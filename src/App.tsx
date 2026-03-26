@@ -5,7 +5,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Mail, Linkedin, ExternalLink, GraduationCap, BookOpen, Film, MessageSquare, Globe, Users, Newspaper, Video, ChevronRight, Trophy, Presentation, Play, FileText } from "lucide-react";
+import { Mail, Linkedin, ExternalLink, GraduationCap, BookOpen, Film, MessageSquare, Globe, Users, Newspaper, Video, ChevronRight, Trophy, Presentation, Play, FileText, Printer } from "lucide-react";
 
 type Language = "en" | "zh";
 
@@ -45,13 +45,17 @@ const translations = {
           event: "Friendship Island Event",
           date: "September, 2025",
           desc: "Planned and hosted the first 25 Fall CAB event 'Friendship Island', a high-energy speed-friending mixer designed specifically to help first-year students build meaningful campus connections. We curated a multi-activity program, featuring a tropical island theme, interactive bingo and an E-Board Mingle. I designed the event's visual slide deck. Successfully generated 60 RSVPs and over 30 attendees.",
-          linkText: "View Event Slides"
+          linkText: "View Event Slides",
+          link: "https://canva.link/8z7g03m76o0wge2",
+          image: "https://i.postimg.cc/9XwnBCGF/Wechat-IMG4108.jpg"
         },
         council: {
           title: "NYU 67A SSAIL Hall Council",
           event: "Chinatown Adventure Event",
           date: "February, 2026",
-          desc: "Developed and pitched a Lunar New Year theme event to introduce residents to Chinese festive traditions. I designed all digital and print marketing materials using Canva, curated a local tour route and served as the lead guide for a group of 6 students, managing all logistics and safety."
+          desc: "Developed and pitched a Lunar New Year theme event to introduce residents to Chinese festive traditions. I designed all digital and print marketing materials using Canva, curated a local tour route and served as the lead guide for a group of 6 students, managing all logistics and safety.",
+          linkText: "View Event Poster",
+          link: "https://canva.link/vqrh29oeewgwqf2"
         },
         mktsoc: {
           title: "NYU MKTSOC 25 Fall Case Competition (Round 2)",
@@ -96,6 +100,7 @@ const translations = {
     resume: {
       title: "Resume",
       download: "Download PDF",
+      print: "Print Portfolio to PDF",
       pdfUrl: "https://docs.google.com/document/d/1rljipEfRFSy-KwMsMhhgSsnUykMpIv0Qj4FFDvvWFm8/edit?usp=drive_link",
       sections: {
         education: "Education",
@@ -172,7 +177,7 @@ const translations = {
         }
       ],
       skills: {
-        lang: "Languages & Skills: Mandarin (Native), Canva, AIGC (Gemini), CapCut, Microsoft Office, Google Workspace, Notion",
+        lang: "Languages & Skills: Mandarin (Native), English (TOEFL 111/120), Canva, AIGC (Gemini), CapCut, Microsoft Office, Google Workspace, Notion",
         interests: "Interests: Running, Free-Style Skiing, Cooking, Traveling, Video Editing"
       }
     }
@@ -212,14 +217,17 @@ const translations = {
           event: "Friendship Island 活动",
           date: "2025年9月",
           desc: "策划并主持了25年秋季CAB首场活动“友谊岛”，这是一个旨在帮助一年级学生建立校园联系的高能量社交聚会。策划了包括热带岛屿主题、“bingo”游戏 和E-Board交流在内的多元活动。我同时设计了活动演示文稿。最终成功吸引了60人报名，30多人到场。",
-          linkText: "查看活动幻灯片"
+          linkText: "查看活动幻灯片",
+          link: "https://canva.link/8z7g03m76o0wge2",
+          image: "https://i.postimg.cc/9XwnBCGF/Wechat-IMG4108.jpg"
         },
         council: {
           title: "NYU 67A SSAIL Hall Council",
           event: "唐人街探险活动",
           date: "2026年2月",
           desc: "组织宿舍农历新年主题活动，向外国同学介绍中国节日传统。熟练使用Canva设计了海报和Google Form报名表，并担任6名学生的中国城导游。",
-          linkText: "查看活动幻灯片"
+          linkText: "查看活动海报",
+          link: "https://canva.link/vqrh29oeewgwqf2"
         },
         mktsoc: {
           title: "NYU MKTSOC 25 秋季案例竞赛 (第二轮)",
@@ -264,6 +272,7 @@ const translations = {
     resume: {
       title: "个人简历",
       download: "下载 PDF",
+      print: "打印作品集为 PDF",
       pdfUrl: "https://docs.google.com/document/d/1KfXJZWUqyeSQszy6zJConywoKHJYSIDmOw5EUB8dMfk/edit?tab=t.0#heading=h.gjdgxs",
       sections: {
         education: "教育经历",
@@ -340,7 +349,7 @@ const translations = {
         }
       ],
       skills: {
-        lang: "语言和技能：中文（母语），英文（流利），Canva，创客贴，秀米，剪映，AIGC内容制作，Microsoft工具，Google工具，Notion",
+        lang: "语言和技能：中文（母语），英文（流利，托福 111/120），Canva，创客贴，秀米，剪映，AIGC内容制作，Microsoft工具，Google工具，Notion",
         interests: "兴趣：跑步，自由式滑雪，烹饪，旅行，视频剪辑"
       }
     }
@@ -368,14 +377,7 @@ export default function App() {
   return (
     <div className="min-h-screen font-sans selection:bg-sky-100 bg-white">
       {/* Header / Nav */}
-      <nav className="fixed top-0 w-full z-50 px-8 py-6 flex justify-between items-center mix-blend-difference text-white">
-        <div className="flex items-center gap-3 md:gap-4">
-          <span className="font-medium tracking-tighter text-xl whitespace-nowrap">{name}</span>
-          <span className="opacity-30">|</span>
-          <span className="text-[10px] md:text-xs uppercase tracking-widest opacity-70 whitespace-nowrap">
-            {lang === "en" ? "Economics Student at NYU" : "纽约大学经济学学生"}
-          </span>
-        </div>
+      <nav className="fixed top-0 w-full z-50 px-8 py-6 flex justify-end items-center mix-blend-difference text-white">
         <div className="flex items-center gap-8">
           <div className="hidden md:flex gap-8 text-sm uppercase tracking-widest">
             <a href="#about" className="hover:opacity-50 transition-opacity">{t.nav.about}</a>
@@ -524,7 +526,12 @@ export default function App() {
                   <h4 className="font-bold text-xl mb-2">{t.portfolio.items.cab.title}</h4>
                   <p className="text-accent font-medium mb-4">{t.portfolio.items.cab.event} • {t.portfolio.items.cab.date}</p>
                   <p className="text-slate-600 mb-6 font-light leading-relaxed">{t.portfolio.items.cab.desc}</p>
-                  <a href="https://www.canva.com/design/DAHEunjxrww/XP__xl-FatdwC5j0TZk-tQ/view" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-slate-900 font-medium hover:text-accent transition-colors">
+                  {t.portfolio.items.cab.image && (
+                    <div className="mb-6">
+                      <img src={t.portfolio.items.cab.image} className="rounded-2xl w-full h-auto shadow-sm" alt="CAB Event" referrerPolicy="no-referrer" />
+                    </div>
+                  )}
+                  <a href={t.portfolio.items.cab.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-slate-900 font-medium hover:text-accent transition-colors">
                     {t.portfolio.items.cab.linkText} <ExternalLink size={16} />
                   </a>
                 </div>
@@ -533,11 +540,18 @@ export default function App() {
                   <h4 className="font-bold text-xl mb-2">{t.portfolio.items.council.title}</h4>
                   <p className="text-accent font-medium mb-4">{t.portfolio.items.council.event} • {t.portfolio.items.council.date}</p>
                   <p className="text-slate-600 mb-6 font-light leading-relaxed">{t.portfolio.items.council.desc}</p>
-                  <div className="grid grid-cols-3 gap-2">
-                    <img src="https://i.postimg.cc/hGKkmBCM/Chinatown-Adventure.jpg" className="rounded-lg aspect-square object-cover" alt="Chinatown" referrerPolicy="no-referrer" />
-                    <img src="https://i.postimg.cc/Znv2mKqD/Wechat-IMG3930.jpg" className="rounded-lg aspect-square object-cover" alt="Chinatown" referrerPolicy="no-referrer" />
-                    <img src="https://i.postimg.cc/xqr71DJJ/Wechat-IMG3931.jpg" className="rounded-lg aspect-square object-cover" alt="Chinatown" referrerPolicy="no-referrer" />
+                  <div className="flex flex-col gap-4 mb-6">
+                    <img src="https://i.postimg.cc/hGKkmBCM/Chinatown-Adventure.jpg" className="rounded-xl w-full h-auto shadow-sm" alt="Chinatown" referrerPolicy="no-referrer" />
+                    <div className="grid grid-cols-2 gap-4">
+                      <img src="https://i.postimg.cc/Znv2mKqD/Wechat-IMG3930.jpg" className="rounded-xl w-full h-auto shadow-sm" alt="Chinatown" referrerPolicy="no-referrer" />
+                      <img src="https://i.postimg.cc/xqr71DJJ/Wechat-IMG3931.jpg" className="rounded-xl w-full h-auto shadow-sm" alt="Chinatown" referrerPolicy="no-referrer" />
+                    </div>
                   </div>
+                  {t.portfolio.items.council.link && (
+                    <a href={t.portfolio.items.council.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-slate-900 font-medium hover:text-accent transition-colors">
+                      {t.portfolio.items.council.linkText} <ExternalLink size={16} />
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
@@ -682,15 +696,24 @@ export default function App() {
                 <h2 className="serif text-6xl mb-4">{t.resume.title}</h2>
                 <p className="text-slate-400 tracking-widest uppercase text-xs">Professional Background</p>
               </div>
-              <a 
-                href={t.resume.pdfUrl} 
-                target="_blank" 
-                rel="noreferrer"
-                className="flex items-center gap-2 px-6 py-3 bg-slate-900 text-white rounded-full text-sm font-medium hover:bg-accent transition-all"
-              >
-                <FileText size={18} />
-                {t.resume.download}
-              </a>
+              <div className="flex flex-wrap items-center gap-4 no-print">
+                <a 
+                  href={t.resume.pdfUrl} 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="flex items-center gap-2 px-6 py-3 bg-slate-900 text-white rounded-full text-sm font-medium hover:bg-accent transition-all"
+                >
+                  <FileText size={18} />
+                  {t.resume.download}
+                </a>
+                <button 
+                  onClick={() => window.print()}
+                  className="flex items-center gap-2 px-6 py-3 bg-white border border-slate-200 text-slate-900 rounded-full text-sm font-medium hover:border-accent transition-all"
+                >
+                  <Printer size={18} />
+                  {t.resume.print}
+                </button>
+              </div>
             </div>
 
             <div className="space-y-16">
