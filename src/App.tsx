@@ -35,7 +35,7 @@ const translations = {
         orgs: "Student Organizations",
         competition: "Competitions",
         presentation: "Class Presentations",
-        td: "TD TestDaily",
+        td: "TD Test Daily",
         personal: "Jessie's Little World (Personal Account)",
         video: "Video Editing"
       },
@@ -66,7 +66,7 @@ const translations = {
           linkText: "View Presentation Slides"
         },
         td: {
-          title: "TD TestDaily",
+          title: "TD Test Daily",
           date: "Dec 2023 - July 2024",
           desc: "Responsible for content planning and production for a public account platform with 200,000+ followers, assisting in the execution of brand promotion plans. Proficient in using Excel and the public account backend for user data analysis, planning educational articles, and maintaining a stable reading volume of 5,000+ per article. Created over 25+ high-conversion, high-interaction viral articles, with interaction rates exceeding the platform average by 150%.",
           linkText1: "Article: 'Waking up to my college closing...' (69.9K Views)",
@@ -131,7 +131,7 @@ const translations = {
           ]
         },
         {
-          company: "Test Daily",
+          company: "TD Test Daily",
           role: "Social Media Coordinator",
           date: "Dec 2023 – Jul 2024",
           details: [
@@ -202,7 +202,7 @@ const translations = {
         orgs: "学生社团",
         competition: "竞赛经历",
         presentation: "课上演讲",
-        td: "TD厚朴优学",
+        td: "TD 厚朴优学",
         personal: "杰西的小世界（个人公众号）",
         video: "视频剪辑"
       },
@@ -234,7 +234,7 @@ const translations = {
           linkText: "查看演讲幻灯片"
         },
         td: {
-          title: "TD厚朴优学",
+          title: "TD 厚朴优学",
           date: "2023年12月 - 2024年7月",
           desc: "负责为拥有20万+粉丝的公众号平台做内容策划与产出，协助执行品牌推广计划。熟练运用Excel表格和公众号后台做用户数据分析，策划教育类推文，保持每篇5000+的稳定阅读量。一共打造超过25+篇高转化、高互动的爆款内容，使推文互动率超出平台平均水平150%。",
           linkText1: "《一觉醒来，我的大学倒闭了...》（6.99万浏览量）",
@@ -299,7 +299,7 @@ const translations = {
           ]
         },
         {
-          company: "Test Daily厚朴优学",
+          company: "TD 厚朴优学",
           role: "TD北美留学进化论公众号运营",
           date: "2023.12 - 2024.7",
           details: [
@@ -355,6 +355,7 @@ export default function App() {
   const nameEn = "Jessie Liu";
   const name = `${nameZh} ${nameEn}`;
   const photoUrl = "https://i.postimg.cc/xTkL3Nkz/eaba872db411359dcefb7b5fb2c80aa8.jpg";
+  const tdLogo = "https://i.postimg.cc/zXwcHprK/1666948832523.jpg";
   
   const contacts = {
     qq: "3148498539@qq.com",
@@ -582,10 +583,10 @@ export default function App() {
               </div>
             </div>
 
-            {/* 4. TD TestDaily */}
+            {/* 4. TD Test Daily */}
             <div className="space-y-12">
               <div className="flex items-center gap-4">
-                <Newspaper className="text-accent" size={32} />
+                <img src={tdLogo} alt="TD Logo" className="w-10 h-10 object-contain rounded-lg" referrerPolicy="no-referrer" />
                 <h3 className="serif text-4xl">{t.portfolio.sections.td}</h3>
               </div>
               <div className="bg-light-blue/5 p-12 rounded-[3rem] border border-light-blue/20 grid md:grid-cols-2 gap-12 items-center">
@@ -594,7 +595,10 @@ export default function App() {
                   <img src="https://i.postimg.cc/nhh5VkMX/Wechat-IMG3952.jpg" className="rounded-2xl shadow-md" alt="TD Work" referrerPolicy="no-referrer" />
                 </div>
                 <div className="order-1 md:order-2 space-y-6">
-                  <h4 className="font-bold text-2xl">{t.portfolio.items.td.title}</h4>
+                  <div className="flex items-center gap-3">
+                    <img src={tdLogo} alt="TD Logo" className="w-8 h-8 object-contain rounded-md" referrerPolicy="no-referrer" />
+                    <h4 className="font-bold text-2xl">{t.portfolio.items.td.title}</h4>
+                  </div>
                   <p className="text-accent font-medium">{t.portfolio.items.td.date}</p>
                   <p className="text-slate-600 font-light leading-relaxed text-lg">{t.portfolio.items.td.desc}</p>
                   <div className="flex flex-wrap gap-4">
@@ -728,7 +732,12 @@ export default function App() {
                   {t.resume.exp.map((item: any, i: number) => (
                     <div key={i}>
                       <div className="flex flex-col md:flex-row justify-between mb-2">
-                        <h4 className="font-bold text-xl text-slate-900">{item.company}</h4>
+                        <div className="flex items-center gap-2">
+                          {(item.company === "TD Test Daily" || item.company === "TD 厚朴优学") && (
+                            <img src={tdLogo} alt="TD Logo" className="w-6 h-6 object-contain rounded-sm" referrerPolicy="no-referrer" />
+                          )}
+                          <h4 className="font-bold text-xl text-slate-900">{item.company}</h4>
+                        </div>
                         <span className="text-slate-400 font-mono text-sm">{item.date}</span>
                       </div>
                       <p className="text-accent font-medium mb-4">{item.role}</p>
