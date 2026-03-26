@@ -64,7 +64,7 @@ const translations = {
           linkText: "View MKTSOC Slides"
         },
         acm: {
-          title: "Class Presentation: Modern Arts and Culture",
+          title: "Class Presentation: Arts and Culture across Modernity",
           date: "December, 2025",
           desc: "Crafted a presentation diving into the intersection of literature, gender roles, and consumer psychology. Explored whether consumerism for women is strictly tied to hedonism or serves a more complex emotional purpose through a close reading of Kate Chopin's work.",
           linkText: "View Presentation Slides"
