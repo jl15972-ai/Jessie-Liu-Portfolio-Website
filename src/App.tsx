@@ -101,7 +101,7 @@ const translations = {
       title: "Resume",
       download: "Download PDF",
       print: "Print Portfolio to PDF",
-      pdfUrl: "https://docs.google.com/document/d/1rljipEfRFSy-KwMsMhhgSsnUykMpIv0Qj4FFDvvWFm8/edit?usp=drive_link",
+      pdfUrl: "https://docs.google.com/document/d/1rljipEfRFSy-KwMsMhhgSsnUykMpIv0Qj4FFDvvWFm8/edit?usp=sharing",
       sections: {
         education: "Education",
         experience: "Professional Experience",
@@ -164,7 +164,7 @@ const translations = {
           details: ["Developed programs and initiatives that support and engage NYU's first-year students"]
         },
         {
-          org: "NYU SSAIL Hall Council",
+          org: "NYU 67A SSAIL Hall Council",
           role: "Director of Business Administration",
           date: "Sept 2025 – Present",
           details: ["Oversee a $14K budget, including reviewing and approving all funding proposals"]
@@ -336,7 +336,7 @@ const translations = {
           details: ["开发并落地多项校园活动，旨在全面提升纽约大学大一新生的参与度"]
         },
         {
-          org: "纽约大学SSAIL宿舍委员会",
+          org: "纽约大学 67A SSAIL 宿舍委员会",
           role: "财政部部长",
           date: "2025.9 - 至今",
           details: ["统筹管理1.4万美元年度预算，负责审查和审批3栋宿舍楼的资金申请"]
