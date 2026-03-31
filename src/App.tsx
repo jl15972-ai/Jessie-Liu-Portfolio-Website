@@ -187,7 +187,7 @@ const translations = {
         }
       ],
       skills: {
-        lang: "Languages & Skills: Mandarin (Native), English (TOEFL 111/120), Canva, AIGC (Gemini), CapCut, Microsoft Office, Google Workspace, Notion",
+        lang: "Languages & Skills: Mandarin (Native), English (TOEFL 111/120), Canva, AIGC (Gemini & Claude), CapCut, Microsoft Office, Google Workspace, Notion",
         interests: "Interests: Running, Free-Style Skiing, Cooking, Traveling, Video Editing"
       }
     }
@@ -369,7 +369,7 @@ const translations = {
         }
       ],
       skills: {
-        lang: "语言和技能：中文（母语），英文（流利，托福 111/120），Canva，创客贴，秀米，剪映，AIGC内容制作，Microsoft工具，Google工具，Notion",
+        lang: "语言和技能：中文（母语），英文（流利，托福 111/120），Canva，创客贴，秀米，剪映，AIGC内容制作 (Gemini & Claude)，Microsoft工具，Google工具，Notion",
         interests: "兴趣：跑步，自由式滑雪，烹饪，旅行，视频剪辑"
       }
     }
