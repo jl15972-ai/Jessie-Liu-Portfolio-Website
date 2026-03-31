@@ -114,7 +114,11 @@ const translations = {
           location: "New York, NY",
           degree: "B.S. in Economics with a Minor in BEMT",
           date: "May 2028",
-          details: ["Cumulative GPA: 4.0/4.0", "Honors: NYU Liberal Studies Dean's List 24-25 AY"]
+          details: [
+            "Cumulative GPA: 4.0/4.0", 
+            "Honors: NYU Liberal Studies Dean's List 24-25 AY",
+            "Relevant Courses: Intro to Marketing, Intro to Entertainment & Media, Business Statistics (Regression & Forecasting), Principles of Financial Accounting"
+          ]
         },
         {
           school: "Guangzhou Foreign Language School",
@@ -174,6 +178,12 @@ const translations = {
           role: "Headline Editor",
           date: "Sept 2024 – Present",
           details: ["Report latest news from NYU and NYC through high-impact storytelling"]
+        },
+        {
+          org: "Nata.NYC",
+          role: "Brand Marketing & Growth",
+          date: "Mar 2026 – Present",
+          details: ["Responsible for marketing and promoting a Portuguese egg tart bakery founded by two NYU students"]
         }
       ],
       skills: {
@@ -273,7 +283,7 @@ const translations = {
       title: "个人简历",
       download: "下载 PDF",
       print: "打印作品集为 PDF",
-      pdfUrl: "https://docs.google.com/document/d/1KfXJZWUqyeSQszy6zJConywoKHJYSIDmOw5EUB8dMfk/edit?tab=t.0#heading=h.gjdgxs",
+      pdfUrl: "https://docs.google.com/document/d/1FfzxKjaEBxDyPCBC2Cf8knTtT_srHfGEDm4qEb07eVo/edit?usp=sharing",
       sections: {
         education: "教育经历",
         experience: "工作经验",
@@ -286,7 +296,11 @@ const translations = {
           location: "美国纽约",
           degree: "经济学专业本科，辅修娱乐、媒体与技术商业管理",
           date: "2024.9 - 2028.5",
-          details: ["总绩点: 4.0/4.0", "荣誉：2024-2025 学年优秀生名单 (NYU Liberal Studies Dean's List)"]
+          details: [
+            "总绩点: 4.0/4.0", 
+            "荣誉：2024-2025 学年优秀生名单 (NYU Liberal Studies Dean's List)",
+            "相关课程：市场营销概论，娱乐传媒产业概论，商务统计（回归分析与预测），财务会计原理"
+          ]
         },
         {
           school: "广州外国语学校",
@@ -346,6 +360,12 @@ const translations = {
           role: "头条文章编辑",
           date: "2024.9 - 至今",
           details: ["追踪报道纽约大学及纽约市最新热点资讯，精准传递NYU学子声音"]
+        },
+        {
+          org: "Nata.NYC",
+          role: "品牌营销与增长",
+          date: "2026.3 - 至今",
+          details: ["负责营销并推广由两名纽约大学学生创立的葡式蛋挞烘焙房"]
         }
       ],
       skills: {
@@ -756,9 +776,6 @@ export default function App() {
                     <div key={i}>
                       <div className="flex flex-col md:flex-row justify-between mb-2">
                         <div className="flex items-center gap-2">
-                          {(item.company === "TD Test Daily" || item.company === "TD 厚朴优学") && (
-                            <img src={tdLogo} alt="TD Logo" className="w-6 h-6 object-contain rounded-sm" referrerPolicy="no-referrer" />
-                          )}
                           <h4 className="font-bold text-xl text-slate-900">{item.company}</h4>
                         </div>
                         <span className="text-slate-400 font-mono text-sm">{item.date}</span>
