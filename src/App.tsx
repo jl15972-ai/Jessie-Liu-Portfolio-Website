@@ -57,6 +57,14 @@ const translations = {
           linkText: "View Event Poster",
           link: "https://canva.link/vqrh29oeewgwqf2"
         },
+        wallstreet: {
+          title: "NYU 67A SSAIL Hall Council",
+          event: "A Cup of Wall Street Event",
+          date: "March, 2026",
+          desc: "Organized 'A Cup of Wall Street' event, leading a cohort of 6 students to visit a coffee shop converted from a Wall Street bank, exploring the historical heritage of New York's Financial District.",
+          linkText: "View Event Poster",
+          link: "https://canva.link/jhhqah91wo2zmx8"
+        },
         mktsoc: {
           title: "NYU MKTSOC 25 Fall Case Competition (Round 2)",
           date: "November, 2025",
@@ -187,7 +195,7 @@ const translations = {
         }
       ],
       skills: {
-        lang: "Languages & Skills: Mandarin (Native), English (TOEFL 111/120), Canva, AIGC (Gemini & Claude), CapCut, Microsoft Office, Google Workspace, Notion",
+        lang: "Languages & Skills: Mandarin (Native), English (TOEFL 111/120), Canva, Figma, AIGC (Gemini & Claude), CapCut, Microsoft Office, Google Workspace, Notion",
         interests: "Interests: Running, Free-Style Skiing, Cooking, Traveling, Video Editing"
       }
     }
@@ -238,6 +246,14 @@ const translations = {
           desc: "组织宿舍农历新年主题活动，向外国同学介绍中国节日传统。熟练使用Canva设计了海报和Google Form报名表，并担任6名学生的中国城导游。",
           linkText: "查看活动海报",
           link: "https://canva.link/vqrh29oeewgwqf2"
+        },
+        wallstreet: {
+          title: "NYU 67A SSAIL Hall Council",
+          event: "“啡阅华尔街”活动",
+          date: "2026年3月",
+          desc: "组织了“啡阅华尔街”活动，带领 6 名学生参观由华尔街银行改造的咖啡店，探寻纽约金融区的历史底蕴。",
+          linkText: "查看活动海报",
+          link: "https://canva.link/jhhqah91wo2zmx8"
         },
         mktsoc: {
           title: "NYU MKTSOC 25 秋季案例竞赛 (第二轮)",
@@ -369,7 +385,7 @@ const translations = {
         }
       ],
       skills: {
-        lang: "语言和技能：中文（母语），英文（流利，托福 111/120），Canva，创客贴，秀米，剪映，AIGC内容制作 (Gemini & Claude)，Microsoft工具，Google工具，Notion",
+        lang: "语言和技能：中文（母语），英文（流利，托福 111/120），Canva，Figma，创客贴，秀米，剪映，AIGC内容制作 (Gemini & Claude)，Microsoft工具，Google工具，Notion",
         interests: "兴趣：跑步，自由式滑雪，烹饪，旅行，视频剪辑"
       }
     }
@@ -570,6 +586,22 @@ export default function App() {
                   {t.portfolio.items.council.link && (
                     <a href={t.portfolio.items.council.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-slate-900 font-medium hover:text-accent transition-colors">
                       {t.portfolio.items.council.linkText} <ExternalLink size={16} />
+                    </a>
+                  )}
+                </div>
+                {/* Wall Street */}
+                <div className="bg-light-blue/10 p-10 rounded-3xl border border-light-blue/20 md:col-span-2">
+                  <h4 className="font-bold text-xl mb-2">{t.portfolio.items.wallstreet.title}</h4>
+                  <p className="text-accent font-medium mb-4">{t.portfolio.items.wallstreet.event} • {t.portfolio.items.wallstreet.date}</p>
+                  <p className="text-slate-600 mb-6 font-light leading-relaxed">{t.portfolio.items.wallstreet.desc}</p>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                    <img src="https://i.postimg.cc/MTFcNQvS/Image-22-55-25.png" className="rounded-xl w-full h-auto shadow-sm" alt="Wall Street Poster" referrerPolicy="no-referrer" />
+                    <img src="https://i.postimg.cc/xdqNR51H/Wechat-IMG4273.jpg" className="rounded-xl w-full h-auto shadow-sm" alt="Wall Street Event 1" referrerPolicy="no-referrer" />
+                    <img src="https://i.postimg.cc/pXx97RL4/Wechat-IMG4274.jpg" className="rounded-xl w-full h-auto shadow-sm" alt="Wall Street Event 2" referrerPolicy="no-referrer" />
+                  </div>
+                  {t.portfolio.items.wallstreet.link && (
+                    <a href={t.portfolio.items.wallstreet.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-slate-900 font-medium hover:text-accent transition-colors">
+                      {t.portfolio.items.wallstreet.linkText} <ExternalLink size={16} />
                     </a>
                   )}
                 </div>
