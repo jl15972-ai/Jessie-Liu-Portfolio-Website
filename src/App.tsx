@@ -26,7 +26,11 @@ const translations = {
       gpa: "GPA",
       university: "New York University (Main Campus)",
       majorVal: "Economics",
-      minorVal: "Business of Entertainment, Media and Technology"
+      minorVal: "Business Studies and Business of Entertainment, Media, and Technology",
+      strengthTitle: "Strength",
+      strengths: ["Achiever", "Context", "Focus", "Strategic", "Learner"],
+      reportLink: "View Gallup Strength Report",
+      reportUrl: "https://content.reportdeliverables.gallup.com/export-engine/users/clients/8399/users/103965283/sf/sf_top_5/pdf/20276308/joiner/output/Liu-Jessie-SF_TOP_5.pdf?AQICAHh2a781HPlWXdmVDajpky+GSV+HMD38chCz/EBxRrX68QGEkOHSb1G8XndvDja8i0quAAABADCB/QYJKoZIhvcNAQcGoIHvMIHsAgEAMIHmBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDFdsYauOWdvDhAUQEQIBEICBuJzR3iV2Iey2zUyKVe8HUcYcm/yOgoDSHeSLBy1FmBomOP7NMual+c8dAjzixOYy0UhRbvjJ3y4SAA0n4jOXB4Jhxz3SZu1mI0uISUdyM3tGv4Bb6jkV/cXydrMla0a9pPhB/Z4jbNfm8jABBdLOtNk4rQrAoxfvRfWematD/sIpeUTCUkAl/0TzWaB8ARnv/oHAew88rv9hLNp4sqDwqrDIdms9ZGnb5MKBNY7mAcggPkGzb8Fb3D0="
     },
     portfolio: {
       title: "Portfolio",
@@ -109,7 +113,7 @@ const translations = {
       title: "Resume",
       download: "Download PDF",
       print: "Print Portfolio to PDF",
-      pdfUrl: "https://docs.google.com/document/d/1rljipEfRFSy-KwMsMhhgSsnUykMpIv0Qj4FFDvvWFm8/edit?usp=sharing",
+      pdfUrl: "/resume_en.pdf",
       sections: {
         education: "Education",
         experience: "Professional Experience",
@@ -120,31 +124,35 @@ const translations = {
         {
           school: "New York University, College of Arts and Science",
           location: "New York, NY",
-          degree: "B.S. in Economics with a Minor in BEMT",
-          date: "May 2028",
+          degree: "B.S. in Economics",
+          minor: "Minor: Business Studies, Business of Entertainment, Media, and Technology",
+          date: "Sept 2024 – May 2028",
           details: [
             "Cumulative GPA: 4.0/4.0", 
             "Honors: NYU Liberal Studies Dean's List 24-25 AY",
-            "Relevant Courses: Intro to Marketing, Intro to Entertainment & Media, Business Statistics (Regression & Forecasting), Principles of Financial Accounting"
+            "Relevant Courses: Management and Organizations, Digital Business Strategy, Topics: Economics Research, Intro to Marketing"
           ]
-        },
-        {
-          school: "Guangzhou Foreign Language School",
-          location: "Guangzhou, China",
-          degree: "High School Diploma: Graduate of Distinction",
-          date: "June 2024",
-          details: ["GPA: 97.23/100", "Activities: Media Center (President), Art & Literature Club (Founder)"]
         }
       ],
       exp: [
         {
-          company: "ECS Technology (Guangzhou) Co., Ltd.",
+          company: "Deloitte Consulting (Shanghai) Co., Ltd. Beijing Branch",
+          role: "Tax & Business Advisory Intern",
+          date: "May 2026 – Present",
+          details: [
+            "Collaborate with consultants and senior managers in the Transfer Pricing team to scope client requirements, frame core business challenges, and deliver transfer pricing documentation for multinational clients",
+            "Build 3 structured workpapers and financial reports using Excel (pivot tables), including FY25 Related Party Transactions and Intangible Asset List, translating intercompany transaction data into decision-ready outputs for client review",
+            "Conduct 20+ pages of automotive industry and market share analysis on leading brands (e.g., Hyundai China), evaluating competitive dynamics across EV and passenger vehicle segments to provide deeper insights for client base"
+          ]
+        },
+        {
+          company: "VSTECS (HK00856)",
           role: "Sales Intern",
           date: "Jun 2025 – Aug 2025",
           details: [
-            "Completed comprehensive training on product specifications and foundational sales strategies",
-            "Conducted client site visits and market research to gather feedback on assigned potential clients",
-            "Acquired a new client and secured an initial sales contract valued at ¥200,000"
+            "Executed structured competitive analysis by evaluating downstream client needs and upstream manufacturer capabilities across 8 site visits; identified product service gaps to help the sales team convert 5 target clients",
+            "Supported commercial risk control by reviewing 10+ contracts and analyzing 20+ prospective clients' financial statements under guidelines, screening out high-risk counterparties to eliminate default exposure",
+            "Coordinated internal technical and commercial resources through a complex sales cycle, aligning cross-functional stakeholders to successfully acquire a new institutional client and secure a ¥200,000 contract"
           ]
         },
         {
@@ -152,51 +160,36 @@ const translations = {
           role: "Social Media Coordinator",
           date: "Dec 2023 – Jul 2024",
           details: [
-            "Directed content strategy for the company's social media platform with 200K+ followers",
-            "Leveraged data-driven insights to curate weekly articles, maintaining 5,000 views per post",
-            "Produced 25+ high-performing content exceeding platform average engagement by 150%"
-          ]
-        },
-        {
-          company: "Jessie's Little World",
-          role: "Founder & Writer",
-          date: "Jul 2023 – Jun 2024",
-          details: [
-            "Founded a publishing account on WeChat dedicated to dissecting marketing strategies",
-            "Analyzed companies' financial reports and ad campaigns using SWOT and 4Ps/7Ps frameworks",
-            "Published 7 analytical articles, reaching a total of 7,000+ readers"
+            "Developed content strategies for a 200K+ follower WeChat platform by analyzing audience demographics and engagement metrics, consistently driving 10,000+ views per post and outperforming average platform engagement by 100%",
+            "Initiated research on U.S. higher education financial deficits (e.g., Rutgers, Penn State, University of Arizona), synthesizing complex financial disclosures into compelling analyses that generated 70,000+ views"
           ]
         }
       ],
       leadership: [
         {
           org: "NYU Class Activities Board",
-          role: "First Year Chair",
+          role: "Executive Vice President",
           date: "Sept 2025 – Present",
-          details: ["Developed programs and initiatives that support and engage NYU's first-year students"]
+          details: [
+            "Lead weekly general meetings and advise 2 CAB committees to host 4 high-impact events within a single semester",
+            "Direct budgeting and event operations for large-scale campus programming",
+            "Events: Last First Day, Friendship Island, Halloween Bash, Friendsgiving, Spring Banquet, Slime Making, Senior Week"
+          ]
         },
         {
           org: "NYU 67A SSAIL Hall Council",
           role: "Director of Business Administration",
-          date: "Sept 2025 – Present",
-          details: ["Oversee a $14K budget, including reviewing and approving all funding proposals"]
-        },
-        {
-          org: "NYU Live",
-          role: "Headline Editor",
-          date: "Sept 2024 – Present",
-          details: ["Report latest news from NYU and NYC through high-impact storytelling"]
-        },
-        {
-          org: "Nata.NYC",
-          role: "Brand Marketing & Growth",
-          date: "Mar 2026 – Present",
-          details: ["Responsible for marketing and promoting a Portuguese egg tart bakery founded by two NYU students"]
+          date: "Sept 2025 – May 2026",
+          details: [
+            "Standardize financial tracking of a $14,000 budget, building custom templates to streamline proposal auditing",
+            "Partner with Resident Assistants (RAs) to design multi-channel promotional campaigns, boosting event turnout by 40%",
+            "Events: UVL Prelim, Dormsgiving, Chinatown Adventure, A Cup of Wall Street, Mimi's Frozen Yogurt Social"
+          ]
         }
       ],
       skills: {
-        lang: "Languages & Skills: Mandarin (Native), English (TOEFL 111/120), Canva, Figma, AIGC (Gemini & Claude), CapCut, Microsoft Office, Google Workspace, Notion",
-        interests: "Interests: Running, Free-Style Skiing, Cooking, Traveling, Video Editing"
+        lang: "Languages & Skills: Mandarin (Native), English (TOEFL 111/120), Microsoft Office (Word, Excel, PowerPoint), AIGC Content Creation (Gemini & Claude), Google Workspace (Sheets, Docs), Canva, Figma, CapCut, Notion",
+        interests: "Interests: Running, Free-Style Skiing, Cooking, Hiking, Exploring Shops"
       }
     }
   },
@@ -216,7 +209,11 @@ const translations = {
       gpa: "GPA",
       university: "纽约大学（主校区）",
       majorVal: "经济学",
-      minorVal: "娱乐、媒体与技术商业管理"
+      minorVal: "商业研究和娱乐、媒体与技术商业管理",
+      strengthTitle: "优势",
+      strengths: ["成就 (Achiever)", "史思 (Context)", "专注 (Focus)", "战略 (Strategic)", "学习 (Learner)"],
+      reportLink: "查看盖洛普优势报告",
+      reportUrl: "https://content.reportdeliverables.gallup.com/export-engine/users/clients/8399/users/103965283/sf/sf_top_5/pdf/20276308/joiner/output/Liu-Jessie-SF_TOP_5.pdf?AQICAHh2a781HPlWXdmVDajpky+GSV+HMD38chCz/EBxRrX68QGEkOHSb1G8XndvDja8i0quAAABADCB/QYJKoZIhvcNAQcGoIHvMIHsAgEAMIHmBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDFdsYauOWdvDhAUQEQIBEICBuJzR3iV2Iey2zUyKVe8HUcYcm/yOgoDSHeSLBy1FmBomOP7NMual+c8dAjzixOYy0UhRbvjJ3y4SAA0n4jOXB4Jhxz3SZu1mI0uISUdyM3tGv4Bb6jkV/cXydrMla0a9pPhB/Z4jbNfm8jABBdLOtNk4rQrAoxfvRfWematD/sIpeUTCUkAl/0TzWaB8ARnv/oHAew88rv9hLNp4sqDwqrDIdms9ZGnb5MKBNY7mAcggPkGzb8Fb3D0="
     },
     portfolio: {
       title: "作品集",
@@ -299,7 +296,7 @@ const translations = {
       title: "个人简历",
       download: "下载 PDF",
       print: "打印作品集为 PDF",
-      pdfUrl: "https://docs.google.com/document/d/1FfzxKjaEBxDyPCBC2Cf8knTtT_srHfGEDm4qEb07eVo/edit?usp=sharing",
+      pdfUrl: "/resume_zh.pdf",
       sections: {
         education: "教育经历",
         experience: "工作经验",
@@ -310,83 +307,72 @@ const translations = {
         {
           school: "纽约大学, 文理学院 (College of Arts and Science)",
           location: "美国纽约",
-          degree: "经济学专业本科，辅修娱乐、媒体与技术商业管理",
+          degree: "经济学专业本科",
+          minor: "辅修：商业研究，娱乐、媒体与技术商业管理",
           date: "2024.9 - 2028.5",
           details: [
             "总绩点: 4.0/4.0", 
-            "荣誉：2024-2025 学年优秀生名单 (NYU Liberal Studies Dean's List)",
-            "相关课程：市场营销概论，娱乐传媒产业概论，商务统计（回归分析与预测），财务会计原理"
+            "荣誉：2024-2025 学年优秀生名单 (NYU Liberal Studies Dean's List 24-25 AY)",
+            "相关课程：管理与组织架构，数字商务战略，主题：经济学研究，市场营销概论"
           ]
-        },
-        {
-          school: "广州外国语学校",
-          location: "中国广州",
-          degree: "高中文凭：优秀毕业生",
-          date: "2021.9 - 2024.6",
-          details: ["总绩点: 97.23/100", "课外活动: IPMC学生媒体中心（总策划），Aphrodite文艺社（创始人）"]
         }
       ],
       exp: [
+        {
+          company: "德勤管理咨询（上海）有限公司北京分公司",
+          role: "税务与商务咨询实习生",
+          date: "2026.5 - 至今",
+          details: [
+            "协作交付：与转让定价团队顾问及高级经理协作，明确跨国客户需求，梳理核心业务挑战，完成转让定价文档交付",
+            "数据建模：运用Excel数据透视表构建3份结构化工作底稿及财务报告，涵盖FY25关联方交易及无形资产清单，将内部交易数据转化为可供客户决策的成果输出",
+            "行业分析：完成逾20页汽车行业及市场份额分析报告，覆盖现代中国等主要品牌，深度评估新能源汽车与乘用车细分市场竞争格局，为客户提供洞察支持"
+          ]
+        },
         {
           company: "广州佳杰科技有限公司",
           role: "新华三业务群销售实习",
           date: "2025.6 - 2025.8",
           details: [
-            "销售培训：接受产品和基础销售知识培训，熟悉销售政策、商务合同条款等",
-            "市场调研：拜访潜在客户，深度调研并分析客户反馈和需求",
-            "客户维护：协同整合公司内部技术与商务资源，成功拓展1名新客户"
+            "竞争洞察：通过8次实地走访，系统评估下游客户需求与上游厂商能力，开展竞品分析，识别产品服务缺口协助销售团队成功转化5家目标客户",
+            "风险管控：参与商业风险管控工作，依据相关规范审核10+份合同，分析20+家潜在客户财务报表，筛查高风险交易客户，有效规避违约情况",
+            "客户拓展：统筹内部技术与商务资源，推动跨职能团队协同配合，成功开拓一家新客户，签署金额¥200,000的合同"
           ]
         },
         {
-          company: "TD 厚朴优学",
-          role: "TD北美留学进化论公众号运营",
+          company: "Test Daily厚朴优学",
+          role: "社交媒体协调员 (Social Media Coordinator)",
           date: "2023.12 - 2024.7",
           details: [
-            "内容规划：负责为拥有20万+粉丝的公众号平台做内容策划与产出",
-            "数据驱动：挖掘社交媒体趋势，熟练运用Excel表格和公众号后台做用户数据分析",
-            "爆款打造：打造超过25+篇爆款内容，使推文互动率超出平台平均水平150%"
-          ]
-        },
-        {
-          company: "杰西的小世界（个人微信公众号）",
-          role: "创立人 & 文章编辑",
-          date: "2023.7 - 2024.6",
-          details: [
-            "平台创立：独立负责选题、采编、排版及用户增长，具备从0到1的项目经验",
-            "商业分析：运用SWOT、4P等理论框架分析大厂营销案例，撰写深度长文",
-            "内容输出：累计发布7篇深度商业分析文章，触达超过7000名读者"
+            "内容策划：通过分析受众画像和互动指标，为拥有20万+粉丝的微信平台制定内容策略，持续保持每篇10,000+的阅读量，超出平台平均互动率100%",
+            "专题研究：主导美国高等教育财政赤字专题研究（如罗格斯大学、宾州州立大学、亚利桑那大学），将复杂的财务信息披露整合为极具吸引力的分析内容，累计创造70,000+次阅读量"
           ]
         }
       ],
       leadership: [
         {
           org: "纽约大学年级活动委员会",
-          role: "大一学生主席",
+          role: "执行副主席",
           date: "2025.9 - 至今",
-          details: ["开发并落地多项校园活动，旨在全面提升纽约大学大一新生的参与度"]
+          details: [
+            "会议统筹：主持每周例会，并指导2个年级委员会单学期内举办4场高影响力活动",
+            "活动运营：负责大型校园活动的预算管理与活动运营工作",
+            "举办活动：Last First Day, Friendship Island, Halloween Bash, Friendsgiving, Spring Banquet, Slime Making, Senior Week"
+          ]
         },
         {
-          org: "纽约大学 67A SSAIL 宿舍委员会",
+          org: "纽约大学67A SSAIL宿舍委员会",
           role: "财政部部长",
-          date: "2025.9 - 至今",
-          details: ["统筹管理1.4万美元年度预算，负责审查和审批3栋宿舍楼的资金申请"]
-        },
-        {
-          org: "NYU Live",
-          role: "头条文章编辑",
-          date: "2024.9 - 至今",
-          details: ["追踪报道纽约大学及纽约市最新热点资讯，精准传递NYU学子声音"]
-        },
-        {
-          org: "Nata.NYC",
-          role: "品牌营销与增长",
-          date: "2026.3 - 至今",
-          details: ["负责营销并推广由两名纽约大学学生创立的葡式蛋挞烘焙房"]
+          date: "2025.9 - 2026.5",
+          details: [
+            "财务规范：规范管理 14,000 美元年度预算，设计结构化模板以简化提案审核流程",
+            "宣传推广：与宿舍助理 (RA) 开展多渠道宣传，服务 100+ 学生并将参与率提升 40%",
+            "举办活动：UVL Prelim, Dormsgiving, Chinatown Adventure, A Cup of Wall Street, Mimi's Frozen Yogurt Social"
+          ]
         }
       ],
       skills: {
-        lang: "语言和技能：中文（母语），英文（流利，托福 111/120），Canva，Figma，创客贴，秀米，剪映，AIGC内容制作 (Gemini & Claude)，Microsoft工具，Google工具，Notion",
-        interests: "兴趣：跑步，自由式滑雪，烹饪，旅行，视频剪辑"
+        lang: "语言和技能：中文（母语），英文（流利，托福 111/120），Microsoft工具 (Word, Excel, PowerPoint), AIGC内容制作 (Gemini & Claude)，Google Sheet，Canva，Figma，创客贴，秀米编辑器，壹伴小插件，剪映，Notion",
+        interests: "兴趣：跑步，自由式滑雪，烹饪，徒步，探店"
       }
     }
   }
@@ -533,9 +519,40 @@ export default function App() {
               </div>
             </div>
             <div className="text-center max-w-3xl mx-auto">
-              <p className="text-lg text-slate-600 font-light leading-relaxed">
+              <p className="text-lg text-slate-600 font-light leading-relaxed mb-12">
                 {t.bio.description}
               </p>
+
+              {/* Strengths Section */}
+              <div className="inline-block bg-white px-8 py-10 rounded-[2rem] shadow-sm border border-slate-100 max-w-2xl w-full">
+                <div className="flex flex-col items-center gap-6">
+                  <div className="flex items-center gap-3">
+                    <Trophy className="text-accent" size={24} />
+                    <h3 className="text-sm uppercase tracking-[0.2em] font-bold text-slate-900">
+                      {t.bio.strengthTitle}
+                    </h3>
+                  </div>
+                  <div className="flex flex-wrap justify-center gap-3">
+                    {(t.bio.strengths as string[]).map((strength: string, i: number) => (
+                      <span 
+                        key={i}
+                        className="px-4 py-2 bg-slate-50 border border-slate-100 rounded-full text-sm font-medium text-slate-700 capitalize"
+                      >
+                        {strength}
+                      </span>
+                    ))}
+                  </div>
+                  <a 
+                    href={t.bio.reportUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-4 flex items-center gap-2 text-accent text-sm font-medium hover:underline"
+                  >
+                    <FileText size={16} />
+                    {t.bio.reportLink}
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -594,8 +611,10 @@ export default function App() {
                   <h4 className="font-bold text-xl mb-2">{t.portfolio.items.wallstreet.title}</h4>
                   <p className="text-accent font-medium mb-4">{t.portfolio.items.wallstreet.event} • {t.portfolio.items.wallstreet.date}</p>
                   <p className="text-slate-600 mb-6 font-light leading-relaxed">{t.portfolio.items.wallstreet.desc}</p>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-                    <img src="https://i.postimg.cc/MTFcNQvS/Image-22-55-25.png" className="rounded-xl w-full h-auto shadow-sm" alt="Wall Street Poster" referrerPolicy="no-referrer" />
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6 print:grid-cols-2 print:gap-8">
+                    <div className="print:row-span-2">
+                      <img src="https://i.postimg.cc/MTFcNQvS/Image-22-55-25.png" className="rounded-xl w-full h-full object-cover shadow-sm" alt="Wall Street Poster" referrerPolicy="no-referrer" />
+                    </div>
                     <img src="https://i.postimg.cc/xdqNR51H/Wechat-IMG4273.jpg" className="rounded-xl w-full h-auto shadow-sm" alt="Wall Street Event 1" referrerPolicy="no-referrer" />
                     <img src="https://i.postimg.cc/pXx97RL4/Wechat-IMG4274.jpg" className="rounded-xl w-full h-auto shadow-sm" alt="Wall Street Event 2" referrerPolicy="no-referrer" />
                   </div>
@@ -676,7 +695,7 @@ export default function App() {
             </div>
 
             {/* 5. Personal Official Account */}
-            <div className="space-y-12">
+            <div className="space-y-12 print:break-inside-avoid">
               <div className="flex items-center gap-4">
                 <MessageSquare className="text-accent" size={32} />
                 <h3 className="serif text-4xl">{t.portfolio.sections.personal}</h3>
@@ -696,19 +715,19 @@ export default function App() {
                     )}
                   </div>
                 </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="aspect-[3/4] bg-slate-200 rounded-2xl overflow-hidden shadow-lg">
-                    <img src="https://i.postimg.cc/Rh7gTPVY/9d37d304a62aeba96fb70aa2e6884954.jpg" className="w-full h-full object-cover" alt="Personal Account" referrerPolicy="no-referrer" />
+                <div className="grid grid-cols-2 gap-4 print:grid-cols-1 print:gap-8">
+                  <div className="aspect-[3/4] bg-slate-200 rounded-2xl overflow-hidden shadow-lg print:aspect-auto print:h-auto">
+                    <img src="https://i.postimg.cc/Rh7gTPVY/9d37d304a62aeba96fb70aa2e6884954.jpg" className="w-full h-full object-cover print:object-contain" alt="Personal Account" referrerPolicy="no-referrer" />
                   </div>
-                  <div className="aspect-[3/4] bg-slate-200 rounded-2xl overflow-hidden mt-8 shadow-lg">
-                    <img src="https://i.postimg.cc/8PGKCVtq/640.webp" className="w-full h-full object-cover" alt="Personal Account" referrerPolicy="no-referrer" />
+                  <div className="aspect-[3/4] bg-slate-200 rounded-2xl overflow-hidden mt-8 shadow-lg print:aspect-auto print:h-auto print:mt-0">
+                    <img src="https://i.postimg.cc/8PGKCVtq/640.webp" className="w-full h-full object-cover print:object-contain" alt="Personal Account" referrerPolicy="no-referrer" />
                   </div>
                 </div>
               </div>
             </div>
 
             {/* 6. Video Editing */}
-            <div className="space-y-12">
+            <div className="space-y-12 print:break-inside-avoid">
               <div className="flex items-center gap-4">
                 <Video className="text-accent" size={32} />
                 <h3 className="serif text-4xl">{t.portfolio.sections.video}</h3>
@@ -725,7 +744,7 @@ export default function App() {
                     href={url} 
                     target="_blank" 
                     rel="noreferrer"
-                    className="aspect-[9/16] bg-slate-100 rounded-2xl flex flex-col items-center justify-center group hover:bg-light-blue transition-colors relative overflow-hidden"
+                    className="aspect-[9/16] bg-slate-100 rounded-2xl flex flex-col items-center justify-center group hover:bg-light-blue transition-colors relative overflow-hidden print:break-inside-avoid print:bg-white print:border print:border-slate-200"
                   >
                     <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                       <Play size={20} className="text-accent fill-accent" />
@@ -781,15 +800,19 @@ export default function App() {
                         <h4 className="font-bold text-xl text-slate-900">{item.school}</h4>
                         <span className="text-slate-400 font-mono text-sm">{item.date}</span>
                       </div>
-                      <div className="flex justify-between text-slate-500 mb-4 italic">
+                      <div className="flex flex-col text-slate-500 mb-4 text-sm">
                         <span>{item.degree}</span>
-                        <span>{item.location}</span>
+                        {item.minor && (
+                          <span className="mt-1">
+                            {item.minor}
+                          </span>
+                        )}
                       </div>
                       <ul className="space-y-2">
                         {item.details.map((detail: string, j: number) => (
-                          <li key={j} className="text-slate-600 flex gap-3 text-sm">
-                            <span className="text-accent mt-1.5 w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
-                            {detail}
+                          <li key={j} className="text-slate-600 flex items-start gap-2 text-sm leading-relaxed">
+                            <span className="text-accent shrink-0 font-bold select-none">·</span>
+                            <span className="flex-1">{detail}</span>
                           </li>
                         ))}
                       </ul>
@@ -815,9 +838,9 @@ export default function App() {
                       <p className="text-accent font-medium mb-4">{item.role}</p>
                       <ul className="space-y-3">
                         {item.details.map((detail: string, j: number) => (
-                          <li key={j} className="text-slate-600 flex gap-3 text-sm leading-relaxed">
-                            <span className="text-accent mt-1.5 w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
-                            {detail}
+                          <li key={j} className="text-slate-600 flex items-start gap-2 text-sm leading-relaxed">
+                            <span className="text-accent shrink-0 font-bold select-none">·</span>
+                            <span className="flex-1">{detail}</span>
                           </li>
                         ))}
                       </ul>
@@ -841,9 +864,9 @@ export default function App() {
                       <p className="text-accent text-sm font-medium mb-4">{item.role}</p>
                       <ul className="space-y-2">
                         {item.details.map((detail: string, j: number) => (
-                          <li key={j} className="text-slate-500 text-xs leading-relaxed flex gap-2">
-                            <span className="text-accent mt-1.5 w-1 h-1 rounded-full bg-accent shrink-0" />
-                            {detail}
+                          <li key={j} className="text-slate-500 flex items-start gap-2 text-xs leading-relaxed">
+                            <span className="text-accent shrink-0 font-bold select-none">·</span>
+                            <span className="flex-1">{detail}</span>
                           </li>
                         ))}
                       </ul>

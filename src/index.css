@@ -78,7 +78,6 @@ body {
 
   .grid {
     display: grid !important;
-    gap: 0 !important;
   }
 
   .space-y-8 > * + *,
@@ -395,7 +394,9 @@ body {
   .bg-light-blue\/10, 
   .bg-slate-900,
   #portfolio .bg-light-blue\/10,
-  #resume .space-y-8 > div {
+  #resume .space-y-8 > div,
+  #portfolio .space-y-32 > div,
+  #resume .space-y-16 > div {
     padding: 1rem !important;
     margin: 0 !important;
     page-break-inside: avoid !important;
