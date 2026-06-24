@@ -5,7 +5,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Mail, Linkedin, ExternalLink, GraduationCap, BookOpen, Film, MessageSquare, Globe, Users, Newspaper, Video, ChevronRight, Trophy, Presentation, Play, FileText, Printer } from "lucide-react";
+import { Mail, Linkedin, ExternalLink, GraduationCap, BookOpen, Film, MessageSquare, Globe, Users, Newspaper, Video, ChevronRight, Trophy, Presentation, Play, FileText, Printer, Menu, X } from "lucide-react";
 
 type Language = "en" | "zh";
 
@@ -380,6 +380,7 @@ const translations = {
 
 export default function App() {
   const [lang, setLang] = useState<Language>("en");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const t = translations[lang];
 
   const nameZh = "刘嘉欣";
@@ -399,8 +400,11 @@ export default function App() {
   return (
     <div className="min-h-screen font-sans selection:bg-sky-100 bg-white">
       {/* Header / Nav */}
-      <nav className="fixed top-0 w-full z-50 px-8 py-6 flex justify-end items-center mix-blend-difference text-white">
-        <div className="flex items-center gap-8">
+      <nav className="fixed top-0 w-full z-50 px-6 md:px-8 py-4 md:py-6 flex justify-between md:justify-end items-center mix-blend-difference text-white">
+        <div className="md:hidden text-sm uppercase tracking-widest font-bold">
+          {lang === "en" ? "Jessie Liu" : "刘嘉欣"}
+        </div>
+        <div className="flex items-center gap-4 md:gap-8">
           <div className="hidden md:flex gap-8 text-sm uppercase tracking-widest">
             <a href="#about" className="hover:opacity-50 transition-opacity">{t.nav.about}</a>
             <a href="#portfolio" className="hover:opacity-50 transition-opacity">{t.nav.portfolio}</a>
@@ -409,16 +413,97 @@ export default function App() {
           </div>
           <button 
             onClick={toggleLang}
-            className="flex items-center gap-2 px-4 py-2 border border-white/20 rounded-full text-xs uppercase tracking-widest hover:bg-white hover:text-black transition-all"
+            className="hidden sm:flex items-center gap-2 px-4 py-2 border border-white/20 rounded-full text-xs uppercase tracking-widest hover:bg-white hover:text-black transition-all"
           >
             <Globe size={14} />
             {lang === "en" ? "中文简体" : "English"}
           </button>
+          <button
+            onClick={() => setMobileMenuOpen(true)}
+            className="md:hidden flex items-center justify-center p-2 border border-white/25 rounded-full hover:bg-white hover:text-black transition-all"
+            aria-label="Toggle menu"
+          >
+            <Menu size={18} />
+          </button>
         </div>
       </nav>
 
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 bg-slate-950/95 backdrop-blur-lg z-50 flex flex-col justify-between p-8 text-white md:hidden"
+          >
+            <div className="flex justify-between items-center">
+              <span className="text-lg font-bold tracking-widest uppercase text-accent">Jessie Liu</span>
+              <button 
+                onClick={() => setMobileMenuOpen(false)}
+                className="p-2 border border-white/10 rounded-full hover:bg-white/10 transition-colors"
+              >
+                <X size={24} />
+              </button>
+            </div>
+
+            <div className="flex flex-col gap-8 text-3xl font-light tracking-widest text-center my-auto">
+              <a 
+                href="#about" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="hover:text-accent transition-colors py-2 block"
+              >
+                {t.nav.about}
+              </a>
+              <a 
+                href="#portfolio" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="hover:text-accent transition-colors py-2 block"
+              >
+                {t.nav.portfolio}
+              </a>
+              <a 
+                href="#resume" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="hover:text-accent transition-colors py-2 block"
+              >
+                {t.nav.resume}
+              </a>
+              <a 
+                href="#contact" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="hover:text-accent transition-colors py-2 block"
+              >
+                {t.nav.contact}
+              </a>
+              
+              <button 
+                onClick={() => {
+                  toggleLang();
+                  setMobileMenuOpen(false);
+                }}
+                className="mx-auto flex items-center gap-2 px-6 py-3 border border-white/20 rounded-full text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-all mt-4"
+              >
+                <Globe size={16} />
+                {lang === "en" ? "中文简体" : "English"}
+              </button>
+            </div>
+
+            <div className="flex justify-center gap-8 py-4 border-t border-white/10">
+              <a href={contacts.linkedin} target="_blank" rel="noreferrer" className="text-white/60 hover:text-accent transition-colors">
+                <Linkedin size={24} />
+              </a>
+              <a href={`mailto:${contacts.gmail}`} className="text-white/60 hover:text-accent transition-colors">
+                <Mail size={24} />
+              </a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen lg:h-screen flex items-center justify-center overflow-hidden py-24 lg:py-0">
         <div className="absolute inset-0 bg-light-blue opacity-20" />
         
         <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center z-10">
@@ -428,7 +513,7 @@ export default function App() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h1 className="serif text-6xl md:text-8xl mb-4 leading-tight">
+            <h1 className="serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl mb-4 leading-tight">
               {lang === "zh" ? (
                 <>
                   {nameZh} <br /> {nameEn}
@@ -440,10 +525,10 @@ export default function App() {
               )}
             </h1>
             <div className="mb-8">
-              <p className="text-xl text-accent font-medium tracking-wide mb-2">
+              <p className="text-lg sm:text-xl text-accent font-medium tracking-wide mb-2">
                 {t.hero.subtitle}
               </p>
-              <p className="text-lg text-slate-500 font-light tracking-[0.2em] uppercase">
+              <p className="text-sm sm:text-base md:text-lg text-slate-500 font-light tracking-[0.2em] uppercase">
                 {t.hero.tagline}
               </p>
             </div>
@@ -478,7 +563,7 @@ export default function App() {
             transition={{ duration: 1, delay: 0.2 }}
             className="relative flex justify-center"
           >
-            <div className="relative w-72 h-96 md:w-96 md:h-[32rem]">
+            <div className="relative w-64 h-80 sm:w-72 sm:h-96 md:w-96 md:h-[32rem]">
               <div className="absolute inset-0 bg-light-blue rounded-3xl rotate-6 -z-10" />
               <img 
                 src={photoUrl} 
@@ -497,34 +582,34 @@ export default function App() {
           <div className="max-w-5xl mx-auto">
             <h2 className="serif text-4xl mb-16 text-center">{t.bio.title}</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-16">
-              <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100">
-                <GraduationCap className="text-accent mb-4" size={32} />
+              <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100">
+                <GraduationCap className="text-accent mb-4 shrink-0" size={32} />
                 <h3 className="text-xs uppercase tracking-widest text-slate-400 mb-2">{t.bio.edu}</h3>
-                <p className="font-medium text-sm md:text-base">{t.bio.university}</p>
+                <p className="font-medium text-xs sm:text-sm md:text-base">{t.bio.university}</p>
               </div>
-              <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100">
-                <BookOpen className="text-accent mb-4" size={32} />
+              <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100">
+                <BookOpen className="text-accent mb-4 shrink-0" size={32} />
                 <h3 className="text-xs uppercase tracking-widest text-slate-400 mb-2">{t.bio.major}</h3>
-                <p className="font-medium text-sm md:text-base">{t.bio.majorVal}</p>
+                <p className="font-medium text-xs sm:text-sm md:text-base">{t.bio.majorVal}</p>
               </div>
-              <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100">
-                <Film className="text-accent mb-4" size={32} />
+              <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100">
+                <Film className="text-accent mb-4 shrink-0" size={32} />
                 <h3 className="text-xs uppercase tracking-widest text-slate-400 mb-2">{t.bio.minor}</h3>
-                <p className="font-medium text-sm md:text-base">{t.bio.minorVal}</p>
+                <p className="font-medium text-xs sm:text-sm md:text-base">{t.bio.minorVal}</p>
               </div>
-              <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100">
-                <Trophy className="text-accent mb-4" size={32} />
+              <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100">
+                <Trophy className="text-accent mb-4 shrink-0" size={32} />
                 <h3 className="text-xs uppercase tracking-widest text-slate-400 mb-2">{t.bio.gpa}</h3>
-                <p className="font-medium text-sm md:text-base">4.0 / 4.0</p>
+                <p className="font-medium text-xs sm:text-sm md:text-base">4.0 / 4.0</p>
               </div>
             </div>
             <div className="text-center max-w-3xl mx-auto">
-              <p className="text-lg text-slate-600 font-light leading-relaxed mb-12">
+              <p className="text-base sm:text-lg text-slate-600 font-light leading-relaxed mb-12">
                 {t.bio.description}
               </p>
 
               {/* Strengths Section */}
-              <div className="inline-block bg-white px-8 py-10 rounded-[2rem] shadow-sm border border-slate-100 max-w-2xl w-full">
+              <div className="inline-block bg-white px-4 py-6 sm:px-8 sm:py-10 rounded-[1.5rem] sm:rounded-[2rem] shadow-sm border border-slate-100 max-w-2xl w-full">
                 <div className="flex flex-col items-center gap-6">
                   <div className="flex items-center gap-3">
                     <Trophy className="text-accent" size={24} />
@@ -559,26 +644,26 @@ export default function App() {
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-32 bg-white">
+      <section id="portfolio" className="py-24 sm:py-32 bg-white">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-24">
-            <h2 className="serif text-6xl mb-4">{t.portfolio.title}</h2>
+          <div className="text-center mb-16 sm:mb-24">
+            <h2 className="serif text-4xl sm:text-5xl md:text-6xl mb-4">{t.portfolio.title}</h2>
             <p className="text-slate-400 tracking-widest uppercase text-xs">{t.portfolio.subtitle}</p>
           </div>
 
-          <div className="space-y-32">
+          <div className="space-y-24 sm:space-y-32">
             {/* 1. Student Orgs */}
-            <div className="space-y-12">
+            <div className="space-y-8 sm:space-y-12">
               <div className="flex items-center gap-4">
                 <Users className="text-accent" size={32} />
-                <h3 className="serif text-4xl">{t.portfolio.sections.orgs}</h3>
+                <h3 className="serif text-2xl sm:text-3xl md:text-4xl">{t.portfolio.sections.orgs}</h3>
               </div>
               <div className="grid md:grid-cols-2 gap-8">
                 {/* CAB */}
-                <div className="bg-light-blue/10 p-10 rounded-3xl border border-light-blue/20">
-                  <h4 className="font-bold text-xl mb-2">{t.portfolio.items.cab.title}</h4>
+                <div className="bg-light-blue/10 p-6 sm:p-10 rounded-2xl sm:rounded-3xl border border-light-blue/20">
+                  <h4 className="font-bold text-lg sm:text-xl mb-2">{t.portfolio.items.cab.title}</h4>
                   <p className="text-accent font-medium mb-4">{t.portfolio.items.cab.event} • {t.portfolio.items.cab.date}</p>
-                  <p className="text-slate-600 mb-6 font-light leading-relaxed">{t.portfolio.items.cab.desc}</p>
+                  <p className="text-slate-600 mb-6 font-light leading-relaxed text-sm sm:text-base">{t.portfolio.items.cab.desc}</p>
                   {t.portfolio.items.cab.image && (
                     <div className="mb-6">
                       <img src={t.portfolio.items.cab.image} className="rounded-2xl w-full h-auto shadow-sm" alt="CAB Event" referrerPolicy="no-referrer" />
@@ -589,10 +674,10 @@ export default function App() {
                   </a>
                 </div>
                 {/* Council */}
-                <div className="bg-light-blue/10 p-10 rounded-3xl border border-light-blue/20">
-                  <h4 className="font-bold text-xl mb-2">{t.portfolio.items.council.title}</h4>
+                <div className="bg-light-blue/10 p-6 sm:p-10 rounded-2xl sm:rounded-3xl border border-light-blue/20">
+                  <h4 className="font-bold text-lg sm:text-xl mb-2">{t.portfolio.items.council.title}</h4>
                   <p className="text-accent font-medium mb-4">{t.portfolio.items.council.event} • {t.portfolio.items.council.date}</p>
-                  <p className="text-slate-600 mb-6 font-light leading-relaxed">{t.portfolio.items.council.desc}</p>
+                  <p className="text-slate-600 mb-6 font-light leading-relaxed text-sm sm:text-base">{t.portfolio.items.council.desc}</p>
                   <div className="flex flex-col gap-4 mb-6">
                     <img src="https://i.postimg.cc/hGKkmBCM/Chinatown-Adventure.jpg" className="rounded-xl w-full h-auto shadow-sm" alt="Chinatown" referrerPolicy="no-referrer" />
                     <div className="grid grid-cols-2 gap-4">
@@ -607,10 +692,10 @@ export default function App() {
                   )}
                 </div>
                 {/* Wall Street */}
-                <div className="bg-light-blue/10 p-10 rounded-3xl border border-light-blue/20 md:col-span-2">
-                  <h4 className="font-bold text-xl mb-2">{t.portfolio.items.wallstreet.title}</h4>
+                <div className="bg-light-blue/10 p-6 sm:p-10 rounded-2xl sm:rounded-3xl border border-light-blue/20 md:col-span-2">
+                  <h4 className="font-bold text-lg sm:text-xl mb-2">{t.portfolio.items.wallstreet.title}</h4>
                   <p className="text-accent font-medium mb-4">{t.portfolio.items.wallstreet.event} • {t.portfolio.items.wallstreet.date}</p>
-                  <p className="text-slate-600 mb-6 font-light leading-relaxed">{t.portfolio.items.wallstreet.desc}</p>
+                  <p className="text-slate-600 mb-6 font-light leading-relaxed text-sm sm:text-base">{t.portfolio.items.wallstreet.desc}</p>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6 print:grid-cols-2 print:gap-8">
                     <div className="print:row-span-2">
                       <img src="https://i.postimg.cc/MTFcNQvS/Image-22-55-25.png" className="rounded-xl w-full h-full object-cover shadow-sm" alt="Wall Street Poster" referrerPolicy="no-referrer" />
@@ -628,17 +713,17 @@ export default function App() {
             </div>
 
             {/* 2. Competitions */}
-            <div className="space-y-12">
+            <div className="space-y-8 sm:space-y-12">
               <div className="flex items-center gap-4">
                 <Trophy className="text-accent" size={32} />
-                <h3 className="serif text-4xl">{t.portfolio.sections.competition}</h3>
+                <h3 className="serif text-2xl sm:text-3xl md:text-4xl">{t.portfolio.sections.competition}</h3>
               </div>
-              <div className="bg-slate-900 text-white p-12 rounded-[3rem] overflow-hidden relative">
+              <div className="bg-slate-900 text-white p-6 sm:p-12 rounded-2xl sm:rounded-[3rem] overflow-hidden relative">
                 <div className="relative z-10 max-w-2xl">
-                  <h4 className="font-bold text-2xl mb-2">{t.portfolio.items.mktsoc.title}</h4>
+                  <h4 className="font-bold text-xl sm:text-2xl mb-2">{t.portfolio.items.mktsoc.title}</h4>
                   <p className="text-accent font-medium mb-6">{t.portfolio.items.mktsoc.date}</p>
-                  <p className="text-slate-300 mb-8 font-light leading-relaxed text-lg">{t.portfolio.items.mktsoc.desc}</p>
-                  <a href="https://docs.google.com/presentation/d/1s8n70wuzMyRBH18s7rpkHrJS4h3ScMcI-MvG0smcTvE/edit?usp=sharing" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-white text-slate-900 px-8 py-4 rounded-full font-medium hover:bg-accent hover:text-white transition-all">
+                  <p className="text-slate-300 mb-8 font-light leading-relaxed text-base sm:text-lg">{t.portfolio.items.mktsoc.desc}</p>
+                  <a href="https://docs.google.com/presentation/d/1s8n70wuzMyRBH18s7rpkHrJS4h3ScMcI-MvG0smcTvE/edit?usp=sharing" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium hover:bg-accent hover:text-white transition-all text-sm sm:text-base">
                     {t.portfolio.items.mktsoc.linkText} <ExternalLink size={18} />
                   </a>
                 </div>
@@ -647,45 +732,46 @@ export default function App() {
             </div>
 
             {/* 3. Class Presentations */}
-            <div className="space-y-12">
+            {/* 3. Class Presentations */}
+            <div className="space-y-8 sm:space-y-12">
               <div className="flex items-center gap-4">
                 <Presentation className="text-accent" size={32} />
-                <h3 className="serif text-4xl">{t.portfolio.sections.presentation}</h3>
+                <h3 className="serif text-2xl sm:text-3xl md:text-4xl">{t.portfolio.sections.presentation}</h3>
               </div>
-              <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                 <div className="space-y-6">
-                  <h4 className="font-bold text-2xl">{t.portfolio.items.acm.title}</h4>
+                  <h4 className="font-bold text-xl sm:text-2xl">{t.portfolio.items.acm.title}</h4>
                   <p className="text-accent font-medium">{t.portfolio.items.acm.date}</p>
-                  <p className="text-slate-600 font-light leading-relaxed text-lg">{t.portfolio.items.acm.desc}</p>
+                  <p className="text-slate-600 font-light leading-relaxed text-base sm:text-lg">{t.portfolio.items.acm.desc}</p>
                   <a href="https://canva.link/ab674oln4c4xsqx" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-slate-900 font-medium hover:text-accent transition-colors">
                     {t.portfolio.items.acm.linkText} <ExternalLink size={16} />
                   </a>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
-                  <img src="https://i.postimg.cc/httw4rhN/Wechat-IMG3941.jpg" className="rounded-2xl shadow-lg" alt="Presentation" referrerPolicy="no-referrer" />
-                  <img src="https://i.postimg.cc/g2t7xZZJ/Wechat-IMG3943.jpg" className="rounded-2xl shadow-lg" alt="Presentation" referrerPolicy="no-referrer" />
+                  <img src="https://i.postimg.cc/httw4rhN/Wechat-IMG3941.jpg" className="rounded-2xl shadow-lg w-full h-auto" alt="Presentation" referrerPolicy="no-referrer" />
+                  <img src="https://i.postimg.cc/g2t7xZZJ/Wechat-IMG3943.jpg" className="rounded-2xl shadow-lg w-full h-auto" alt="Presentation" referrerPolicy="no-referrer" />
                 </div>
               </div>
             </div>
 
             {/* 4. TD Test Daily */}
-            <div className="space-y-12">
+            <div className="space-y-8 sm:space-y-12">
               <div className="flex items-center gap-4">
                 <img src={tdLogo} alt="TD Logo" className="w-10 h-10 object-contain rounded-lg" referrerPolicy="no-referrer" />
-                <h3 className="serif text-4xl">{t.portfolio.sections.td}</h3>
+                <h3 className="serif text-2xl sm:text-3xl md:text-4xl">{t.portfolio.sections.td}</h3>
               </div>
-              <div className="bg-light-blue/5 p-12 rounded-[3rem] border border-light-blue/20 grid md:grid-cols-2 gap-12 items-center">
+              <div className="bg-light-blue/5 p-6 sm:p-12 rounded-2xl sm:rounded-[3rem] border border-light-blue/20 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                 <div className="order-2 md:order-1 grid grid-cols-2 gap-4">
-                  <img src="https://i.postimg.cc/RCw2ghjL/Wechat-IMG3953.jpg" className="rounded-2xl shadow-md" alt="TD Work" referrerPolicy="no-referrer" />
-                  <img src="https://i.postimg.cc/nhh5VkMX/Wechat-IMG3952.jpg" className="rounded-2xl shadow-md" alt="TD Work" referrerPolicy="no-referrer" />
+                  <img src="https://i.postimg.cc/RCw2ghjL/Wechat-IMG3953.jpg" className="rounded-2xl shadow-md w-full h-auto" alt="TD Work" referrerPolicy="no-referrer" />
+                  <img src="https://i.postimg.cc/nhh5VkMX/Wechat-IMG3952.jpg" className="rounded-2xl shadow-md w-full h-auto" alt="TD Work" referrerPolicy="no-referrer" />
                 </div>
                 <div className="order-1 md:order-2 space-y-6">
                   <div className="flex items-center gap-3">
                     <img src={tdLogo} alt="TD Logo" className="w-8 h-8 object-contain rounded-md" referrerPolicy="no-referrer" />
-                    <h4 className="font-bold text-2xl">{t.portfolio.items.td.title}</h4>
+                    <h4 className="font-bold text-xl sm:text-2xl">{t.portfolio.items.td.title}</h4>
                   </div>
                   <p className="text-accent font-medium">{t.portfolio.items.td.date}</p>
-                  <p className="text-slate-600 font-light leading-relaxed text-lg">{t.portfolio.items.td.desc}</p>
+                  <p className="text-slate-600 font-light leading-relaxed text-base sm:text-lg">{t.portfolio.items.td.desc}</p>
                   <div className="flex flex-wrap gap-4">
                     <a href={t.portfolio.items.td.link1} target="_blank" rel="noreferrer" className="text-sm bg-white border border-slate-200 px-4 py-2 rounded-full hover:border-accent transition-colors">{t.portfolio.items.td.linkText1}</a>
                     <a href={t.portfolio.items.td.link2} target="_blank" rel="noreferrer" className="text-sm bg-white border border-slate-200 px-4 py-2 rounded-full hover:border-accent transition-colors">{t.portfolio.items.td.linkText2}</a>
@@ -695,18 +781,18 @@ export default function App() {
             </div>
 
             {/* 5. Personal Official Account */}
-            <div className="space-y-12 print:break-inside-avoid">
+            <div className="space-y-8 sm:space-y-12 print:break-inside-avoid">
               <div className="flex items-center gap-4">
                 <MessageSquare className="text-accent" size={32} />
-                <h3 className="serif text-4xl">{t.portfolio.sections.personal}</h3>
+                <h3 className="serif text-2xl sm:text-3xl md:text-4xl">{t.portfolio.sections.personal}</h3>
               </div>
-              <div className="bg-slate-50 p-12 rounded-[3rem] border border-slate-200 grid md:grid-cols-2 gap-12 items-center">
+              <div className="bg-slate-50 p-6 sm:p-12 rounded-2xl sm:rounded-[3rem] border border-slate-200 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                 <div className="space-y-6">
-                  <h4 className="font-bold text-2xl">
+                  <h4 className="font-bold text-xl sm:text-2xl">
                     {t.portfolio.items.personal.title}
-                    <span className="block text-lg font-normal text-slate-400 mt-1">{t.portfolio.items.personal.type}</span>
+                    <span className="block text-base sm:text-lg font-normal text-slate-400 mt-1">{t.portfolio.items.personal.type}</span>
                   </h4>
-                  <p className="text-slate-600 font-light leading-relaxed text-lg">{t.portfolio.items.personal.desc}</p>
+                  <p className="text-slate-600 font-light leading-relaxed text-base sm:text-lg">{t.portfolio.items.personal.desc}</p>
                   <div className="flex flex-wrap gap-4">
                     <a href={t.portfolio.items.personal.link1} target="_blank" rel="noreferrer" className="text-sm bg-white border border-slate-200 px-4 py-2 rounded-full hover:border-accent transition-colors">{t.portfolio.items.personal.linkText1}</a>
                     <a href={t.portfolio.items.personal.link2} target="_blank" rel="noreferrer" className="text-sm bg-white border border-slate-200 px-4 py-2 rounded-full hover:border-accent transition-colors">{t.portfolio.items.personal.linkText2}</a>
@@ -727,10 +813,10 @@ export default function App() {
             </div>
 
             {/* 6. Video Editing */}
-            <div className="space-y-12 print:break-inside-avoid">
+            <div className="space-y-8 sm:space-y-12 print:break-inside-avoid">
               <div className="flex items-center gap-4">
                 <Video className="text-accent" size={32} />
-                <h3 className="serif text-4xl">{t.portfolio.sections.video}</h3>
+                <h3 className="serif text-2xl sm:text-3xl md:text-4xl">{t.portfolio.sections.video}</h3>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {[
@@ -749,7 +835,7 @@ export default function App() {
                     <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                       <Play size={20} className="text-accent fill-accent" />
                     </div>
-                    <span className="mt-4 text-xs font-medium text-slate-400 group-hover:text-slate-900 uppercase tracking-widest">Video {i+1}</span>
+                    <span className="mt-4 text-[10px] sm:text-xs font-medium text-slate-400 group-hover:text-slate-900 uppercase tracking-widest">Video {i+1}</span>
                   </a>
                 ))}
               </div>
@@ -759,12 +845,12 @@ export default function App() {
       </section>
 
       {/* Resume Section */}
-      <section id="resume" className="py-32 bg-slate-50">
+      <section id="resume" className="py-24 sm:py-32 bg-slate-50">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 sm:mb-16 gap-4">
               <div>
-                <h2 className="serif text-6xl mb-4">{t.resume.title}</h2>
+                <h2 className="serif text-4xl sm:text-5xl md:text-6xl mb-4">{t.resume.title}</h2>
                 <p className="text-slate-400 tracking-widest uppercase text-xs">Professional Background</p>
               </div>
               <div className="flex flex-wrap items-center gap-4 no-print">
@@ -856,10 +942,10 @@ export default function App() {
                 </h3>
                 <div className="grid md:grid-cols-2 gap-8">
                   {t.resume.leadership.map((item: any, i: number) => (
-                    <div key={i} className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
-                      <div className="flex justify-between items-start mb-4">
+                    <div key={i} className="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-100 shadow-sm">
+                      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2">
                         <h4 className="font-bold text-lg leading-tight">{item.org}</h4>
-                        <span className="text-[10px] font-mono text-slate-400 whitespace-nowrap ml-2">{item.date}</span>
+                        <span className="text-[10px] font-mono text-slate-400 whitespace-nowrap">{item.date}</span>
                       </div>
                       <p className="text-accent text-sm font-medium mb-4">{item.role}</p>
                       <ul className="space-y-2">
@@ -876,13 +962,13 @@ export default function App() {
               </div>
 
               {/* Skills */}
-              <div className="bg-slate-900 text-white p-12 rounded-[3rem]">
+              <div className="bg-slate-900 text-white p-6 sm:p-12 rounded-2xl sm:rounded-[3rem]">
                 <h3 className="text-xs uppercase tracking-[0.2em] text-accent font-bold mb-8 border-b border-white/10 pb-2">
                   {t.resume.sections.skills}
                 </h3>
                 <div className="space-y-6">
-                  <p className="text-slate-300 leading-relaxed">{t.resume.skills.lang}</p>
-                  <p className="text-slate-300 leading-relaxed">{t.resume.skills.interests}</p>
+                  <p className="text-slate-300 leading-relaxed text-sm sm:text-base">{t.resume.skills.lang}</p>
+                  <p className="text-slate-300 leading-relaxed text-sm sm:text-base">{t.resume.skills.interests}</p>
                 </div>
               </div>
             </div>
@@ -891,9 +977,9 @@ export default function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-32 bg-slate-900 text-white">
+      <section id="contact" className="py-24 sm:py-32 bg-slate-900 text-white">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="serif text-5xl mb-16">{t.contact.title}</h2>
+          <h2 className="serif text-3xl sm:text-4xl md:text-5xl mb-12 sm:mb-16">{t.contact.title}</h2>
           <div className="grid md:grid-cols-3 gap-12 max-w-4xl mx-auto">
             <motion.a 
               whileHover={{ y: -5 }}
@@ -904,7 +990,7 @@ export default function App() {
                 <Mail size={24} className="text-accent" />
               </div>
               <span className="text-xs uppercase tracking-widest opacity-50">{t.contact.gmail}</span>
-              <span className="text-lg font-light">{contacts.gmail}</span>
+              <span className="text-base sm:text-lg font-light break-all px-2">{contacts.gmail}</span>
             </motion.a>
 
             <motion.a 
@@ -916,7 +1002,7 @@ export default function App() {
                 <MessageSquare size={24} className="text-accent" />
               </div>
               <span className="text-xs uppercase tracking-widest opacity-50">{t.contact.qq}</span>
-              <span className="text-lg font-light">{contacts.qq}</span>
+              <span className="text-base sm:text-lg font-light break-all px-2">{contacts.qq}</span>
             </motion.a>
 
             <motion.a 
@@ -930,7 +1016,7 @@ export default function App() {
                 <Linkedin size={24} className="text-accent" />
               </div>
               <span className="text-xs uppercase tracking-widest opacity-50">{t.contact.linkedin}</span>
-              <span className="text-lg font-light">Jessie Liu</span>
+              <span className="text-base sm:text-lg font-light break-all px-2">Jessie Liu</span>
             </motion.a>
           </div>
         </div>
