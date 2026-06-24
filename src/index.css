@@ -435,7 +435,7 @@ body {
     color: #0369a1 !important; /* Darker blue for better print contrast */
   }
 
-  .rounded-[3rem], .rounded-3xl {
+  .rounded-\[3rem\], .rounded-3xl {
     border-radius: 0.5rem !important;
   }
 
