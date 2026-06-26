@@ -5,7 +5,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Mail, Linkedin, ExternalLink, GraduationCap, BookOpen, Film, MessageSquare, Globe, Users, Newspaper, Video, ChevronRight, Trophy, Play, FileText, Printer, Menu, X, Sparkles } from "lucide-react";
+import { Mail, Linkedin, ExternalLink, GraduationCap, BookOpen, Film, MessageSquare, Globe, Users, Newspaper, Video, ChevronRight, Trophy, Play, FileText, Printer, Menu, X, Sparkles, Heart, Bookmark, MoreHorizontal, Send } from "lucide-react";
 
 type Language = "en" | "zh";
 
@@ -63,7 +63,10 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
           desc: "Planned and hosted the first 25 Fall CAB event 'Friendship Island', a high-energy speed-friending mixer designed specifically to help first-year students build meaningful campus connections. We curated a multi-activity program, featuring a tropical island theme, interactive bingo and an E-Board Mingle. I designed the event's visual slide deck. Successfully generated 60 RSVPs and over 30 attendees.",
           linkText: "View Event Slides",
           link: "https://canva.link/8z7g03m76o0wge2",
-          image: "https://i.postimg.cc/9XwnBCGF/Wechat-IMG4108.jpg"
+          image: "https://i.postimg.cc/Jn26XvWq/Wechat-IMG4181.jpg",
+          images: [
+            "https://i.postimg.cc/Jn26XvWq/Wechat-IMG4181.jpg"
+          ]
         },
         council: {
           title: "NYU 67A SSAIL Hall Council",
@@ -193,6 +196,15 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
             "Partner with Resident Assistants (RAs) to design multi-channel promotional campaigns, boosting event turnout by 40%",
             "Events: UVL Prelim, Dormsgiving, Chinatown Adventure, A Cup of Wall Street, Mimi's Frozen Yogurt Social"
           ]
+        },
+        {
+          org: "NYU Live",
+          role: "Headline Editor",
+          date: "Sept 2024 – May 2026",
+          details: [
+            "Report NYU and NYC news while managing \"NYU Survival Kit\" blog, tailoring content to the Gen-Z student demographic；publish 12+ articles and organize a 30+ person orientation mixer, fostering community among NYU Chinese students",
+            "Build and manage a 187-member WeChat community for NYU's Class of 2030, serving as a key resource for incoming students"
+          ]
         }
       ],
       skills: {
@@ -216,7 +228,7 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
 
 我也致力成为一个终生学习者，具备快速学习的能力。对我来说，好奇心不是加分项，而是工作方式。我习惯刨根问底，喜欢在技术趋势里找商业逻辑，也愿意在失败里反复打磨。大学4.0 GPA背后没有什么秘诀，只是想把知识点搞清楚。
 
-工作之外，我在山上和路上找平衡。长跑让我清空大脑，自由式滑雪让我重新学会接受失控。最近的目标：180转体 + mute抓板。还没落稳，但在练。`,
+工作之外，我在山上和路上找平衡。长跑让我清空大脑，自由式滑雪让我重新学会接受失控。最近的目标是180转体 + mute抓板。还没落稳，但在练。`,
       edu: "教育背景",
       major: "专业",
       minor: "辅修",
@@ -250,7 +262,10 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
           desc: "策划并主持了25年秋季CAB首场活动“友谊岛”，这是一个旨在帮助一年级学生建立校园联系的高能量社交聚会。策划了包括热带岛屿主题、“bingo”游戏 和E-Board交流在内的多元活动。我同时设计了活动演示文稿。最终成功吸引了60人报名，30多人到场。",
           linkText: "查看活动幻灯片",
           link: "https://canva.link/8z7g03m76o0wge2",
-          image: "https://i.postimg.cc/9XwnBCGF/Wechat-IMG4108.jpg"
+          image: "https://i.postimg.cc/Jn26XvWq/Wechat-IMG4181.jpg",
+          images: [
+            "https://i.postimg.cc/Jn26XvWq/Wechat-IMG4181.jpg"
+          ]
         },
         council: {
           title: "NYU 67A SSAIL Hall Council",
@@ -380,6 +395,15 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
             "宣传推广：与宿舍助理 (RA) 开展多渠道宣传，服务 100+ 学生并将参与率提升 40%",
             "举办活动：UVL Prelim, Dormsgiving, Chinatown Adventure, A Cup of Wall Street, Mimi's Frozen Yogurt Social"
           ]
+        },
+        {
+          org: "NYU Live",
+          role: "头条文章编辑",
+          date: "2024.9 - 2026.5",
+          details: [
+            "流量转化：负责生活方式专栏“情报特刊”，深度洞察Z世代受众画像并定制专属内容，定向产出探店、选课、求职等垂类内容，累计发布 12 篇深度公众号文章，持续扩大NYU学生社群影响力",
+            "社群运营：创建并精细化运营187人NYU 2030届新生微信社群，策划30+人线下见面会，搭建新生信息交流平台"
+          ]
         }
       ],
       skills: {
@@ -393,6 +417,10 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
 export default function App() {
   const [lang, setLang] = useState<Language>("en");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [lightboxImg, setLightboxImg] = useState<string | null>(null);
+  const [activeCabImg, setActiveCabImg] = useState(0);
+  const [cabLiked, setCabLiked] = useState(false);
+  const [cabBookmarked, setCabBookmarked] = useState(false);
   const t = translations[lang];
 
   const nameZh = "刘嘉欣";
@@ -709,11 +737,21 @@ export default function App() {
                   <h4 className="font-bold text-lg sm:text-xl mb-2">{t.portfolio.items.cab.title}</h4>
                   <p className="text-accent font-medium mb-4">{t.portfolio.items.cab.event} • {t.portfolio.items.cab.date}</p>
                   <p className="text-slate-600 mb-6 font-light leading-relaxed text-sm sm:text-base">{t.portfolio.items.cab.desc}</p>
-                  {t.portfolio.items.cab.image && (
+                  {t.portfolio.items.cab.images ? (
+                    <div className="mb-6">
+                      <img 
+                        src={t.portfolio.items.cab.images[0]} 
+                        onClick={() => setLightboxImg(t.portfolio.items.cab.images[0])}
+                        className="rounded-xl w-full h-auto shadow-sm cursor-zoom-in hover:scale-[1.01] transition-all duration-300" 
+                        alt={lang === "en" ? "CAB Event Portfolio" : "CAB 活动作品"} 
+                        referrerPolicy="no-referrer" 
+                      />
+                    </div>
+                  ) : t.portfolio.items.cab.image ? (
                     <div className="mb-6">
                       <img src={t.portfolio.items.cab.image} className="rounded-2xl w-full h-auto shadow-sm" alt="CAB Event" referrerPolicy="no-referrer" />
                     </div>
-                  )}
+                  ) : null}
                   <a href={t.portfolio.items.cab.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-slate-900 font-medium hover:text-accent transition-colors">
                     {t.portfolio.items.cab.linkText} <ExternalLink size={16} />
                   </a>
@@ -902,7 +940,7 @@ export default function App() {
             <div className="space-y-16">
               {/* Education */}
               <div>
-                <h3 className="text-xs uppercase tracking-[0.2em] text-accent font-bold mb-8 border-b border-slate-200 pb-2">
+                <h3 className="text-sm sm:text-base uppercase tracking-[0.2em] text-accent font-bold mb-8 border-b border-slate-200 pb-2">
                   {t.resume.sections.education}
                 </h3>
                 <div className="space-y-8">
@@ -935,7 +973,7 @@ export default function App() {
 
               {/* Experience */}
               <div>
-                <h3 className="text-xs uppercase tracking-[0.2em] text-accent font-bold mb-8 border-b border-slate-200 pb-2">
+                <h3 className="text-sm sm:text-base uppercase tracking-[0.2em] text-accent font-bold mb-8 border-b border-slate-200 pb-2">
                   {t.resume.sections.experience}
                 </h3>
                 <div className="space-y-12">
@@ -963,20 +1001,22 @@ export default function App() {
 
               {/* Leadership */}
               <div>
-                <h3 className="text-xs uppercase tracking-[0.2em] text-accent font-bold mb-8 border-b border-slate-200 pb-2">
+                <h3 className="text-sm sm:text-base uppercase tracking-[0.2em] text-accent font-bold mb-8 border-b border-slate-200 pb-2">
                   {t.resume.sections.leadership}
                 </h3>
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="flex flex-col gap-6">
                   {t.resume.leadership.map((item: any, i: number) => (
-                    <div key={i} className="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-100 shadow-sm">
+                    <div key={i} className="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300">
                       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2">
-                        <h4 className="font-bold text-lg leading-tight">{item.org}</h4>
-                        <span className="text-[10px] font-mono text-slate-400 whitespace-nowrap">{item.date}</span>
+                        <div>
+                          <h4 className="font-bold text-lg leading-tight text-slate-800">{item.org}</h4>
+                          <p className="text-accent text-sm font-medium mt-1">{item.role}</p>
+                        </div>
+                        <span className="text-[11px] font-mono text-slate-400 bg-slate-50 px-2.5 py-1 rounded-full whitespace-nowrap">{item.date}</span>
                       </div>
-                      <p className="text-accent text-sm font-medium mb-4">{item.role}</p>
-                      <ul className="space-y-2">
+                      <ul className="space-y-2 mt-4 border-t border-slate-50 pt-4">
                         {item.details.map((detail: string, j: number) => (
-                          <li key={j} className="text-slate-500 flex items-start gap-2 text-xs leading-relaxed">
+                          <li key={j} className="text-slate-500 flex items-start gap-2 text-xs sm:text-sm leading-relaxed">
                             <span className="text-accent shrink-0 font-bold select-none">·</span>
                             <span className="flex-1">{detail}</span>
                           </li>
@@ -989,7 +1029,7 @@ export default function App() {
 
               {/* Skills */}
               <div className="bg-slate-900 text-white p-6 sm:p-12 rounded-2xl sm:rounded-[3rem]">
-                <h3 className="text-xs uppercase tracking-[0.2em] text-accent font-bold mb-8 border-b border-white/10 pb-2">
+                <h3 className="text-sm sm:text-base uppercase tracking-[0.2em] text-accent font-bold mb-8 border-b border-white/10 pb-2">
                   {t.resume.sections.skills}
                 </h3>
                 <div className="space-y-6">
@@ -1051,6 +1091,32 @@ export default function App() {
       <footer className="py-12 bg-slate-900 text-white/30 text-center border-t border-white/5">
         <p className="text-sm tracking-widest uppercase">&copy; {new Date().getFullYear()} {name}. All Rights Reserved.</p>
       </footer>
+
+      {/* Fullscreen Lightbox Modal */}
+      {lightboxImg && (
+        <div 
+          className="fixed inset-0 bg-slate-950/90 z-50 flex flex-col items-center justify-center p-4 backdrop-blur-md cursor-zoom-out"
+          onClick={() => setLightboxImg(null)}
+        >
+          <div className="relative max-w-5xl max-h-[85vh] flex flex-col items-center">
+            <button 
+              className="absolute -top-12 right-0 text-white/60 hover:text-white bg-white/10 hover:bg-white/20 p-2 rounded-full transition-all duration-200"
+              onClick={() => setLightboxImg(null)}
+            >
+              <X size={20} />
+            </button>
+            <img 
+              src={lightboxImg} 
+              className="rounded-xl max-w-full max-h-[75vh] object-contain shadow-2xl border border-white/10" 
+              alt="Enlarged view" 
+              referrerPolicy="no-referrer" 
+            />
+            <p className="text-white/50 text-xs sm:text-sm mt-4 tracking-wider text-center font-light">
+              {lang === "en" ? "Click anywhere to close" : "点击任意区域关闭"}
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
