@@ -42,7 +42,7 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
       reportLink: "View Gallup Strength Report",
       reportUrl: "/gallup_report.pdf",
       skillsTitle: "Skills",
-      skills: ["AIGC (Gemini, Claude)", "Canva", "Microsoft Office", "CapCut"],
+      skills: ["AIGC (Gemini, Claude)", "Canva", "Figma", "Microsoft Office", "CapCut"],
       skillsSubtitle: "Tools & Technologies"
     },
     portfolio: {
@@ -241,7 +241,7 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
       reportLink: "查看盖洛普优势报告",
       reportUrl: "/gallup_report.pdf",
       skillsTitle: "专业技能",
-      skills: ["AIGC (Gemini, Claude)", "Canva", "Microsoft Office", "剪映"],
+      skills: ["AIGC (Gemini, Claude)", "Canva", "Figma", "Microsoft Office", "剪映"],
       skillsSubtitle: "工具与技术"
     },
     portfolio: {
