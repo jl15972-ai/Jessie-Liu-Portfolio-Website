@@ -5,7 +5,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Mail, Linkedin, ExternalLink, GraduationCap, BookOpen, Film, MessageSquare, Globe, Users, Newspaper, Video, ChevronRight, Trophy, Presentation, Play, FileText, Printer, Menu, X } from "lucide-react";
+import { Mail, Linkedin, ExternalLink, GraduationCap, BookOpen, Film, MessageSquare, Globe, Users, Newspaper, Video, ChevronRight, Trophy, Play, FileText, Printer, Menu, X } from "lucide-react";
 
 type Language = "en" | "zh";
 
@@ -38,7 +38,6 @@ const translations = {
       sections: {
         orgs: "Student Organizations",
         competition: "Competitions",
-        presentation: "Class Presentations",
         td: "TD Test Daily",
         personal: "Jessie's Little World (Personal Account)",
         video: "Video Editing"
@@ -70,16 +69,10 @@ const translations = {
           link: "https://canva.link/jhhqah91wo2zmx8"
         },
         mktsoc: {
-          title: "NYU MKTSOC 25 Fall Case Competition (Round 2)",
+          title: "NYU MKTSOC 25 Fall Case Competition — TOP 6",
           date: "November, 2025",
           desc: "Developed a strategic marketing turnaround for Solara, a wellness app facing a 7.3% market slump. Designed the 'Celebrity Wake-Up' campaign, leveraging AI-integrated personas like Ryan Reynolds to solve the 'willpower gap'. Strategy included a tiered pricing model positioning Solara as a cost-effective alternative.",
-          linkText: "View MKTSOC Slides"
-        },
-        acm: {
-          title: "Class Presentation: Arts and Culture across Modernity",
-          date: "December, 2025",
-          desc: "Crafted a presentation diving into the intersection of literature, gender roles, and consumer psychology. Explored whether consumerism for women is strictly tied to hedonism or serves a more complex emotional purpose through a close reading of Kate Chopin's work.",
-          linkText: "View Presentation Slides"
+          linkText: "View Competition Slides (PDF)"
         },
         td: {
           title: "TD Test Daily",
@@ -202,7 +195,13 @@ const translations = {
     },
     bio: {
       title: "关于我",
-      description: "我对世界充满好奇，热衷于洞察消费者心理学和技术趋势。我不畏挑战，具备快速学习的能力并勇于采取行动。我的目标是通过创意性的问题解决和战略思考，为客户创造卓越价值。我是一个敢于冒险、善于社交且具备极强时间管理能力的人。目前，我正在寻找实习机会，希望能在实践中应用我的技能、发挥主动性并不断成长。",
+      description: `不管是帮客户梳理品牌故事、为20万粉丝的账号策划内容，还是在纽约大学组织百人活动，我做的事情形式各异，但核心始终是同一件事：找到那根线，把散落的信息串成一个真正能打动人的故事。
+
+这条路我走得很杂。社媒运营、活动策划、销售、德勤的税务咨询……每一段经历都逼着我从不同角度理解人，理解客户想要什么，读者需要什么，以及怎么把"专业"变成"有用"。
+
+我也致力成为一个终生学习者。对我来说，好奇心不是加分项，而是工作方式。我习惯刨根问底，喜欢在技术趋势里找商业逻辑，也愿意在失败里反复打磨。大学4.0 GPA背后没有什么秘诀，只是想把知识点搞清楚。
+
+工作之外，我在山上和路上找平衡。长跑让我清空大脑，自由式滑雪让我重新学会接受失控。最近的目标：180转体 + mute抓板。还没落稳，但在练。`,
       edu: "教育背景",
       major: "专业",
       minor: "辅修",
@@ -221,7 +220,6 @@ const translations = {
       sections: {
         orgs: "学生社团",
         competition: "竞赛经历",
-        presentation: "课上演讲",
         td: "TD 厚朴优学",
         personal: "杰西的小世界（个人公众号）",
         video: "视频剪辑"
@@ -253,16 +251,10 @@ const translations = {
           link: "https://canva.link/jhhqah91wo2zmx8"
         },
         mktsoc: {
-          title: "NYU MKTSOC 25 秋季案例竞赛 (第二轮)",
+          title: "NYU MKTSOC 25 秋季案例竞赛 — TOP 6",
           date: "2025年11月",
           desc: "为面临7.3%市场下滑的健康应用Solara开发了战略营销转型方案。设计了“名人叫醒”活动，利用Ryan Reynolds等AI集成角色解决用户的“意志力差距”。策略包括阶梯定价模型，将Solara定位为高性价比替代方案。",
-          linkText: "查看竞赛幻灯片"
-        },
-        acm: {
-          title: "课上演讲：现代艺术与文化",
-          date: "2025年12月",
-          desc: "制作了一场深入探讨文学、性别角色和消费者心理学交集的演讲。通过对凯特·肖邦作品的细读，探讨女性消费主义是仅与享乐主义挂钩，还是服务于更复杂的情感目的。",
-          linkText: "查看演讲幻灯片"
+          linkText: "查看竞赛幻灯片 (PDF)"
         },
         td: {
           title: "TD 厚朴优学",
@@ -340,7 +332,7 @@ const translations = {
         },
         {
           company: "Test Daily厚朴优学",
-          role: "社交媒体协调员 (Social Media Coordinator)",
+          role: "社媒运营",
           date: "2023.12 - 2024.7",
           details: [
             "内容策划：通过分析受众画像和互动指标，为拥有20万+粉丝的微信平台制定内容策略，持续保持每篇10,000+的阅读量，超出平台平均互动率100%",
@@ -604,7 +596,7 @@ export default function App() {
               </div>
             </div>
             <div className="text-center max-w-3xl mx-auto">
-              <p className="text-base sm:text-lg text-slate-600 font-light leading-relaxed mb-12">
+              <p className="whitespace-pre-line text-left md:text-justify text-base sm:text-lg text-slate-600 font-light leading-relaxed mb-12">
                 {t.bio.description}
               </p>
 
@@ -723,7 +715,7 @@ export default function App() {
                   <h4 className="font-bold text-xl sm:text-2xl mb-2">{t.portfolio.items.mktsoc.title}</h4>
                   <p className="text-accent font-medium mb-6">{t.portfolio.items.mktsoc.date}</p>
                   <p className="text-slate-300 mb-8 font-light leading-relaxed text-base sm:text-lg">{t.portfolio.items.mktsoc.desc}</p>
-                  <a href="https://docs.google.com/presentation/d/1s8n70wuzMyRBH18s7rpkHrJS4h3ScMcI-MvG0smcTvE/edit?usp=sharing" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium hover:bg-accent hover:text-white transition-all text-sm sm:text-base">
+                  <a href="/competition_experience.pdf" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium hover:bg-accent hover:text-white transition-all text-sm sm:text-base">
                     {t.portfolio.items.mktsoc.linkText} <ExternalLink size={18} />
                   </a>
                 </div>
@@ -731,28 +723,7 @@ export default function App() {
               </div>
             </div>
 
-            {/* 3. Class Presentations */}
-            {/* 3. Class Presentations */}
-            <div className="space-y-8 sm:space-y-12">
-              <div className="flex items-center gap-4">
-                <Presentation className="text-accent" size={32} />
-                <h3 className="serif text-2xl sm:text-3xl md:text-4xl">{t.portfolio.sections.presentation}</h3>
-              </div>
-              <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-                <div className="space-y-6">
-                  <h4 className="font-bold text-xl sm:text-2xl">{t.portfolio.items.acm.title}</h4>
-                  <p className="text-accent font-medium">{t.portfolio.items.acm.date}</p>
-                  <p className="text-slate-600 font-light leading-relaxed text-base sm:text-lg">{t.portfolio.items.acm.desc}</p>
-                  <a href="https://canva.link/ab674oln4c4xsqx" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-slate-900 font-medium hover:text-accent transition-colors">
-                    {t.portfolio.items.acm.linkText} <ExternalLink size={16} />
-                  </a>
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <img src="https://i.postimg.cc/httw4rhN/Wechat-IMG3941.jpg" className="rounded-2xl shadow-lg w-full h-auto" alt="Presentation" referrerPolicy="no-referrer" />
-                  <img src="https://i.postimg.cc/g2t7xZZJ/Wechat-IMG3943.jpg" className="rounded-2xl shadow-lg w-full h-auto" alt="Presentation" referrerPolicy="no-referrer" />
-                </div>
-              </div>
-            </div>
+
 
             {/* 4. TD Test Daily */}
             <div className="space-y-8 sm:space-y-12">
