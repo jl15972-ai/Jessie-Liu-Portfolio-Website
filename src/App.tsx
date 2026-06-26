@@ -93,7 +93,7 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
         td: {
           title: "TD Test Daily",
           date: "Dec 2023 - July 2024",
-          desc: "Responsible for content planning and production for a public account platform with 200,000+ followers, assisting in the execution of brand promotion plans. Proficient in using Excel and the public account backend for user data analysis, planning educational articles, and maintaining a stable reading volume of 5,000+ per article. Created over 25+ high-conversion, high-interaction viral articles, with interaction rates exceeding the platform average by 150%.",
+          desc: "Responsible for content planning and production for a public account platform with 200,000+ followers, assisting in the execution of brand promotion plans. Proficient in using Excel and the public account backend for user data analysis, planning educational articles, and maintaining a stable reading volume of 10,000+ per article. Created over 25+ high-conversion, high-interaction viral articles, with interaction rates exceeding the platform average by 100%.",
           linkText1: "Article: 'Waking up to my college closing...' (69.9K Views) - Simplified Chinese Version",
           linkText2: "Article: 'Middle-class study abroad experience' (16.2K Views) - Simplified Chinese Version",
           link1: "https://mp.weixin.qq.com/s/wZQpXuCB14Ob5mU1B5tLkg",
@@ -292,7 +292,7 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
         td: {
           title: "TD 厚朴优学",
           date: "2023年12月 - 2024年7月",
-          desc: "负责为拥有20万+粉丝的公众号平台做内容策划与产出，协助执行品牌推广计划。熟练运用Excel表格和公众号后台做用户数据分析，策划教育类推文，保持每篇5000+的稳定阅读量。一共打造超过25+篇高转化、高互动的爆款内容，使推文互动率超出平台平均水平150%。",
+          desc: "负责为拥有20万+粉丝的公众号平台做内容策划与产出，协助执行品牌推广计划。熟练运用Excel表格和公众号后台做用户数据分析，策划教育类推文，保持每篇10000+阅读量。一共打造超过25+篇高转化、高互动的爆款内容，使推文互动率超出平台平均水平100%。",
           linkText1: "《一觉醒来，我的大学倒闭了...》（6.99万浏览量）- 简体中文版",
           linkText2: "《“中产留学是爸妈送给我的富二代体验券”》（1.62万浏览量）- 简体中文版",
           link1: "https://mp.weixin.qq.com/s/wZQpXuCB14Ob5mU1B5tLkg",
