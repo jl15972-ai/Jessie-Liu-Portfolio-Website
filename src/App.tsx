@@ -415,7 +415,7 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
 };
 
 export default function App() {
-  const [lang, setLang] = useState<Language>("en");
+  const [lang, setLang] = useState<Language>("zh");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [lightboxImg, setLightboxImg] = useState<string | null>(null);
   const [activeCabImg, setActiveCabImg] = useState(0);
