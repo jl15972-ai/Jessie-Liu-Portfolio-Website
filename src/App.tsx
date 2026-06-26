@@ -5,7 +5,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Mail, Linkedin, ExternalLink, GraduationCap, BookOpen, Film, MessageSquare, Globe, Users, Newspaper, Video, ChevronRight, Trophy, Play, FileText, Printer, Menu, X } from "lucide-react";
+import { Mail, Linkedin, ExternalLink, GraduationCap, BookOpen, Film, MessageSquare, Globe, Users, Newspaper, Video, ChevronRight, Trophy, Play, FileText, Printer, Menu, X, Sparkles } from "lucide-react";
 
 type Language = "en" | "zh";
 
@@ -19,7 +19,17 @@ const translations = {
     },
     bio: {
       title: "About Me",
-      description: "I am a curious explorer of the world with a deep passion for consumer psychology and emerging technology trends. I thrive on challenges and pride myself on being a fast learner who takes initiative. My ultimate goal is to deliver superior value to clients through creative problem-solving and strategic thinking. Known for being a risk-taker and a people person with strong time management skills, I am currently seeking internship opportunities where I can apply my skills, take initiative, and grow.",
+      description: `"Blockbuster"
+
+I make complex things worth reading.
+
+Whether it's crafting content for a 200K+ social media account, organizing events for hundreds of students at NYU, or helping clients navigate tax strategy at Deloitte, the throughline has always been the same: find the story, and tell it in a way that actually lands.
+
+My path has been deliberately varied. Each role pushed me to understand people from a different angle, including what clients need, what readers want, and how to turn expertise into something genuinely useful.
+
+I’m also a life-long learner. I dig into problems until the logic clicks. I look for business signals inside tech trends. That restless curiosity is what kept my GPA at 4.0. It’s not discipline for its own sake, but the genuine need to actually get it.
+
+Outside of work, I find my balance on trails and slopes. Long-distance running clears my head. Freestyle skiing reminds me how to become a risk-taker and get comfortable with losing control. Current goal: land a 180 mute grab. Not there yet, but getting closer:)`,
       edu: "Education",
       major: "Major",
       minor: "Minor",
@@ -30,7 +40,10 @@ const translations = {
       strengthTitle: "Strength",
       strengths: ["Achiever", "Context", "Focus", "Strategic", "Learner"],
       reportLink: "View Gallup Strength Report",
-      reportUrl: "https://content.reportdeliverables.gallup.com/export-engine/users/clients/8399/users/103965283/sf/sf_top_5/pdf/20276308/joiner/output/Liu-Jessie-SF_TOP_5.pdf?AQICAHh2a781HPlWXdmVDajpky+GSV+HMD38chCz/EBxRrX68QGEkOHSb1G8XndvDja8i0quAAABADCB/QYJKoZIhvcNAQcGoIHvMIHsAgEAMIHmBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDFdsYauOWdvDhAUQEQIBEICBuJzR3iV2Iey2zUyKVe8HUcYcm/yOgoDSHeSLBy1FmBomOP7NMual+c8dAjzixOYy0UhRbvjJ3y4SAA0n4jOXB4Jhxz3SZu1mI0uISUdyM3tGv4Bb6jkV/cXydrMla0a9pPhB/Z4jbNfm8jABBdLOtNk4rQrAoxfvRfWematD/sIpeUTCUkAl/0TzWaB8ARnv/oHAew88rv9hLNp4sqDwqrDIdms9ZGnb5MKBNY7mAcggPkGzb8Fb3D0="
+      reportUrl: "/gallup_report.pdf",
+      skillsTitle: "Skills",
+      skills: ["AIGC (Gemini, Claude)", "Canva", "Microsoft Office", "CapCut"],
+      skillsSubtitle: "Tools & Technologies"
     },
     portfolio: {
       title: "Portfolio",
@@ -107,6 +120,8 @@ const translations = {
       download: "Download PDF",
       print: "Print Portfolio to PDF",
       pdfUrl: "/resume_en.pdf",
+      gallup: "Gallup CliftonStrengths PDF",
+      gallupUrl: "/gallup_report.pdf",
       sections: {
         education: "Education",
         experience: "Professional Experience",
@@ -199,7 +214,7 @@ const translations = {
 
 这条路我走得很杂。社媒运营、活动策划、销售、德勤的税务咨询……每一段经历都逼着我从不同角度理解人，理解客户想要什么，读者需要什么，以及怎么把"专业"变成"有用"。
 
-我也致力成为一个终生学习者。对我来说，好奇心不是加分项，而是工作方式。我习惯刨根问底，喜欢在技术趋势里找商业逻辑，也愿意在失败里反复打磨。大学4.0 GPA背后没有什么秘诀，只是想把知识点搞清楚。
+我也致力成为一个终生学习者，具备快速学习的能力。对我来说，好奇心不是加分项，而是工作方式。我习惯刨根问底，喜欢在技术趋势里找商业逻辑，也愿意在失败里反复打磨。大学4.0 GPA背后没有什么秘诀，只是想把知识点搞清楚。
 
 工作之外，我在山上和路上找平衡。长跑让我清空大脑，自由式滑雪让我重新学会接受失控。最近的目标：180转体 + mute抓板。还没落稳，但在练。`,
       edu: "教育背景",
@@ -212,7 +227,10 @@ const translations = {
       strengthTitle: "优势",
       strengths: ["成就 (Achiever)", "史思 (Context)", "专注 (Focus)", "战略 (Strategic)", "学习 (Learner)"],
       reportLink: "查看盖洛普优势报告",
-      reportUrl: "https://content.reportdeliverables.gallup.com/export-engine/users/clients/8399/users/103965283/sf/sf_top_5/pdf/20276308/joiner/output/Liu-Jessie-SF_TOP_5.pdf?AQICAHh2a781HPlWXdmVDajpky+GSV+HMD38chCz/EBxRrX68QGEkOHSb1G8XndvDja8i0quAAABADCB/QYJKoZIhvcNAQcGoIHvMIHsAgEAMIHmBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDFdsYauOWdvDhAUQEQIBEICBuJzR3iV2Iey2zUyKVe8HUcYcm/yOgoDSHeSLBy1FmBomOP7NMual+c8dAjzixOYy0UhRbvjJ3y4SAA0n4jOXB4Jhxz3SZu1mI0uISUdyM3tGv4Bb6jkV/cXydrMla0a9pPhB/Z4jbNfm8jABBdLOtNk4rQrAoxfvRfWematD/sIpeUTCUkAl/0TzWaB8ARnv/oHAew88rv9hLNp4sqDwqrDIdms9ZGnb5MKBNY7mAcggPkGzb8Fb3D0="
+      reportUrl: "/gallup_report.pdf",
+      skillsTitle: "专业技能",
+      skills: ["AIGC (Gemini, Claude)", "Canva", "Microsoft Office", "剪映"],
+      skillsSubtitle: "工具与技术"
     },
     portfolio: {
       title: "作品集",
@@ -289,6 +307,8 @@ const translations = {
       download: "下载 PDF",
       print: "打印作品集为 PDF",
       pdfUrl: "/resume_zh.pdf",
+      gallup: "盖洛普优势报告 PDF",
+      gallupUrl: "/gallup_report.pdf",
       sections: {
         education: "教育经历",
         experience: "工作经验",
@@ -573,26 +593,34 @@ export default function App() {
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             <h2 className="serif text-4xl mb-16 text-center">{t.bio.title}</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-16">
-              <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100">
-                <GraduationCap className="text-accent mb-4 shrink-0" size={32} />
-                <h3 className="text-xs uppercase tracking-widest text-slate-400 mb-2">{t.bio.edu}</h3>
-                <p className="font-medium text-xs sm:text-sm md:text-base">{t.bio.university}</p>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-16">
+              <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+                <div>
+                  <GraduationCap className="text-accent mb-4 shrink-0" size={32} />
+                  <h3 className="text-xs uppercase tracking-widest text-slate-400 mb-2">{t.bio.edu}</h3>
+                  <p className="font-medium text-xs sm:text-sm md:text-base text-slate-900">{t.bio.university}</p>
+                </div>
               </div>
-              <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100">
-                <BookOpen className="text-accent mb-4 shrink-0" size={32} />
-                <h3 className="text-xs uppercase tracking-widest text-slate-400 mb-2">{t.bio.major}</h3>
-                <p className="font-medium text-xs sm:text-sm md:text-base">{t.bio.majorVal}</p>
+              <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+                <div>
+                  <BookOpen className="text-accent mb-4 shrink-0" size={32} />
+                  <h3 className="text-xs uppercase tracking-widest text-slate-400 mb-2">{t.bio.major}</h3>
+                  <p className="font-medium text-xs sm:text-sm md:text-base text-slate-900">{t.bio.majorVal}</p>
+                </div>
               </div>
-              <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100">
-                <Film className="text-accent mb-4 shrink-0" size={32} />
-                <h3 className="text-xs uppercase tracking-widest text-slate-400 mb-2">{t.bio.minor}</h3>
-                <p className="font-medium text-xs sm:text-sm md:text-base">{t.bio.minorVal}</p>
+              <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+                <div>
+                  <Film className="text-accent mb-4 shrink-0" size={32} />
+                  <h3 className="text-xs uppercase tracking-widest text-slate-400 mb-2">{t.bio.minor}</h3>
+                  <p className="font-medium text-xs sm:text-sm md:text-base text-slate-900">{t.bio.minorVal}</p>
+                </div>
               </div>
-              <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100">
-                <Trophy className="text-accent mb-4 shrink-0" size={32} />
-                <h3 className="text-xs uppercase tracking-widest text-slate-400 mb-2">{t.bio.gpa}</h3>
-                <p className="font-medium text-xs sm:text-sm md:text-base">4.0 / 4.0</p>
+              <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+                <div>
+                  <Trophy className="text-accent mb-4 shrink-0" size={32} />
+                  <h3 className="text-xs uppercase tracking-widest text-slate-400 mb-2">{t.bio.gpa}</h3>
+                  <p className="font-medium text-xs sm:text-sm md:text-base text-slate-900">4.0 / 4.0</p>
+                </div>
               </div>
             </div>
             <div className="text-center max-w-3xl mx-auto">
@@ -600,34 +628,59 @@ export default function App() {
                 {t.bio.description}
               </p>
 
-              {/* Strengths Section */}
-              <div className="inline-block bg-white px-4 py-6 sm:px-8 sm:py-10 rounded-[1.5rem] sm:rounded-[2rem] shadow-sm border border-slate-100 max-w-2xl w-full">
-                <div className="flex flex-col items-center gap-6">
-                  <div className="flex items-center gap-3">
-                    <Trophy className="text-accent" size={24} />
-                    <h3 className="text-sm uppercase tracking-[0.2em] font-bold text-slate-900">
-                      {t.bio.strengthTitle}
-                    </h3>
-                  </div>
-                  <div className="flex flex-wrap justify-center gap-3">
-                    {(t.bio.strengths as string[]).map((strength: string, i: number) => (
-                      <span 
-                        key={i}
-                        className="px-4 py-2 bg-slate-50 border border-slate-100 rounded-full text-sm font-medium text-slate-700 capitalize"
-                      >
-                        {strength}
-                      </span>
-                    ))}
+              {/* Strengths & Skills Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-12 text-center">
+                {/* Strengths Card */}
+                <div className="bg-white px-6 py-8 sm:px-10 sm:py-10 rounded-[1.5rem] shadow-sm border border-slate-100 flex flex-col items-center justify-between min-h-[250px]">
+                  <div className="flex flex-col items-center gap-5 w-full">
+                    <div className="flex items-center gap-3">
+                      <Trophy className="text-accent" size={24} />
+                      <h3 className="text-sm uppercase tracking-[0.2em] font-bold text-slate-900">
+                        {t.bio.strengthTitle}
+                      </h3>
+                    </div>
+                    <div className="flex flex-wrap justify-center gap-2 mt-2">
+                      {(t.bio.strengths as string[]).map((strength: string, i: number) => (
+                        <span 
+                          key={i}
+                          className="px-3.5 py-1.5 bg-slate-50 border border-slate-100 rounded-full text-xs sm:text-sm font-medium text-slate-700 capitalize"
+                        >
+                          {strength}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                   <a 
                     href={t.bio.reportUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-4 flex items-center gap-2 text-accent text-sm font-medium hover:underline"
+                    className="mt-6 flex items-center gap-2 text-accent text-xs sm:text-sm font-medium hover:underline"
                   >
                     <FileText size={16} />
                     {t.bio.reportLink}
                   </a>
+                </div>
+
+                {/* Skills Card */}
+                <div className="bg-white px-6 py-8 sm:px-10 sm:py-10 rounded-[1.5rem] shadow-sm border border-slate-100 flex flex-col items-center justify-between min-h-[250px]">
+                  <div className="flex flex-col items-center gap-5 w-full">
+                    <div className="flex items-center gap-3">
+                      <Sparkles className="text-accent" size={24} />
+                      <h3 className="text-sm uppercase tracking-[0.2em] font-bold text-slate-900">
+                        {t.bio.skillsTitle}
+                      </h3>
+                    </div>
+                    <div className="flex flex-wrap justify-center gap-2 mt-2">
+                      {(t.bio.skills as string[]).map((skill: string, i: number) => (
+                        <span 
+                          key={i}
+                          className="px-3.5 py-1.5 bg-slate-50 border border-slate-100 rounded-full text-xs sm:text-sm font-medium text-slate-700"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -834,13 +887,15 @@ export default function App() {
                   <FileText size={18} />
                   {t.resume.download}
                 </a>
-                <button 
-                  onClick={() => window.print()}
-                  className="flex items-center gap-2 px-6 py-3 bg-white border border-slate-200 text-slate-900 rounded-full text-sm font-medium hover:border-accent transition-all"
+                <a 
+                  href={t.resume.gallupUrl} 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="flex items-center gap-2 px-6 py-3 bg-white border border-slate-200 text-slate-900 rounded-full text-sm font-medium hover:border-accent hover:bg-slate-50 transition-all"
                 >
-                  <Printer size={18} />
-                  {t.resume.print}
-                </button>
+                  <Trophy size={18} />
+                  {t.resume.gallup}
+                </a>
               </div>
             </div>
 
