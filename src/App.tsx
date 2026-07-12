@@ -84,6 +84,12 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
           linkText: "View Event Poster",
           link: "https://canva.link/jhhqah91wo2zmx8"
         },
+        loreal: {
+          title: "2026 Roland Berger × L’Oréal China Case Competition",
+          date: "July, 2026",
+          desc: "Designed the CeraVe 'Shield' AI Eco-Strategy, a revolutionary digital model integrating real-time map weather LBS API with L'Oréal's Skin Genius technology. Created a proactive, personalized daily skin defense system with location-aware stress profiling, interactive skincare guidance, and a business roadmap centered around Gen Z consumer retention.",
+          linkText: "View Case Competition Slides (PDF)"
+        },
         mktsoc: {
           title: "NYU MKTSOC 25 Fall Case Competition — TOP 6",
           date: "November, 2025",
@@ -283,6 +289,12 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
           desc: "组织了“啡阅华尔街”活动，带领 6 名学生参观由华尔街银行改造的咖啡店，探寻纽约金融区的历史底蕴。",
           linkText: "查看活动海报",
           link: "https://canva.link/jhhqah91wo2zmx8"
+        },
+        loreal: {
+          title: "罗兰贝格x欧莱雅中国精英挑战赛",
+          date: "2026年7月",
+          desc: "策划并设计了全新“适乐护”微信小程序 AI 生态战略，全球首创将高德地图实时气象与欧莱雅 Skin Genius 测肤技术深度融合。构建了集“气象环境指数-实时皮肤压力-主动防护提醒”于一体的场景化主动防御系统，针对 Z 世代消费群体提供个性化护肤方案。",
+          linkText: "查看挑战赛方案 (PDF)"
         },
         mktsoc: {
           title: "NYU MKTSOC 25 秋季案例竞赛 — TOP 6",
@@ -803,16 +815,42 @@ export default function App() {
                 <Trophy className="text-accent" size={32} />
                 <h3 className="serif text-2xl sm:text-3xl md:text-4xl">{t.portfolio.sections.competition}</h3>
               </div>
-              <div className="bg-slate-900 text-white p-6 sm:p-12 rounded-2xl sm:rounded-[3rem] overflow-hidden relative">
-                <div className="relative z-10 max-w-2xl">
-                  <h4 className="font-bold text-xl sm:text-2xl mb-2">{t.portfolio.items.mktsoc.title}</h4>
-                  <p className="text-accent font-medium mb-6">{t.portfolio.items.mktsoc.date}</p>
-                  <p className="text-slate-300 mb-8 font-light leading-relaxed text-base sm:text-lg">{t.portfolio.items.mktsoc.desc}</p>
-                  <a href="/competition_experience.pdf" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium hover:bg-accent hover:text-white transition-all text-sm sm:text-base">
-                    {t.portfolio.items.mktsoc.linkText} <ExternalLink size={18} />
-                  </a>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* L'Oréal Case Competition */}
+                <div className="bg-slate-900 text-white p-6 sm:p-10 rounded-2xl sm:rounded-[2.5rem] overflow-hidden relative flex flex-col justify-between border border-slate-800">
+                  <div className="relative z-10">
+                    <span className="bg-accent/20 text-accent text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full mb-4 inline-block">
+                      {lang === "en" ? "L'Oréal × Roland Berger" : "罗兰贝格 × 欧莱雅"}
+                    </span>
+                    <h4 className="font-bold text-xl sm:text-2xl mb-2 leading-snug">{t.portfolio.items.loreal.title}</h4>
+                    <p className="text-accent font-medium mb-4 text-sm font-mono">{t.portfolio.items.loreal.date}</p>
+                    <p className="text-slate-300 mb-8 font-light leading-relaxed text-sm sm:text-base">{t.portfolio.items.loreal.desc}</p>
+                  </div>
+                  <div className="relative z-10 mt-auto">
+                    <a href="/roland_berger_loreal_2026.pdf" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-full font-medium hover:bg-accent hover:text-white transition-all text-xs sm:text-sm shadow-sm">
+                      {t.portfolio.items.loreal.linkText} <ExternalLink size={16} />
+                    </a>
+                  </div>
+                  <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/5 -skew-x-12 translate-x-12 pointer-events-none" />
                 </div>
-                <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/10 -skew-x-12 translate-x-12" />
+
+                {/* MKTSOC Case Competition */}
+                <div className="bg-slate-900 text-white p-6 sm:p-10 rounded-2xl sm:rounded-[2.5rem] overflow-hidden relative flex flex-col justify-between border border-slate-800">
+                  <div className="relative z-10">
+                    <span className="bg-accent/20 text-accent text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full mb-4 inline-block">
+                      {lang === "en" ? "NYU Marketing Society" : "纽约大学营销协会"}
+                    </span>
+                    <h4 className="font-bold text-xl sm:text-2xl mb-2 leading-snug">{t.portfolio.items.mktsoc.title}</h4>
+                    <p className="text-accent font-medium mb-4 text-sm font-mono">{t.portfolio.items.mktsoc.date}</p>
+                    <p className="text-slate-300 mb-8 font-light leading-relaxed text-sm sm:text-base">{t.portfolio.items.mktsoc.desc}</p>
+                  </div>
+                  <div className="relative z-10 mt-auto">
+                    <a href="/competition_experience.pdf" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-full font-medium hover:bg-accent hover:text-white transition-all text-xs sm:text-sm shadow-sm">
+                      {t.portfolio.items.mktsoc.linkText} <ExternalLink size={16} />
+                    </a>
+                  </div>
+                  <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/5 -skew-x-12 translate-x-12 pointer-events-none" />
+                </div>
               </div>
             </div>
 
