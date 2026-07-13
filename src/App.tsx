@@ -155,7 +155,7 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
         {
           company: "Deloitte",
           role: "Tax and Business Advisory Intern",
-          date: "May 2026 – June 2026",
+          date: "May 2026 – Jun 2026",
           details: [
             "Processed internal transaction data via Excel pivot tables, constructing 5 structured workpapers, covering FY25 related-party transactions and intangible asset lists; successfully transformed raw data into standardized, executive-ready deliverables",
             "Provided precise English-Chinese translation and proofreading for 6 legal contracts and 3 Industry Analysis reports; actively supported business development workstreams by localizing and perfecting core pitch decks to ensure seamless alignment with the global corporate standards of multinational accounts",
