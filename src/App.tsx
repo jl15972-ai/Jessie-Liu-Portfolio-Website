@@ -128,7 +128,7 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
       title: "Resume",
       download: "Download PDF",
       print: "Print Portfolio to PDF",
-      pdfUrl: "/Jessie_Resume_2026_EN.pdf",
+      pdfUrl: "/Jessie_Resume_2026_EN_v2.pdf",
       gallup: "Gallup CliftonStrengths PDF",
       gallupUrl: "/gallup_report.pdf",
       sections: {
@@ -140,14 +140,13 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
       edu: [
         {
           school: "New York University, College of Arts and Science",
-          location: "New York, NY",
           degree: "Bachelor of Science in Economics",
           minor: "Minors: Business Studies; Business of Entertainment, Media, and Technology",
           date: "May 2028",
           details: [
-            "Cumulative GPA: 4.0/4.0",
+            "Cumulative GPA: 4.0/4.0 (Ranking N/A)",
             "Relevant Coursework: Management and Organizations, Digital Business Strategy, Topics: Economics Research",
-            "Honors: NYU Liberal Studies Dean's List 25-26 AY | NYU Liberal Studies Dean's List 24-25 AY"
+            "Honors: NYU Liberal Studies Dean’s List 25-26 AY | NYU Liberal Studies Dean’s List 24-25 AY"
           ]
         }
       ],
@@ -157,9 +156,9 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
           role: "Tax and Business Advisory Intern",
           date: "May 2026 – Jun 2026",
           details: [
-            "Processed internal transaction data via Excel pivot tables, constructing 5 structured workpapers, covering FY25 related-party transactions and intangible asset lists; successfully transformed raw data into standardized, executive-ready deliverables",
-            "Provided precise English-Chinese translation and proofreading for 6 legal contracts and 3 Industry Analysis reports; actively supported business development workstreams by localizing and perfecting core pitch decks to ensure seamless alignment with the global corporate standards of multinational accounts",
-            "Conducted rigorous quality assurance on 100+ pages of business analysis reports spanning global leaders in new energy, manufacturing, top-tier language education, and joint-venture automotive sectors; screened and analyzed financial statements of peer companies to perform benchmarking analysis, assisting clients in independent comparability cross-checks to strongly defend customized transfer pricing methodologies in alignment with OECD Guidelines"
+            "Leveraged Excel to clean and categorize massive transactional data streams for multinational enterprises; constructed 5 comprehensive FY25 related-party transaction models and intangible asset reports, efficiently transforming raw data into structured, executive-ready deliverables for management review",
+            "Supported the project bidding and Business Development workstreams for multinational accounts; refined language and visual formatting for Deloitte's pitch decks, while independently delivering the bilingual translation of 3 industry analysis reports and 6 corporate contracts",
+            "Conducted internal reviews for 100+ pages of commercial analysis reports across high-growth sectors, including New Energy, Automotive, Advanced Manufacturing, and Consumer Services (Language Education); independently cross-verified peer companies' financial and operational data cited in the Deloitte report through in-depth research of public filings and industry databases, ensuring data integrity and strengthening the report's analytical rigor"
           ]
         },
         {
@@ -167,9 +166,9 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
           role: "Sales Intern",
           date: "Jun 2025 – Aug 2025",
           details: [
-            "Conducted South China market research for H3C UniServer and HPE ProLiant series; executed 8 field visits to distributors and SIs to analyze competitors (Huawei/Inspur), optimizing sales strategies to convert 5 target clients",
+            "Conducted South China market research for H3C UniServer and HPE ProLiant series; executed 8 field visits to distributors and SIs and developed competitive analysis (Huawei/Inspur), optimizing sales strategies to convert 5 target clients",
             "Managed risk compliance within the IT distribution network; analyzed financial statements of 20+ prospective sub-distributors and reviewed 10+ contracts to assess credit risks and mitigate bad debt exposure",
-            "Coordinated internal enterprise resources to customize hardware configurations and quotations; successfully acquired 1 new channel partner and secured a ¥200,000 server procurement contract"
+            "Aligned with complex corporate demands and mobilized internal resources to deliver customized solutions; successfully acquired 1 new channel partner and secured a ¥200,000 server procurement contract"
           ]
         },
         {
@@ -177,8 +176,8 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
           role: "Social Media Coordinator",
           date: "Dec 2023 – Jul 2024",
           details: [
-            "Conducted deep user segmentation and persona analysis for a 200K+ followers account; leveraged insights to formulate content strategies on US university evaluations and cross-cultural studies; produced 25+ deep-dive articles with a 10K+ average per-post read volume, outperforming the platform average by 100%",
-            "Led a dedicated research initiative on fiscal deficits within US higher education, performing in-depth analysis on financial reports of institutions (e.g., Rutgers, Penn State); integrated Gen Z-oriented narratives and humor to synthesize complex business logic into deep-dive insights catering to both students and parents, generating 70K+ cumulative views"
+            "Analyzed backend datasets of a 200K+ follower platform to conduct persona mapping and consumer segmentation; formulated targeted strategies on cross-cultural trends to deliver 25+ deep-dive articles, achieving an average read volume of 10K+ per article and outperforming platform conversion benchmarks by 100%",
+            "Pioneered the industry-first research series on US university fiscal crises by performing in-depth analysis on financial reports of institutions (e.g., Rutgers, Penn State) and integrating Gen Z-oriented narratives and humor to synthesize complex business logic into deep-dive insights catering to both students and parents, generating 70K+ views"
           ]
         }
       ],
@@ -188,8 +187,8 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
           role: "Executive Vice President",
           date: "Sep 2025 – Present",
           details: [
-            "Host weekly general meetings to establish a loop of student demand collection, feedback analysis, and event planning; successfully spearhead 4 campus-wide events within a single semester, serving 800+ NYU participants",
-            "Supervise the First Year Committee through proposal reviews, task delegation, and end-to-end tracking to empower organizational talent growth; streamline coordination with external vendors and campus entities to secure premium materials and venue resources for high-quality project delivery"
+            "Host weekly general meetings to establish a loop of student demand collection, feedback analysis, event planning and project debrief; successfully spearhead 4 campus-wide events within a single semester, serving 800+ NYU participants",
+            "Supervised the First Year Committee by managing project approvals, resource allocation, and milestone tracking; negotiated with external vendors to orchestrate venue and logistics resources, ensuring high-quality project delivery under budget constraints"
           ]
         },
         {
@@ -213,9 +212,9 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
         }
       ],
       skills: {
-        lang: "Languages: English (TOEFL 111/120), Mandarin",
-        tech: "Technical Skills: Excel, PowerPoint, Google Sheets, Canva, Figma, Notion",
-        ai: "AI Tools: Gemini, Claude",
+        lang: "Languages: English (Fluent, TOEFL 111/120), Mandarin (Native)",
+        tech: "Technical Skills: Excel, PowerPoint, Gemini, Claude, Google Sheets, Canva, Figma, Notion",
+        ai: "",
         interests: "Interests: Running, Freestyle Skiing, Cooking, Hiking, Matcha, Exploring NYC Restaurants"
       }
     }
@@ -334,7 +333,7 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
       title: "个人简历",
       download: "下载 PDF",
       print: "打印作品集为 PDF",
-      pdfUrl: "/Jessie_Resume_2026_CN.pdf",
+      pdfUrl: "/Jessie_Resume_2026_CN_v2.pdf",
       gallup: "盖洛普优势报告 PDF",
       gallupUrl: "/gallup_report.pdf",
       sections: {
@@ -346,14 +345,13 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
       edu: [
         {
           school: "纽约大学, 文理学院 (College of Arts and Science)",
-          location: "美国纽约",
           degree: "经济学专业本科",
-          minor: "辅修：商业研究和娱乐、媒体与技术商业管理",
+          minor: "辅修商业研究和娱乐、媒体与技术商业管理",
           date: "2024.9 - 2028.5",
           details: [
-            "总绩点: 4.0/4.0",
+            "总绩点: 4.0/4.0 （学校不提供排名）",
             "相关课程：管理与组织架构，数字商务战略，主题：经济学研究",
-            "荣誉：2025-2026学年和2024-2025 学年优秀生名单 (NYU Liberal Studies Dean's List 25-26AY and 24-25 AY)"
+            "荣誉：2025-2026学年和2024-2025 学年优秀生名单 (NYU Liberal Studies Dean’s List 25-26AY and 24-25 AY)"
           ]
         }
       ],
@@ -363,9 +361,9 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
           role: "税务与商务咨询实习生",
           date: "2026.5 - 2026.6",
           details: [
-            "数据结构化与决策支持：运用 Excel（数据透视表等）处理客户公司内部交易数据，构建 5 份 FY25 关联方交易及无形资产清单的工作底稿与财务报告；成功将底层原始数据沉淀为标准化的成果，直供客户管理层审阅与决策。",
-            "跨境项目与商务拓展支持：承担多语言转换工作，独立完成6份跨国法律合同、3篇行业分析报告的中英双语互译；参与商业拓展阶段的投标准备，负责核心投标 PPT 的语言翻译与视觉校对，确保交付物符合跨国大客户的全球商业标准。",
-            "基准分析与方法论验证：负责有关全球新能源领军者、高端制造巨头、顶尖语言教育机构及头部合资汽车品牌的共计 100+页商业报告质量复核；通过检索上市企业财报，抽样同行业可比企业的财务数据进行基准对比，并协助可比性独立交叉检验，有力支撑了客户转让定价方法论符合 OECD指南的合理性与合规性论证。"
+            "数据结构化与决策支持：熟练运用 Excel对跨国巨头海量内部交易数据进行清洗与分类汇总；构建 5 份 FY25 关联方交易及无形资产清单的工作底稿与财务报告，将原始数据高效转化为结构清晰、直供客户管理层审阅的标准化交付物。",
+            "跨境项目与商务拓展支持：支持团队针对跨国客户的商业拓展与项目投标工作，负责德勤投标 PPT的语言翻译与排版视觉校对，并独立完成 3 篇深度行业分析报告及 6 份合同的中英双语翻译。",
+            "行业调研与基准分析：负责新能源、汽车、高端制造及泛消费（如语言教育）等行业头部客户共计 100+ 页商业分析报告的质量复核；通过深度检索跨国上市企业财报及行业数据库，对德勤报告中引用的同行业竞品财务与运营指标进行独立交叉检验与勾稽关系审查，确保底层数据源的精准度，有力支撑了报告核心论证逻辑的严密性。"
           ]
         },
         {
@@ -373,9 +371,9 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
           role: "新华三业务群销售实习",
           date: "2025.6 - 2025.8",
           details: [
-            "竞争洞察：聚焦华南区域市场，针对新华三UniServer及HPE ProLiant系列服务器开展渠道链路调研；通过 8 次代理商及系统集成商的实地走访和分析华为、浪潮等核心竞品的技术参数与服务缺口，协助销售团队系统性优化渠道销售策略，成功转化 5 家目标渠道客户。",
-            "渠道风险管控：参与分销体系下的商业风险合规工作，对 20+ 家潜在渠道商的资产负债表及经营状况进行财务分析，并审核 10+ 份商务合同，有效评估代理商授信风险，规避潜在的履约与坏账违约损失。",
-            "客户拓展：整合企业内部 IT 解决方案资源，针对客户需求定制硬件配置与商务报价流转；成功开拓 1 家新渠道客户，并签署达 ¥200,000 的服务器采购合同。"
+            "市场调研与渠道策略：聚焦华南企业级 IT 市场，负责新华三服务器（H3C UniServer & HPE ProLiant）渠道链路专项调研；通过对 8 家核心代理商及系统集成商实地走访，并对华为、浪潮等头部竞品进行多维基准对比与缺口分析，协助团队优化渠道准入策略，成功转化 5 家目标合作伙伴。",
+            "渠道风险管控：深度参与分销生态体系下的风险合规与准入审查；对 20+ 家潜在合作伙伴的资产负债表及经营状况进行深度的财务分析，并合规审核 10+ 份商务合同，有效评估代理商授信风险，规避潜在的履约与坏账违约损失。",
+            "客户拓展：精准对齐 B端客户深层需求，高效整合内部技术与产品资源，成功拓展 1 家全新渠道伙伴，推动签署总金额达 ¥200,000 的服务器采购协议。"
           ]
         },
         {
@@ -383,8 +381,8 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
           role: "TD北美留学进化论公众号运营",
           date: "2023.12 - 2024.7",
           details: [
-            "内容策划与用户洞察：依托后台数据剖析 20万+ 粉丝的深度画像与用户分层，创作有关美国高校综合测评与中美文化差异的推文；累计产出 25+ 篇高深度内容，实现平均单篇 10,000+ 阅读量，内容转化率超越平台均值 100%。",
-            "逻辑拆解与商业叙事：主导美国高校财政亏损专题研究，对罗格斯、宾州州立等院校的官方财务报告进行深度剖析；融合 Z 世代网络语境与幽默叙事风格，将复杂的商业逻辑转化为兼顾学生与家长阅读偏好的深度解读，实现单专题累计阅读量超 70,000 次。"
+            "内容策划与用户洞察：依托后台数据剖析 20万+ 粉丝的深度画像与用户分层，精准捕捉年轻一代跨境消费与留学教育需求，累计产出 25+ 篇高深度推文，实现平均单篇 10,000+ 阅读量，内容转化率超越平台均值 100%。",
+            "逻辑拆解与商业叙事：发表全网首个关于美国高校财政危机研究推文，通过深度剖析罗格斯、宾州州立等院校的官方财务报告，融合 Z 世代网络语境与幽默叙事风格，将复杂的商业逻辑转化为兼顾学生与家长阅读偏好的深度解读，实现单专题累计阅读量超 70,000 次。"
           ]
         }
       ],
@@ -394,8 +392,8 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
           role: "执行副主席",
           date: "2025.9 - 至今",
           details: [
-            "项目管理：主持每周社团例会，构建“学生需求收集—反馈分析—活动策划”的敏捷闭环；单学期内成功举办4场校级活动，累计吸引 800+ 纽约大学学生参与。",
-            "梯队建设与外部供应链统筹：指导大一委员会工作，负责活动立项审批、任务分配及全流程跟进，赋能组织梯队建设；高效对接校外多方供应商，跨方统筹核心物资与场地资源，确保活动高质量落地。"
+            "项目管理：主持每周社团例会，构建“学生需求收集—反馈分析—活动策划—经验复盘”的结构化项目闭环；单学期内成功推动 4 场校级大型项目从 0 到 1 落地，累计吸引 800+ 纽约大学学生参与。",
+            "梯队建设与外部供应链统筹：指导大一委员会工作，负责项目审批、资源分配及关键节点管控，赋能梯队建设；高效对接并谈判校外多方供应商，跨职能统筹核心物资与场地资源，在有限预算内实现项目高质量交付。"
           ]
         },
         {
@@ -419,10 +417,10 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
         }
       ],
       skills: {
-        lang: "语言：中文（母语），英文（流利，托福 111/120）",
-        tech: "专业技能：Microsoft工具 (Word, Excel, PowerPoint), Google Sheet, Canva, Figma, Notion",
-        ai: "AI工具：Gemini，Claude",
-        interests: "兴趣：跑步，自由式滑雪，烹饪，徒步，做抹茶，探店"
+        lang: "语言：中文（母语），英文（流利，托福111/120）",
+        tech: "技能：Microsoft工具 (Word, Excel, PowerPoint)，AIGC内容制作 (Gemini & Claude)，Google Sheet，Canva，Figma，Notion",
+        ai: "",
+        interests: "爱好：跑步，自由式滑雪，烹饪，徒步，做抹茶，探店"
       }
     }
   }
@@ -973,27 +971,27 @@ export default function App() {
             <div className="space-y-16">
               {/* Education */}
               <div>
-                <h3 className="text-sm sm:text-base uppercase tracking-[0.2em] text-accent font-bold mb-8 border-b border-slate-200 pb-2">
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl uppercase tracking-wider text-accent font-bold mb-8 border-b-2 border-slate-200 pb-3">
                   {t.resume.sections.education}
                 </h3>
                 <div className="space-y-8">
                   {t.resume.edu.map((item: any, i: number) => (
                     <div key={i} className="group">
-                      <div className="flex flex-col md:flex-row justify-between mb-2 gap-1">
-                        <h4 className="font-bold text-xl text-slate-900">{item.school}</h4>
-                        <span className="text-slate-400 font-mono text-sm whitespace-nowrap">{item.date}</span>
+                      <div className="flex flex-col sm:flex-row justify-between items-baseline mb-2 gap-2">
+                        <h4 className="font-bold text-sm sm:text-base text-slate-900">{item.school}</h4>
+                        <span className="text-slate-500 font-medium text-xs sm:text-sm whitespace-nowrap">{item.date}</span>
                       </div>
-                      <div className="flex flex-col text-slate-500 mb-4 text-sm">
-                        <span>{item.degree}</span>
+                      <div className="flex flex-col text-slate-500 mb-3 text-xs sm:text-sm">
+                        <span className="text-slate-600">{item.degree}</span>
                         {item.minor && (
-                          <span className="mt-1">
+                          <span className="mt-0.5 text-slate-600">
                             {item.minor}
                           </span>
                         )}
                       </div>
-                      <ul className="space-y-2">
+                      <ul className="space-y-2 pl-4 sm:pl-5">
                         {item.details.map((detail: string, j: number) => (
-                          <li key={j} className="text-slate-600 flex items-start gap-2 text-sm leading-relaxed">
+                          <li key={j} className="text-slate-600 flex items-start gap-2 text-xs sm:text-sm leading-relaxed">
                             <span className="text-accent shrink-0 font-bold select-none">·</span>
                             <span className="flex-1">{detail}</span>
                           </li>
@@ -1006,20 +1004,20 @@ export default function App() {
 
               {/* Experience */}
               <div>
-                <h3 className="text-sm sm:text-base uppercase tracking-[0.2em] text-accent font-bold mb-8 border-b border-slate-200 pb-2">
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl uppercase tracking-wider text-accent font-bold mb-8 border-b-2 border-slate-200 pb-3">
                   {t.resume.sections.experience}
                 </h3>
                 <div className="space-y-12">
                   {t.resume.exp.map((item: any, i: number) => (
                     <div key={i}>
-                      <div className="flex flex-col md:flex-row justify-between mb-2 gap-1">
-                        <h4 className="font-bold text-xl text-slate-900">{item.company}</h4>
-                        <span className="text-slate-400 font-mono text-sm whitespace-nowrap">{item.date}</span>
+                      <div className="flex flex-col sm:flex-row justify-between items-baseline mb-2 gap-2">
+                        <h4 className="font-bold text-sm sm:text-base text-slate-900">{item.company}</h4>
+                        <span className="text-slate-500 font-medium text-xs sm:text-sm whitespace-nowrap">{item.date}</span>
                       </div>
-                      <p className="text-accent font-medium mb-4 text-sm sm:text-base">{item.role}</p>
-                      <ul className="space-y-3">
+                      <p className="text-accent font-medium mb-3 text-xs sm:text-sm">{item.role}</p>
+                      <ul className="space-y-2.5 pl-4 sm:pl-5">
                         {item.details.map((detail: string, j: number) => (
-                          <li key={j} className="text-slate-600 flex items-start gap-2 text-sm leading-relaxed">
+                          <li key={j} className="text-slate-600 flex items-start gap-2 text-xs sm:text-sm leading-relaxed">
                             <span className="text-accent shrink-0 font-bold select-none">·</span>
                             <span className="flex-1">{detail}</span>
                           </li>
@@ -1032,22 +1030,20 @@ export default function App() {
 
               {/* Leadership */}
               <div>
-                <h3 className="text-sm sm:text-base uppercase tracking-[0.2em] text-accent font-bold mb-8 border-b border-slate-200 pb-2">
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl uppercase tracking-wider text-accent font-bold mb-8 border-b-2 border-slate-200 pb-3">
                   {t.resume.sections.leadership}
                 </h3>
-                <div className="flex flex-col gap-6">
+                <div className="space-y-6">
                   {t.resume.leadership.map((item: any, i: number) => (
-                    <div key={i} className="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300">
-                      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2">
-                        <div>
-                          <h4 className="font-bold text-lg leading-tight text-slate-800">{item.org}</h4>
-                          <p className="text-accent text-sm font-medium mt-1">{item.role}</p>
-                        </div>
-                        <span className="text-[11px] font-mono text-slate-400 bg-slate-50 px-2.5 py-1 rounded-full whitespace-nowrap">{item.date}</span>
+                    <div key={i} className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
+                      <div className="flex flex-col sm:flex-row justify-between items-baseline mb-2 gap-2">
+                        <h4 className="font-bold text-sm sm:text-base text-slate-900">{item.org}</h4>
+                        <span className="text-slate-500 font-medium text-xs sm:text-sm whitespace-nowrap">{item.date}</span>
                       </div>
-                      <ul className="space-y-2 mt-4 border-t border-slate-50 pt-4">
+                      <p className="text-accent font-medium mb-3 text-xs sm:text-sm">{item.role}</p>
+                      <ul className="space-y-2.5">
                         {item.details.map((detail: string, j: number) => (
-                          <li key={j} className="text-slate-500 flex items-start gap-2 text-xs sm:text-sm leading-relaxed">
+                          <li key={j} className="text-slate-600 flex items-start gap-2 text-xs sm:text-sm leading-relaxed">
                             <span className="text-accent shrink-0 font-bold select-none">·</span>
                             <span className="flex-1">{detail}</span>
                           </li>
@@ -1060,14 +1056,14 @@ export default function App() {
 
               {/* Skills */}
               <div className="bg-slate-900 text-white p-6 sm:p-12 rounded-2xl sm:rounded-[3rem]">
-                <h3 className="text-sm sm:text-base uppercase tracking-[0.2em] text-accent font-bold mb-8 border-b border-white/10 pb-2">
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl uppercase tracking-wider text-accent font-bold mb-8 border-b-2 border-white/10 pb-3">
                   {t.resume.sections.skills}
                 </h3>
                 <div className="space-y-6">
-                  <p className="text-slate-300 leading-relaxed text-sm sm:text-base">{t.resume.skills.lang}</p>
-                  <p className="text-slate-300 leading-relaxed text-sm sm:text-base">{t.resume.skills.tech}</p>
-                  <p className="text-slate-300 leading-relaxed text-sm sm:text-base">{t.resume.skills.ai}</p>
-                  <p className="text-slate-300 leading-relaxed text-sm sm:text-base">{t.resume.skills.interests}</p>
+                  <p className="text-slate-300 leading-relaxed text-xs sm:text-sm">{t.resume.skills.lang}</p>
+                  <p className="text-slate-300 leading-relaxed text-xs sm:text-sm">{t.resume.skills.tech}</p>
+                  {t.resume.skills.ai && <p className="text-slate-300 leading-relaxed text-xs sm:text-sm">{t.resume.skills.ai}</p>}
+                  <p className="text-slate-300 leading-relaxed text-xs sm:text-sm">{t.resume.skills.interests}</p>
                 </div>
               </div>
             </div>
