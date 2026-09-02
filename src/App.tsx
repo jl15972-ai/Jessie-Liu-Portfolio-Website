@@ -176,7 +176,7 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
           date: "Dec 2023 – Jul 2024",
           details: [
             "Analyzed engagement data across 200K+ followers to identify Gen Z education trends and audience preferences; produced 25+ articles averaging 10K+ views and outperforming platform benchmarks by 100%",
-            "Identified emerging online trends and transformed complex education and business topics into timely, story-driven content, using culturally relevant and emotionally resonant narratives to generate up to 70K+ views per article",
+            "Identified emerging online trends and transformed complex education and business topics into timely, story-driven content, with one top-performing article reaching 70K+ views",
             "Leveraged content to engage prospective international students and parents throughout the customer journey, helping drive a 15% increase in study-abroad consulting inquiries and strengthen conversion to the firm’s education services"
           ]
         }

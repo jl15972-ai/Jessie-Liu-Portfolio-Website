@@ -157,7 +157,7 @@ function generateResumePDF(outputPath) {
   addHeaderRow('Test Daily', fBold, 'Guangzhou, China', fRegular);
   addHeaderRow('Social Media Coordinator', fItalic, 'Dec 2023 – Jul 2024', fRegular);
   addBullet('Analyzed engagement data across 200K+ followers to identify Gen Z education trends and audience preferences; produced 25+ articles averaging 10K+ views and outperforming platform benchmarks by 100%');
-  addBullet('Identified emerging online trends and transformed complex education and business topics into timely, story-driven content, using culturally relevant and emotionally resonant narratives to generate up to 70K+ views per article');
+  addBullet('Identified emerging online trends and transformed complex education and business topics into timely, story-driven content, with one top-performing article reaching 70K+ views');
   addBullet('Leveraged content to engage prospective international students and parents throughout the customer journey, helping drive a 15% increase in study-abroad consulting inquiries and strengthen conversion to the firm’s education services');
 
   doc.y += 2;
@@ -183,7 +183,8 @@ function generateResumePDF(outputPath) {
 
   // SECTION: SKILLS & INTERESTS
   addSectionHeader('SKILLS & INTERESTS');
-  addLabeledLine('Languages & Technical Skills:', 'English, Mandarin; Excel (PivotTables, XLOOKUP), PowerPoint, Google Sheets');
+  addLabeledLine('Languages:', 'English, Mandarin');
+  addLabeledLine('Skills:', 'Excel (PivotTables, XLOOKUP), PowerPoint, Google Sheets, CapCut, Canva, Figma');
   addLabeledLine('Interests:', 'Running, Freestyle Skiing, Cooking, Hiking, Matcha, Exploring NYC Restaurants');
 
   doc.end();
