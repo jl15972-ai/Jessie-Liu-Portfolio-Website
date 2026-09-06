@@ -5,13 +5,14 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Mail, Linkedin, ExternalLink, GraduationCap, BookOpen, Film, MessageSquare, Globe, Users, Newspaper, Video, ChevronRight, Trophy, Play, FileText, Printer, Menu, X, Sparkles, Heart, Bookmark, MoreHorizontal, Send } from "lucide-react";
+import { Mail, Linkedin, ExternalLink, GraduationCap, BookOpen, Film, MessageSquare, Globe, Users, Newspaper, Video, ChevronRight, Trophy, Play, FileText, Printer, Menu, X, Snowflake, Heart, Bookmark, MoreHorizontal, Send } from "lucide-react";
+import { PrintPortfolioModal } from "./components/PrintPortfolioModal";
 
 type Language = "en" | "zh";
 
 const translations = {
   en: {
-    nav: { about: "About", portfolio: "Portfolio", resume: "Resume", contact: "Contact" },
+    nav: { about: "About", portfolio: "Portfolio", resume: "Resume", contact: "Contact", printPortfolio: "Print Portfolio" },
     hero: {
       subtitle: "Economics Student at NYU",
       tagline: "Consumer Insight × Growth Mindset",
@@ -88,13 +89,15 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
           title: "2026 Roland Berger × L’Oréal China Case Competition",
           date: "July, 2026",
           desc: "Designed the CeraVe 'Shield' AI Eco-Strategy, a revolutionary digital model integrating real-time map weather LBS API with L'Oréal's Skin Genius technology. Created a proactive, personalized daily skin defense system with location-aware stress profiling, interactive skincare guidance, and a business roadmap centered around Gen Z consumer retention.",
-          linkText: "View Case Competition Slides (PDF)"
+          linkText: "View Case Competition Slides (PDF)",
+          link: "/roland_berger_loreal_2026.pdf"
         },
         mktsoc: {
           title: "NYU MKTSOC 25 Fall Case Competition — TOP 6",
           date: "November, 2025",
           desc: "Developed a strategic marketing turnaround for Solara, a wellness app facing a 7.3% market slump. Designed the 'Celebrity Wake-Up' campaign, leveraging AI-integrated personas like Ryan Reynolds to solve the 'willpower gap'. Strategy included a tiered pricing model positioning Solara as a cost-effective alternative.",
-          linkText: "View Competition Slides (PDF)"
+          linkText: "View Competition Slides (PDF)",
+          link: "/competition_experience.pdf"
         },
         td: {
           title: "TD Test Daily",
@@ -183,6 +186,15 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
       ],
       leadership: [
         {
+          org: "L'Oréal",
+          role: "Campus Entrepreneur",
+          date: "Jul 2026 – Present",
+          details: [
+            "Drive brand innovation and marketing campaigns across campus channels by translating Gen Z consumer insights into creative, data-backed promotional strategies, expanding L'Oréal's brand presence and youth engagement",
+            "Oversee end-to-end project management and cross-functional execution for campus initiatives, bridging online social buzz with offline activations while gathering real-time student feedback to optimize future brand outreach"
+          ]
+        },
+        {
           org: "NYU Class Activities Board",
           role: "Executive Vice President (promoted from First Year Chair)",
           date: "Sep 2025 – Present",
@@ -219,7 +231,7 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
     }
   },
   zh: {
-    nav: { about: "关于我", portfolio: "作品集", resume: "简历", contact: "联系方式" },
+    nav: { about: "关于我", portfolio: "作品集", resume: "简历", contact: "联系方式", printPortfolio: "打印作品集" },
     hero: {
       subtitle: "纽约大学经济学学生",
       tagline: "消费者洞察 × 成长型思维",
@@ -292,13 +304,15 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
           title: "罗兰贝格x欧莱雅中国精英挑战赛",
           date: "2026年7月",
           desc: "策划并设计了全新“适乐护”微信小程序 AI 生态战略，全球首创将高德地图实时气象与欧莱雅 Skin Genius 测肤技术深度融合。构建了集“气象环境指数-实时皮肤压力-主动防护提醒”于一体的场景化主动防御系统，针对 Z 世代消费群体提供个性化护肤方案。",
-          linkText: "查看挑战赛方案 (PDF)"
+          linkText: "查看挑战赛方案 (PDF)",
+          link: "/roland_berger_loreal_2026.pdf"
         },
         mktsoc: {
           title: "NYU MKTSOC 25 秋季案例竞赛 — TOP 6",
           date: "2025年11月",
           desc: "为面临7.3%市场下滑的健康应用Solara开发了战略营销转型方案。设计了“名人叫醒”活动，利用Ryan Reynolds等AI集成角色解决用户的“意志力差距”。策略包括阶梯定价模型，将Solara定位为高性价比替代方案。",
-          linkText: "查看竞赛幻灯片 (PDF)"
+          linkText: "查看竞赛幻灯片 (PDF)",
+          link: "/competition_experience.pdf"
         },
         td: {
           title: "TD 厚朴优学",
@@ -387,6 +401,15 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
       ],
       leadership: [
         {
+          org: "欧莱雅 (L'Oréal)",
+          role: "欧莱雅创想家 (Campus Entrepreneur)",
+          date: "2026.7 - 至今",
+          details: [
+            "品牌共创与营销方案落地：深度对接欧莱雅旗下品牌商业与市场需求，结合 Z 世代校园消费洞察与趋势，主导跨渠道创意营销方案的策划与执行，赋能品牌在高校青年群体的认知破圈与心智渗透。",
+            "全流程项目推进与青年生态：统筹校级落地活动与社群运营全流程，跨职能打通线上社媒传播与线下互动场景，驱动核心物料与项目节点高质量交付，以敏捷复盘和用户数据反馈赋能品牌策略迭代。"
+          ]
+        },
+        {
           org: "纽约大学年级活动委员会",
           role: "执行副主席",
           date: "2025.9 - 至今",
@@ -425,8 +448,22 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
 };
 
 export default function App() {
-  const [lang, setLang] = useState<Language>("en");
+  const [lang, setLang] = useState<Language>(() => {
+    if (typeof window !== "undefined") {
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlLang = urlParams.get("lang");
+      if (urlLang === "zh" || urlLang === "en") return urlLang as Language;
+    }
+    return "en";
+  });
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isPrintModalOpen, setIsPrintModalOpen] = useState(() => {
+    if (typeof window !== "undefined") {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get("print") === "true" || window.location.hash === "#print";
+    }
+    return false;
+  });
   const [lightboxImg, setLightboxImg] = useState<string | null>(null);
   const [activeCabImg, setActiveCabImg] = useState(0);
   const [cabLiked, setCabLiked] = useState(false);
@@ -435,7 +472,7 @@ export default function App() {
 
   const nameZh = "刘嘉欣";
   const nameEn = "Jessie Liu";
-  const name = `${nameZh} ${nameEn}`;
+  const name = lang === "en" ? nameEn : `${nameZh} ${nameEn}`;
   const photoUrl = "https://i.postimg.cc/CKBc65PS/Weixin-Image-20260901220215-512-2.jpg";
   const tdLogo = "https://i.postimg.cc/zXwcHprK/1666948832523.jpg";
   
@@ -449,17 +486,27 @@ export default function App() {
 
   return (
     <div className="min-h-screen font-sans selection:bg-sky-100 bg-white">
-      {/* Header / Nav */}
-      <nav className="fixed top-0 w-full z-50 px-6 md:px-8 py-4 md:py-6 flex justify-between md:justify-end items-center mix-blend-difference text-white">
+      {/* Main Web Page Content (completely hidden during print when print portfolio modal is open) */}
+      <div id="main-web-content" className={isPrintModalOpen ? "print:hidden" : ""}>
+        {/* Header / Nav */}
+        <nav className="fixed top-0 w-full z-50 px-6 md:px-8 py-4 md:py-6 flex justify-between md:justify-end items-center mix-blend-difference text-white">
         <div className="md:hidden text-sm uppercase tracking-widest font-bold">
           {lang === "en" ? "Jessie Liu" : "刘嘉欣"}
         </div>
         <div className="flex items-center gap-4 md:gap-8">
-          <div className="hidden md:flex gap-8 text-sm uppercase tracking-widest">
+          <div className="hidden md:flex gap-6 lg:gap-8 text-sm uppercase tracking-widest items-center">
             <a href="#about" className="hover:opacity-50 transition-opacity">{t.nav.about}</a>
             <a href="#portfolio" className="hover:opacity-50 transition-opacity">{t.nav.portfolio}</a>
             <a href="#resume" className="hover:opacity-50 transition-opacity">{t.nav.resume}</a>
             <a href="#contact" className="hover:opacity-50 transition-opacity">{t.nav.contact}</a>
+            <button
+              onClick={() => setIsPrintModalOpen(true)}
+              className="flex items-center gap-1.5 px-3.5 py-1.5 bg-white/10 hover:bg-white hover:text-black border border-white/20 rounded-full text-xs font-medium tracking-wider transition-all cursor-pointer"
+              title={lang === "en" ? "Print Portfolio (PDF)" : "打印整站作品集 (PDF)"}
+            >
+              <Printer size={14} />
+              <span>{t.nav.printPortfolio}</span>
+            </button>
           </div>
           <button 
             onClick={toggleLang}
@@ -527,6 +574,17 @@ export default function App() {
               >
                 {t.nav.contact}
               </a>
+
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  setIsPrintModalOpen(true);
+                }}
+                className="mx-auto flex items-center gap-2 px-6 py-3 bg-accent text-white rounded-full text-sm font-semibold uppercase tracking-widest hover:bg-accent/90 transition-all shadow-md mt-2 cursor-pointer"
+              >
+                <Printer size={18} />
+                <span>{lang === "en" ? "Print Portfolio (PDF)" : "打印作品集 (PDF)"}</span>
+              </button>
               
               <button 
                 onClick={() => {
@@ -582,7 +640,7 @@ export default function App() {
                 {t.hero.tagline}
               </p>
             </div>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 items-center">
               <a 
                 href="#portfolio" 
                 className="bg-slate-900 text-white px-8 py-4 rounded-full text-sm font-medium hover:bg-accent transition-colors"
@@ -596,7 +654,15 @@ export default function App() {
                 <FileText size={18} />
                 {t.nav.resume}
               </a>
-              <div className="flex items-center gap-4 px-4">
+              <button
+                onClick={() => setIsPrintModalOpen(true)}
+                className="bg-accent/10 border border-accent/30 text-accent hover:bg-accent hover:text-white px-6 py-4 rounded-full text-sm font-medium transition-all flex items-center gap-2 cursor-pointer"
+                title={lang === "en" ? "Print / Export Portfolio to PDF" : "打印 / 导出整站作品集为 PDF"}
+              >
+                <Printer size={18} />
+                <span>{lang === "en" ? "Print Portfolio" : "打印作品集"}</span>
+              </button>
+              <div className="flex items-center gap-4 px-2">
                 <a href={contacts.linkedin} target="_blank" rel="noreferrer" className="text-slate-400 hover:text-accent transition-colors">
                   <Linkedin size={20} />
                 </a>
@@ -703,7 +769,7 @@ export default function App() {
                 <div className="bg-white px-6 py-8 sm:px-10 sm:py-10 rounded-[1.5rem] shadow-sm border border-slate-100 flex flex-col items-center justify-between min-h-[250px]">
                   <div className="flex flex-col items-center gap-5 w-full">
                     <div className="flex items-center gap-3">
-                      <Sparkles className="text-accent" size={24} />
+                      <Snowflake className="text-accent" size={24} />
                       <h3 className="text-sm uppercase tracking-[0.2em] font-bold text-slate-900">
                         {t.bio.skillsTitle}
                       </h3>
@@ -736,14 +802,14 @@ export default function App() {
 
           <div className="space-y-24 sm:space-y-32">
             {/* 1. Student Orgs */}
-            <div className="space-y-8 sm:space-y-12">
+            <div className="space-y-8 sm:space-y-12 print:break-inside-auto">
               <div className="flex items-center gap-4">
                 <Users className="text-accent" size={32} />
                 <h3 className="serif text-2xl sm:text-3xl md:text-4xl">{t.portfolio.sections.orgs}</h3>
               </div>
               <div className="grid md:grid-cols-2 gap-8">
                 {/* CAB */}
-                <div className="bg-light-blue/10 p-6 sm:p-10 rounded-2xl sm:rounded-3xl border border-light-blue/20">
+                <div className="bg-light-blue/10 p-6 sm:p-10 rounded-2xl sm:rounded-3xl border border-light-blue/20 avoid-break print:break-inside-avoid print:overflow-visible">
                   <h4 className="font-bold text-lg sm:text-xl mb-2">{t.portfolio.items.cab.title}</h4>
                   <p className="text-accent font-medium mb-4">{t.portfolio.items.cab.event} • {t.portfolio.items.cab.date}</p>
                   <p className="text-slate-600 mb-6 font-light leading-relaxed text-sm sm:text-base">{t.portfolio.items.cab.desc}</p>
@@ -767,7 +833,7 @@ export default function App() {
                   </a>
                 </div>
                 {/* Council */}
-                <div className="bg-light-blue/10 p-6 sm:p-10 rounded-2xl sm:rounded-3xl border border-light-blue/20">
+                <div className="bg-light-blue/10 p-6 sm:p-10 rounded-2xl sm:rounded-3xl border border-light-blue/20 avoid-break print:break-inside-avoid print:overflow-visible">
                   <h4 className="font-bold text-lg sm:text-xl mb-2">{t.portfolio.items.council.title}</h4>
                   <p className="text-accent font-medium mb-4">{t.portfolio.items.council.event} • {t.portfolio.items.council.date}</p>
                   <p className="text-slate-600 mb-6 font-light leading-relaxed text-sm sm:text-base">{t.portfolio.items.council.desc}</p>
@@ -785,7 +851,7 @@ export default function App() {
                   )}
                 </div>
                 {/* Wall Street */}
-                <div className="bg-light-blue/10 p-6 sm:p-10 rounded-2xl sm:rounded-3xl border border-light-blue/20 md:col-span-2">
+                <div className="bg-light-blue/10 p-6 sm:p-10 rounded-2xl sm:rounded-3xl border border-light-blue/20 md:col-span-2 avoid-break print:break-inside-avoid print:overflow-visible">
                   <h4 className="font-bold text-lg sm:text-xl mb-2">{t.portfolio.items.wallstreet.title}</h4>
                   <p className="text-accent font-medium mb-4">{t.portfolio.items.wallstreet.event} • {t.portfolio.items.wallstreet.date}</p>
                   <p className="text-slate-600 mb-6 font-light leading-relaxed text-sm sm:text-base">{t.portfolio.items.wallstreet.desc}</p>
@@ -806,14 +872,14 @@ export default function App() {
             </div>
 
             {/* 2. Competitions */}
-            <div className="space-y-8 sm:space-y-12">
+            <div className="space-y-8 sm:space-y-12 print:break-inside-auto">
               <div className="flex items-center gap-4">
                 <Trophy className="text-accent" size={32} />
                 <h3 className="serif text-2xl sm:text-3xl md:text-4xl">{t.portfolio.sections.competition}</h3>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* L'Oréal Case Competition */}
-                <div className="bg-slate-900 text-white p-6 sm:p-10 rounded-2xl sm:rounded-[2.5rem] overflow-hidden relative flex flex-col justify-between border border-slate-800">
+                <div className="bg-slate-900 text-white p-6 sm:p-10 rounded-2xl sm:rounded-[2.5rem] overflow-hidden print:overflow-visible relative flex flex-col justify-between border border-slate-800 avoid-break print:break-inside-avoid">
                   <div className="relative z-10">
                     <span className="bg-accent/20 text-accent text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full mb-4 inline-block">
                       {lang === "en" ? "L'Oréal × Roland Berger" : "罗兰贝格 × 欧莱雅"}
@@ -831,7 +897,7 @@ export default function App() {
                 </div>
 
                 {/* MKTSOC Case Competition */}
-                <div className="bg-slate-900 text-white p-6 sm:p-10 rounded-2xl sm:rounded-[2.5rem] overflow-hidden relative flex flex-col justify-between border border-slate-800">
+                <div className="bg-slate-900 text-white p-6 sm:p-10 rounded-2xl sm:rounded-[2.5rem] overflow-hidden print:overflow-visible relative flex flex-col justify-between border border-slate-800 avoid-break print:break-inside-avoid">
                   <div className="relative z-10">
                     <span className="bg-accent/20 text-accent text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full mb-4 inline-block">
                       {lang === "en" ? "NYU Marketing Society" : "纽约大学营销协会"}
@@ -853,12 +919,12 @@ export default function App() {
 
 
             {/* 4. TD Test Daily */}
-            <div className="space-y-8 sm:space-y-12">
+            <div className="space-y-8 sm:space-y-12 print:break-inside-auto">
               <div className="flex items-center gap-4">
                 <img src={tdLogo} alt="TD Logo" className="w-10 h-10 object-contain rounded-lg" referrerPolicy="no-referrer" />
                 <h3 className="serif text-2xl sm:text-3xl md:text-4xl">{t.portfolio.sections.td}</h3>
               </div>
-              <div className="bg-light-blue/5 p-6 sm:p-12 rounded-2xl sm:rounded-[3rem] border border-light-blue/20 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+              <div className="bg-light-blue/5 p-6 sm:p-12 rounded-2xl sm:rounded-[3rem] border border-light-blue/20 grid md:grid-cols-2 gap-8 md:gap-12 items-center avoid-break print:break-inside-avoid print:overflow-visible">
                 <div className="order-2 md:order-1 grid grid-cols-2 gap-4">
                   <img src="https://i.postimg.cc/RCw2ghjL/Wechat-IMG3953.jpg" className="rounded-2xl shadow-md w-full h-auto" alt="TD Work" referrerPolicy="no-referrer" />
                   <img src="https://i.postimg.cc/nhh5VkMX/Wechat-IMG3952.jpg" className="rounded-2xl shadow-md w-full h-auto" alt="TD Work" referrerPolicy="no-referrer" />
@@ -879,12 +945,12 @@ export default function App() {
             </div>
 
             {/* 5. Personal Official Account */}
-            <div className="space-y-8 sm:space-y-12 print:break-inside-avoid">
+            <div className="space-y-8 sm:space-y-12 print:break-inside-auto">
               <div className="flex items-center gap-4">
                 <MessageSquare className="text-accent" size={32} />
                 <h3 className="serif text-2xl sm:text-3xl md:text-4xl">{t.portfolio.sections.personal}</h3>
               </div>
-              <div className="bg-slate-50 p-6 sm:p-12 rounded-2xl sm:rounded-[3rem] border border-slate-200 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+              <div className="bg-slate-50 p-6 sm:p-12 rounded-2xl sm:rounded-[3rem] border border-slate-200 grid md:grid-cols-2 gap-8 md:gap-12 items-center avoid-break print:break-inside-avoid print:overflow-visible">
                 <div className="space-y-6">
                   <h4 className="font-bold text-xl sm:text-2xl">
                     {t.portfolio.items.personal.title}
@@ -911,7 +977,7 @@ export default function App() {
             </div>
 
             {/* 6. Video Editing */}
-            <div className="space-y-8 sm:space-y-12 print:break-inside-avoid">
+            <div className="space-y-8 sm:space-y-12 print:break-inside-auto">
               <div className="flex items-center gap-4">
                 <Video className="text-accent" size={32} />
                 <h3 className="serif text-2xl sm:text-3xl md:text-4xl">{t.portfolio.sections.video}</h3>
@@ -943,22 +1009,29 @@ export default function App() {
       </section>
 
       {/* Resume Section */}
-      <section id="resume" className="py-24 sm:py-32 bg-slate-50">
+      <section id="resume" className="py-24 sm:py-32 print:py-4 bg-slate-50">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 sm:mb-16 gap-6">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 sm:mb-16 print:mb-4 gap-6">
               <div>
-                <h2 className="serif text-4xl sm:text-5xl md:text-6xl mb-4">{t.resume.title}</h2>
+                <h2 className="serif text-4xl sm:text-5xl md:text-6xl mb-4 print:mb-2">{t.resume.title}</h2>
                 <p className="text-slate-400 tracking-widest uppercase text-xs">
                   {lang === "en" ? "Professional Background" : "职业背景与成长轨迹"}
                 </p>
               </div>
               <div className="flex flex-wrap items-center gap-4 no-print">
+                <button 
+                  onClick={() => setIsPrintModalOpen(true)}
+                  className="flex items-center gap-2 px-6 py-3.5 bg-accent text-white rounded-full text-sm font-semibold hover:bg-accent/90 transition-all duration-200 shadow-sm cursor-pointer active:scale-95"
+                >
+                  <Printer size={18} />
+                  {t.resume.print}
+                </button>
                 <a 
                   href={t.resume.pdfUrl} 
                   target="_blank" 
                   rel="noreferrer"
-                  className="flex items-center gap-2 px-6 py-3.5 bg-slate-900 text-white rounded-full text-sm font-medium hover:bg-accent hover:text-white transition-all duration-200 shadow-sm"
+                  className="flex items-center gap-2 px-6 py-3.5 bg-slate-900 text-white rounded-full text-sm font-medium hover:bg-slate-800 transition-all duration-200 shadow-sm"
                 >
                   <FileText size={18} />
                   {t.resume.download}
@@ -966,15 +1039,15 @@ export default function App() {
               </div>
             </div>
 
-            <div className="space-y-16">
+            <div className="space-y-16 print:space-y-6 print:break-inside-auto">
               {/* Education */}
-              <div>
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl uppercase tracking-wider text-accent font-bold mb-8 border-b-2 border-slate-200 pb-3">
+              <div className="print:break-inside-auto">
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl uppercase tracking-wider text-accent font-bold mb-8 print:mb-3 border-b-2 border-slate-200 pb-3 print:pb-1.5">
                   {t.resume.sections.education}
                 </h3>
-                <div className="space-y-8">
+                <div className="space-y-8 print:space-y-4 print:break-inside-auto">
                   {t.resume.edu.map((item: any, i: number) => (
-                    <div key={i} className="group">
+                    <div key={i} className="group avoid-break print:break-inside-avoid">
                       <div className="flex flex-col sm:flex-row justify-between items-baseline mb-2 gap-2">
                         <h4 className="font-bold text-sm sm:text-base text-slate-900">{item.school}</h4>
                         <div className="flex items-center gap-2 text-slate-500 font-medium text-xs sm:text-sm whitespace-nowrap">
@@ -1005,13 +1078,13 @@ export default function App() {
               </div>
 
               {/* Experience */}
-              <div>
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl uppercase tracking-wider text-accent font-bold mb-8 border-b-2 border-slate-200 pb-3">
+              <div className="print:break-inside-auto">
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl uppercase tracking-wider text-accent font-bold mb-8 print:mb-3 border-b-2 border-slate-200 pb-3 print:pb-1.5">
                   {t.resume.sections.experience}
                 </h3>
-                <div className="space-y-12">
+                <div className="space-y-12 print:space-y-5 print:break-inside-auto">
                   {t.resume.exp.map((item: any, i: number) => (
-                    <div key={i}>
+                    <div key={i} className="avoid-break print:break-inside-avoid">
                       <div className="flex flex-col sm:flex-row justify-between items-baseline mb-2 gap-2">
                         <h4 className="font-bold text-sm sm:text-base text-slate-900">{item.company}</h4>
                         <div className="flex items-center gap-2 text-slate-500 font-medium text-xs sm:text-sm whitespace-nowrap">
@@ -1035,13 +1108,13 @@ export default function App() {
               </div>
 
               {/* Leadership */}
-              <div>
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl uppercase tracking-wider text-accent font-bold mb-8 border-b-2 border-slate-200 pb-3">
+              <div className="print:break-inside-auto">
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl uppercase tracking-wider text-accent font-bold mb-8 print:mb-3 border-b-2 border-slate-200 pb-3 print:pb-1.5">
                   {t.resume.sections.leadership}
                 </h3>
-                <div className="space-y-6">
+                <div className="space-y-6 print:space-y-4 print:break-inside-auto">
                   {t.resume.leadership.map((item: any, i: number) => (
-                    <div key={i} className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
+                    <div key={i} className="bg-white p-6 sm:p-8 print:p-4 rounded-2xl border border-slate-200/80 shadow-sm avoid-break print:break-inside-avoid">
                       <div className="flex flex-col sm:flex-row justify-between items-baseline mb-2 gap-2">
                         <h4 className="font-bold text-sm sm:text-base text-slate-900">{item.org}</h4>
                         <div className="flex items-center gap-2 text-slate-500 font-medium text-xs sm:text-sm whitespace-nowrap">
@@ -1050,22 +1123,24 @@ export default function App() {
                           <span>{item.date}</span>
                         </div>
                       </div>
-                      <p className="text-accent font-medium mb-3 text-xs sm:text-sm">{item.role}</p>
-                      <ul className="space-y-2.5">
-                        {item.details.map((detail: string, j: number) => (
-                          <li key={j} className="text-slate-600 flex items-start gap-2 text-xs sm:text-sm leading-relaxed">
-                            <span className="text-accent shrink-0 font-bold select-none">·</span>
-                            <span className="flex-1">{detail}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      <p className={`text-accent font-medium text-xs sm:text-sm ${item.details && item.details.length > 0 ? "mb-3" : "mb-0"}`}>{item.role}</p>
+                      {item.details && item.details.length > 0 && (
+                        <ul className="space-y-2.5">
+                          {item.details.map((detail: string, j: number) => (
+                            <li key={j} className="text-slate-600 flex items-start gap-2 text-xs sm:text-sm leading-relaxed">
+                              <span className="text-accent shrink-0 font-bold select-none">·</span>
+                              <span className="flex-1">{detail}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
                   ))}
                 </div>
               </div>
 
               {/* Skills */}
-              <div className="bg-slate-900 text-white p-6 sm:p-12 rounded-2xl sm:rounded-[3rem]">
+              <div className="bg-slate-900 text-white p-6 sm:p-12 rounded-2xl sm:rounded-[3rem] avoid-break print:break-inside-avoid print:overflow-visible">
                 <h3 className="text-2xl sm:text-3xl lg:text-4xl uppercase tracking-wider text-accent font-bold mb-8 border-b-2 border-white/10 pb-3">
                   {t.resume.sections.skills}
                 </h3>
@@ -1127,9 +1202,19 @@ export default function App() {
         </div>
       </section>
 
-      <footer className="py-12 bg-slate-900 text-white/30 text-center border-t border-white/5">
+      <footer className="py-12 bg-slate-900 text-white/30 text-center border-t border-white/5 web-footer">
         <p className="text-sm tracking-widest uppercase">&copy; {new Date().getFullYear()} {name}. All Rights Reserved.</p>
       </footer>
+      </div>
+
+      {/* Print Portfolio Modal */}
+      <PrintPortfolioModal
+        isOpen={isPrintModalOpen}
+        onClose={() => setIsPrintModalOpen(false)}
+        lang={lang}
+        onToggleLang={toggleLang}
+        translations={translations}
+      />
 
       {/* Fullscreen Lightbox Modal */}
       {lightboxImg && (

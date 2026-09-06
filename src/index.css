@@ -4,8 +4,8 @@
 @theme {
   --font-serif: "Playfair Display", serif;
   --font-sans: "Inter", "Noto Sans SC", sans-serif;
-  --color-brand-blue: #e0f2fe; /* Light blue */
-  --color-brand-accent: #0ea5e9; /* Sky blue accent */
+  --color-brand-blue: #e0f2fe;
+  --color-brand-accent: #0ea5e9;
 }
 
 body {
@@ -24,458 +24,225 @@ body {
   color: var(--color-brand-accent);
 }
 
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Print Specific Rules */
+@page {
+  size: A4 portrait;
+  margin: 10mm 12mm;
+}
+
 @media print {
-  nav, 
+  /* Hide all web UI and interactive controls */
+  nav,
   .no-print,
   button,
   .mix-blend-difference,
-  #contact,
-  footer {
+  .lightbox-modal,
+  footer.web-footer,
+  .web-chrome-only {
+    display: none !important;
+  }
+
+  /* If in print-portfolio modal mode, hide everything else */
+  body:has(#print-portfolio-document) > *:not(:has(#print-portfolio-document)),
+  body:has(#print-portfolio-document) #main-web-content,
+  body:has(#print-portfolio-modal-wrapper) #main-web-content {
     display: none !important;
   }
 
   body {
-    background: white !important;
-    color: black !important;
-    font-size: 11pt;
-    line-height: 1.5;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 10pt;
+    line-height: 1.45;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Ensure link elements retain functional link styling and interactivity in PDF exports */
+  a[href] {
+    color: #1a56db !important;
+    text-decoration: underline !important;
+    text-decoration-thickness: 1px !important;
+    text-underline-offset: 2px !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
 
-  section {
-    padding: 0.5rem 0 !important;
-    border: none !important;
-    page-break-inside: auto;
+  /* Internal or anchor elements without href */
+  a:not([href]) {
+    text-decoration: none !important;
+    color: inherit !important;
   }
 
-  .container {
-    width: 100% !important;
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0 0.5rem !important;
+  /* Page Break & Splitting Prevention */
+  .page-break-before {
+    page-break-before: always !important;
+    break-before: page !important;
   }
 
-  h1, h2, h3, h4 {
-    color: black !important;
-    page-break-after: avoid;
-    margin-top: 0.75rem !important;
-    margin-bottom: 0.25rem !important;
+  .page-break-after {
+    page-break-after: always !important;
+    break-after: page !important;
   }
 
-  #resume h2 {
-    font-size: 20pt !important;
-    text-align: center;
+  .avoid-break,
+  .break-inside-avoid,
+  .print-break-inside-avoid,
+  [class*="rounded-xl"],
+  [class*="rounded-2xl"],
+  [class*="rounded-lg"] {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  section,
+  .print-break-inside-auto,
+  .space-y-4,
+  .space-y-5,
+  .space-y-6,
+  .space-y-8,
+  .space-y-10,
+  .space-y-12 {
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+
+  /* Prevent text paragraphs and lists from splitting mid-sentence or mid-paragraph */
+  p, 
+  li, 
+  blockquote, 
+  dd, 
+  dt {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    orphans: 4 !important;
+    widows: 4 !important;
+  }
+
+  /* Keep headings tightly attached to their content below */
+  h1, h2, h3, h4, h5, h6 {
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Keep buttons, links, and badges whole */
+  a, 
+  button, 
+  [role="button"] {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Atomic cards and individual entries should avoid slicing, but parent sections MUST allow page breaks */
+  section,
+  #resume,
+  #portfolio,
+  #about,
+  #contact,
+  .space-y-16,
+  .space-y-24,
+  .space-y-32,
+  .space-y-12,
+  .space-y-8 {
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+
+  /* Compact print spacing to eliminate excessive white space in PDF */
+  section,
+  #resume,
+  #portfolio,
+  #about,
+  #contact {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  .space-y-24 > :not([hidden]) ~ :not([hidden]),
+  .space-y-32 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 2rem !important;
+  }
+
+  .space-y-16 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 1.5rem !important;
+  }
+
+  .space-y-12 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 1.25rem !important;
+  }
+
+  .space-y-8 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 1rem !important;
+  }
+
+  .mb-16,
+  .mb-24,
+  .sm\:mb-24,
+  .sm\:mb-32 {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .mb-8,
+  .mb-12 {
     margin-bottom: 1rem !important;
   }
 
-  #resume h3 {
-    border-bottom: 1px solid #333 !important;
-    padding-bottom: 2px !important;
-    margin-top: 1.25rem !important;
-    font-size: 13pt !important;
-  }
-
-  .grid {
-    display: grid !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  .space-y-8 > * + *,
-  .space-y-12 > * + * {
-    margin-top: 0 !important;
-  }
-
-  /* Portfolio and Experience items */
-  .bg-light-blue\/10, 
+  /* In print, disable overflow:hidden which breaks page pagination in Chromium/WebKit */
+  .grid, 
+  .flex,
+  .rounded-2xl,
+  .rounded-3xl,
+  .rounded-\[2\.5rem\],
+  .rounded-\[3rem\],
   .bg-slate-900,
-  #portfolio .bg-light-blue\/10,
-  #resume .space-y-8 > div,
-  #portfolio .space-y-32 > div,
-  #resume .space-y-16 > div {
-    padding: 1rem !important;
+  .overflow-hidden {
+    overflow: visible !important;
+  }
+
+  /* Print document container resets */
+  .print-document-container {
+    background: #ffffff !important;
+    box-shadow: none !important;
+    border: none !important;
     margin: 0 !important;
-    page-break-inside: avoid !important;
-    border-radius: 0 !important;
-    border: 1px solid #eee !important;
-    background-color: transparent !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
-  .md\:grid-cols-2 {
-    grid-template-columns: 1fr 1fr !important;
+  /* Force clean print colors on dark badges */
+  .print-card-dark {
+    background-color: #f8fafc !important;
+    color: #0f172a !important;
+    border: 1px solid #e2e8f0 !important;
   }
 
-  .flex {
-    display: flex !important;
+  .print-card-dark * {
+    color: #0f172a !important;
   }
 
-  .justify-between {
-    justify-content: space-between !important;
+  .print-card-dark .text-accent {
+    color: #0284c7 !important;
   }
 
-  .items-center {
-    align-items: center !important;
-  }
-
-  .bg-slate-900 {
-    background-color: #f8fafc !important; /* Light gray for print instead of dark */
-    color: black !important;
-    border: 1px solid #e2e8f0;
-  }
-
-  .text-slate-300, .text-slate-400, .text-slate-500, .text-slate-600 {
+  .print-card-dark p {
     color: #334155 !important;
   }
 
-  .text-accent {
-    color: #0369a1 !important; /* Darker blue for better print contrast */
-  }
-
-  .rounded-\[3rem\], .rounded-3xl {
-    border-radius: 0.5rem !important;
-  }
-
-  /* Force page break before major sections if they are too long */
-  #resume {
-    page-break-before: always;
-  }
-
-  /* Better image handling for print */
+  /* Image optimization for crisp print */
   img {
     max-width: 100% !important;
     height: auto !important;
     page-break-inside: avoid;
     image-rendering: auto;
-  }
-
-  /* Specifically keep small logos small */
-  .w-6.h-6, 
-  img[alt="TD Logo"] {
-    width: 1.5rem !important;
-    height: 1.5rem !important;
-    max-width: 1.5rem !important;
-    display: inline-block !important;
-    vertical-align: middle !important;
-  }
-
-  /* Portfolio images can be visible in print */
-  #portfolio img {
-    max-height: 25rem !important;
-    width: 100% !important;
-    object-fit: contain !important;
-    border-radius: 8px !important;
-  }
-
-  /* Ensure bullet points look good */
-  ul {
-    padding-left: 1.25rem !important;
-  }
-  
-  li {
-    page-break-inside: avoid;
   }
 }
