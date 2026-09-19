@@ -190,8 +190,8 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
           role: "Campus Entrepreneur",
           date: "Jul 2026 – Present",
           details: [
-            "Drive brand innovation and marketing campaigns across campus channels by translating Gen Z consumer insights into creative, data-backed promotional strategies, expanding L'Oréal's brand presence and youth engagement",
-            "Oversee end-to-end project management and cross-functional execution for campus initiatives, bridging online social buzz with offline activations while gathering real-time student feedback to optimize future brand outreach"
+            "Develop RedNote content and targeted outreach to strengthen employer brand positioning and Gen Z engagement, reaching 500+ students",
+            "Analyze Gen Z consumer trends among Chinese international students across North American universities, synthesizing student feedback and product preferences into insights that inform L’Oréal China’s marketing strategy and positioning"
           ]
         },
         {
@@ -405,8 +405,8 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
           role: "欧莱雅创想家 (Campus Entrepreneur)",
           date: "2026.7 - 至今",
           details: [
-            "品牌共创与营销方案落地：深度对接欧莱雅旗下品牌商业与市场需求，结合 Z 世代校园消费洞察与趋势，主导跨渠道创意营销方案的策划与执行，赋能品牌在高校青年群体的认知破圈与心智渗透。",
-            "全流程项目推进与青年生态：统筹校级落地活动与社群运营全流程，跨职能打通线上社媒传播与线下互动场景，驱动核心物料与项目节点高质量交付，以敏捷复盘和用户数据反馈赋能品牌策略迭代。"
+            "小红书内容策划与定向触达：主导小红书（RedNote）优质内容产出与精准社群触达，强化雇主品牌年轻化定位并深化 Z 世代心智渗透，累计触达 500+ 高校学生。",
+            "北美留学生消费洞察与策略赋能：深度调研北美高校中国留学生群体的 Z 世代消费趋势，系统整合学生真实反馈与产品偏好并转化为高价值商业洞察，赋能欧莱雅中国市场营销策略与品牌定位优化。"
           ]
         },
         {
