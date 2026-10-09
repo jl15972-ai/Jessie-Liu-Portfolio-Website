@@ -1,0 +1,223 @@
+      CeraCare Mini Program:
+      An AI Ecosystem Strategy
+      A world-first AI skincare companion combining map-based weather data and L'Oréal Skin Genius.
+      Team: Gemini
+                                                                                               Beauty for Each, Powered by Beauty Tech
+            AGENDA
+                              CeraVe Brand Insights & Market Positioning
+                 01
+                              Mass-market dermatological positioning / SWOT analysis and growth opportunities
+                              Core Consumer Profiles & Segmentation
+                 02
+                              Gen Z repair needs and changing consumption / Daily Maintenance and Advanced Repair segments
+                              CeraCare Strategy Upgrade & End-to-End Experience
+                 03
+                              Skin Genius + Amap environmental insights / A redesigned journey toward science-based healthy living
+                              CeraCare Implementation & Business Value
+                 04
+                              12-month phased rollout / Risk and data compliance / Key growth metrics and ROI
+                                                                                                                                             1
+         CeraVe: Mass-Market Dermatological Skincare
+         With medical R&D; expertise, a mature product portfolio and accessible pricing, CeraVe has established a differentiated position in China's RMB 100-range skin-barrier repair market: medical expertise × mass-market accessibility.
+           Brand DNA                                               Product Portfolio
+                        Medical Expertise
+             • Developed with dermatologists
+             ceramides × MVE delivery technology
+             brand positioning
+             • Three essential
+             • Dermatological
+                                                                      Globally, the portfolio covers cleansing, moisturizing, repair, acne, baby care and sun protection. Mainland China offers core cleansers, moisturizers,
+                                                                      barrier-repair and acne products, meeting everyday skincare needs with dermatological expertise.
+                                                                      Core Product Strengths                                                                China Market Position
+                     Accessible to Everyone
+                                                                    ■                                                                                      ■
+                                                                       Three ceramides × MVE technology for expert barrier repair                             Focus on affordable skin-barrier repair
+             • Affordable pricing
+             reach”
+             for all skin types
+             • “Expert skincare within everyone's                   ■                                                                                      ■
+                                                                       Gentle formulas for all skin types, including sensitive skin                           Serve sensitive and efficacy-focused skin
+             • Great value, transparent ingredients and formulas
+                                                                    ■                                                                                      ■
+                                                                       A broad portfolio covering everyday skincare needs                                     Expertise at an accessible price
+                                                                    ■                                                                                      ■
+                                                                       RMB 100-range pricing brings expert skincare within reach                              Build a mass-market dermatology identity
+         Source: https://www.cerave.com
+                                                                                                                                                                                                         2
+         https://cerave.tmall.com/index.htm?spm=a1z10.3-b-s.w5002-25650024555.2.25e14127U99XbY
+             SWOT: CeraVe’s Internal Challenges & External Opportunities
+             CeraVe offers generous, affordable products and an established member ecosystem in China. Low brand awareness, intense ingredient competition and high churn in conventional skin-analysis tools call for sharper consumer insights and
+             sustainable growth opportunities.
+                 S Strengths                                                                                                                            W Weaknesses
+                • Scientific expertise: 21 years of co-development with dermatologists. Three signature ceramides strengthen the                       • Limited awareness: Since entering China in 2019, CeraVe still has room to grow awareness and penetration
+                natural skin barrier and reduce moisture loss.                                                                                         relative to established local leaders such as Winona and Proya.
+                • Complete portfolio: Cleansers, moisturizers, sunscreen and serums meet basic skincare needs.                                         • Hard-to-communicate expertise: Strict Chinese advertising rules on skincare efficacy limit public promotion of
+                                                                                                                                                       many medical-grade ingredients and benefits.
+                • Exceptional value: Affordable, large-format products appeal to students and other value-conscious consumers.
+                 O Opportunities                                                                                                                        T Threats
+                • Group support: L'Oréal's Skin Genius technology, extensive Chinese consumer database and established                                 • AI commoditization: Without ongoing interaction, conventional AI skin analysis becomes a one-off traffic
+                marketing capabilities support AI transformation.                                                                                      monetization tool, improving purchases but not relationships.
+                • Member ecosystem: The existing WeChat mini program captures QR-code users across channels and holds rich                             • Intense ingredient competition: Ceramide barrier repair is now an industry standard. Local and established
+                member data for platform upgrades and precision engagement.                                                                            competitors are eroding differentiation.
+                • Industry trends: Basic efficacy products lead; science-led and emotional skincare develop together.
+                                                  Cross-check survey findings with industry reports to identify high-growth segments, key skincare pain points and AI service use cases, guiding feature priorities and pilot-user selection.
+                Next Step
+             Source: https://www.loreal.com/en/articles/science-and-technology/skin-genius-loreal-paris/
+                                                                                                                                                                                                                                                                                 3
+             https://pdf.dfcfw.com/pdf/H3_AP202506051685380084_1.pdf?1749152339000.pdf
+       Gen Z Consumer Profiles & Target Segments
+       Industry trends and early survey results show that younger consumers seek professional, scientific and long-term skin health management. As repair needs diversify, brands should evolve from individual repair products into long-term skin health
+       partners.
+       Survey Findings     *40 valid responses; 70% of respondents aged 18-35.                              Target Consumers
+                                                                                                            Two core consumer groups show the strongest growth potential based on
+       72.5%   Cannot see results, doubt product combinations or lack motivation                            differing needs.
+       • Lack of scientific skincare guidance
+                                                                                                              01 Daily Maintenance
+                                                                                                              Scale segment | Ages 18-25
+       67.5%   Want dynamically tailored, personalized skincare plans
+       • Expect continuous, adaptive support                                                                  • Who: Students, early-career professionals and skincare beginners.
+                                                                                                              • Needs: Basic hydration and barrier stability; affordable solutions for mild
+                                                                                                              issues.
+       52.5%   Spend RMB 151-300 per month on skincare
+                                                                                                              • Spending: Limited budgets, lower basket value and steady repeat
+                                                                                                              purchases.
+       • Stable spending supports mass-market repair
+       40%     Find it hard to sustain skincare routines
+       • Barriers to long-term skincare management
+                                                                                                              02 Advanced Repair
+       Changing Consumption Patterns                                                                          Value segment | Ages 25-35
+                                                                                                              • Who: Urban professionals, users of light aesthetic treatments and
+                              Occasional repair → everyday skin health
+        Broader Repair Needs                                                                                  ingredient enthusiasts.
+                              As efficacy skincare becomes mainstream, repair becomes an
+                                                                                                              • Needs: Aftercare for acids/treatments, persistent issue management and
+                              everyday need.
+                                                                                                              safe expert guidance.
+                                                                                          Consumer needs are
+                                                                                                              • Spending: Higher budgets; willing to pay for expertise, effective
+                                                                                          shifting from buying
+                              Influencer-led choices → personalized science
+                                                                                                              combinations and lasting results.
+                                                                                          products to managing skin
+        More Precise Choices
+                              Consumers seek accurate product matching within mid-range
+                                                                                          health.
+                              budgets.
+                                                                                          should extend from
+                                                                                          products to long-term
+                                                                                          health management.
+                              One-off purchase → ongoing health support
+        Expanded Brand Value
+                              Consumers expect continuing guidance and adaptive,
+                                                                                          Brand value
+                              personalized care.
+       Source: https://v.wjx.cn/vm/OiKapVt.aspx
+                                                                                                                                                             4
+       https://assets.kpmg.com/content/dam/kpmgsites/cn/pdf/zh/2025/11/2025-china-beauty-market-industry-report.pdf?
+            Strategic Positioning & Consumer Journey
+            A world-first combination of map-based weather data and AI skin analysis turns product sales into an AI daily-care partnership. By understanding the environment and skin condition in everyday settings, CeraCare proactively identifies skin stress,
+            offers care advice and supports long-term repurchase.
+                                    1                                                2                                                3                                                4                                                5
+                 Discover & Join                                  Personal Profile                                  Daily Environment                                Proactive Reminders                              Track & Repurchase
+                  User Action                                      User Action                                       User Action                                      User Action                                      User Action
+                  Enter via WeChat, Douyin, Xiaohongshu,           Enter skin type, sensitivities, routine and       Commute, attend classes, work, travel or         Receive care reminders before leaving, at        Continue using products as skin changes
+                  campus events, mall activations or product       daily settings, supported by Skin Genius.         spend time outdoors.                             midday or at night; more often in extreme        with seasons, surroundings, routines and
+                  QR codes.                                                                                                                                           weather.                                         consumption.
+                  Service Touchpoint                               Service Touchpoint                                Service Touchpoint                               Service Touchpoint                               Service Touchpoint
+                  Creators share environmental reports and AI      Create a personal skin profile and request        Combine real-time UV, humidity, pollution,       Add the embedded CeraCare Skin Concierge         Invite periodic retests and use past records to
+                  skin-analysis experiences to attract first-hand  necessary location consent. Location is used      pollen and skin condition to calculate a skin    on WeCom to receive daily recommendations:       detect changes and refresh the skin
+                  trials.                                          only to identify the current environment and      stress score.                                    what to protect against, how to care for skin    profile.
+                  QR code in purchases. Over time, print the       assess its effect on skin for personalized        preview future care advice, prepare protection   and which product categories to use.             knowledge base for questions and user
+                  code on every product bottle.                    advice, with no other use.                        and pack relevant products.                                                                       feedback.
+                                                                                                                                                                                                                       new skin needs, send replenishment alerts
+                                                                                                                                                                                                                       and bundle suggestions.
+                  Initially, include cards with a CeraCare                                                           Manually switch locations to                                                                      Build and continually improve an AI
+                                                                                                                                                                                                                       At low stock, season changes or
+                                                Feedback loop | Environment + skin profile → Daily advice → Product use → Periodic retest → Plan updates + repurchase
+                                                                                                                                                                                                                                                                        5
+       CeraCare: A Dynamic Skin Defense System
+                             L'Oréal skin analysis
+           Skincare               Genius
+                                                             Personal Skin Report            Real-Time Care Advice         Skin Test Archive
+         Survey
+                             Skin
+           Analysis
+                            User Location
+         Needs                    Data
+                                                                                                        Share experience
+                                                                                                                             Conversion
+                            Environment
+                                                                                                           awareness
+                                                                                                                                            6
+                                                                                                        Build
+         CeraCare Mini Program: Phased Rollout
+                                                                                                                                          Months 3-6 plateau: refine the AI knowledge base and adjust reminder
+                                                                                                                                                              frequency.
+         Move from tool launch to lasting consumer relationships through technology development, targeted testing, public launch and habit formation.
+                                                                                                                                      Note: Adjust timing based on API tests, campaign feedback and platform performance.
+             Phases & Core Tasks                                              12-Month Rollout
+                                                                                 Oct      Nov      Dec       Jan      Feb      Mar      Apr      May      Jun      Jul      Aug      Sep
+                         Technology Development         Oct-Nov
+                   01
+                         Integrate Amap LBS/weather APIs with Skin Genius data to
+                         deliver adaptive, customized repair plans.
+                         Targeted Testing               Dec-Feb
+                   02
+                         Invite highly engaged members, including Graduate and Senior
+                         tiers, to beta-test features and experience.
+                         Public Launch + Campus Tour    Mar-Jun
+                   03
+                         Open CeraCare to the public; partner with celebrities and
+                         creators, plus offline campus-tour activations.
+                         Retention & Habits             Jul-Sep
+                   04
+                         Encourage social UGC, run themed online/offline campaigns
+                         and continually improve the technology.
+            *Phase 03 channels: Weibo, WeChat Channels, Douyin and Xiaohongshu.
+            *Combine Amap location data with environmental information to assess local impacts on skin.
+                  
+  Overall Goal                                                 API Integration         Content Engagement         Campus Conversion         Habit Formation
+                  From skin-testing tool to an everyday skin-barrier management   Smooth experience       Build brand awareness      Drive trials + sign-ups   Boost retention + repurchase
+                  partner.
+                                                                                                                                                                                                     7
+              Risk Assessment, Data Compliance & Business Returns
+              Connect consumer value with commercial growth through AI-personalized care, with compliance and manageable risk.
+                Cross-Border Data Compliance                                                              Key Beneficiaries
+                As a French company, L'Oréal must comply with EU and Chinese
+                                                                                                                      Consumers                                          CeraVe                                                 Retail / E-commerce                            KOLs / Agencies
+                data protection laws.
+                daily settings and potentially location data.
+                                                                                                                 Practical daily advice with less                  Improve retention, repurchase and                          Better product matching and                    New content themes, experiences
+                personalized service with user privacy.
+                                                                                                                 ineffective trial and error.                      differentiation; connect directly with                     conversion; increase basket value,             and collaboration opportunities.
+                                                                                                                                                                   consumers, deepen loyalty and gather                       repeat purchases and loyalty.
+                                                                                                                                                                   Chinese consumer data to support
+                The service uses skin photos, care records,
+                                                                                                                                                                   group growth.
+                Core issue: Balance
+                Recommended Actions
+                                                                                                                      CeraCare business value: First-hand needs data → Better portfolio and channel strategy → Stronger brand loyalty
+                       Collect, process and store data within China.
+                  1
+                                                                                                          Potential Resistance
+                       With Amap, retain only de-identified daily-setting tags.
+                  2
+                                                                                                                        Privacy-Sensitive Users                                      Similar L'Oréal Brands                                    Internal Finance / Sales
+                       Global teams access only anonymized, aggregated trend
+                  3
+                                                                                                                    May reject the service over ongoing                         Concern over competition for resources,                   Short-term ROI may be unclear. Start
+                       data.
+                                                                                                                    tracking of photos and daily settings,                      customer diversion, budgets and                           quickly with a low-cost MVP and reuse the
+                                                                                                                    marketing use or unclear consent.                           cannibalization within Dermatological                     current team to reduce development costs.
+                       Photos and locations are used solely for CeraVe services.                                                                                                Beauty.                                                   Show repurchase and LTV gains from
+                  4
+                                                                                                                                                                                                                                          frequent engagement.
+                  Goal: Trusted, privacy-friendly, sustainable
+                                                                                                               Management focus: Clear consent eases privacy concerns | Brand boundaries reduce conflict | Validate ROI with MVP metrics, then scale investment.
+            Risk priorities: Reuse the existing team; launch a lightweight MVP; build in compliance; validate ROI with core metrics.                                                Key metrics: Retention | Advice adoption | Retest completion | Repurchase | Basket value | NPS | Marketing ROI
+                                                                                                                                                                                                                                                                                                                         8
+                                           Beauty for Each,
+                                           Powered by Beauty Tech
+    Redefining the Next Frontier of Skin Repair
+    with a World-First Digital and AI Ecosystem.
+  Team: Gemini

@@ -7,8 +7,8 @@ function generateResumePDF(outputPath) {
   const doc = new PDFDocument({
     size: 'LETTER',
     margins: {
-      top: 34,
-      bottom: 34,
+      top: 30,
+      bottom: 28,
       left: 38,
       right: 38
     },
@@ -136,7 +136,23 @@ function generateResumePDF(outputPath) {
   // SECTION: PROFESSIONAL EXPERIENCE
   addSectionHeader('PROFESSIONAL EXPERIENCE');
   
-  // 1. Deloitte
+  // 1. Consult Your Community
+  addHeaderRow('Consult Your Community', fBold, '', fRegular);
+  addHeaderRow('Business Analyst', fItalic, 'Oct 2026 – Present', fRegular);
+  addBullet('Support pro bono consulting projects for small businesses in New York City');
+  addBullet('Collaborate with a student consulting team to understand client needs, research business challenges, and develop practical recommendations to support growth and improve operations');
+
+  doc.y += 1.5;
+
+  // 2. New York University
+  addHeaderRow('New York University', fBold, '', fRegular);
+  addHeaderRow('Learning Assistant', fItalic, 'Aug 2026 – Present', fRegular);
+  addBullet('Tutor NYU students in economics and Stern business courses, translating complex concepts into clear explanations and step-by-step problem-solving guidance');
+  addBullet('Facilitate learning groups and study workshops supporting 100+ students in refining their study strategies, and adapting instruction to individual needs through active listening, targeted questions, and constructive feedback');
+
+  doc.y += 1.5;
+
+  // 2. Deloitte
   addHeaderRow('Deloitte', fBold, 'Beijing, China', fRegular);
   addHeaderRow('Tax and Business Advisory Intern', fItalic, 'May 2026 – Jun 2026', fRegular);
   addBullet('Built 5 FY25 related-party transaction models and intangible asset reports for multinational clients, transforming raw transaction data into management-ready analysis');

@@ -887,7 +887,9 @@ ${styles}
                   <div key={i} className="text-xs avoid-break print:break-inside-avoid">
                     <div className="flex justify-between items-baseline font-bold text-slate-900">
                       <span>{item.company}</span>
-                      <span className="text-slate-500 font-medium">{item.date}</span>
+                      <span className="text-slate-500 font-medium">
+                        {item.location ? `${item.location} | ${item.date}` : item.date}
+                      </span>
                     </div>
                     <div className="text-accent font-semibold mb-1">{item.role}</div>
                     <ul className="space-y-1 pl-3 text-slate-700">

@@ -90,7 +90,7 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
           date: "July, 2026",
           desc: "Designed the CeraVe 'Shield' AI Eco-Strategy, a revolutionary digital model integrating real-time map weather LBS API with L'Oréal's Skin Genius technology. Created a proactive, personalized daily skin defense system with location-aware stress profiling, interactive skincare guidance, and a business roadmap centered around Gen Z consumer retention.",
           linkText: "View Case Competition Slides (PDF)",
-          link: "/roland_berger_loreal_2026.pdf"
+          link: "/roland_berger_loreal_2026_en.pdf"
         },
         mktsoc: {
           title: "NYU MKTSOC 25 Fall Case Competition — TOP 6",
@@ -154,6 +154,24 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
         }
       ],
       exp: [
+        {
+          company: "Consult Your Community",
+          role: "Business Analyst",
+          date: "Oct 2026 – Present",
+          details: [
+            "Support pro bono consulting projects for small businesses in New York City",
+            "Collaborate with a student consulting team to understand client needs, research business challenges, and develop practical recommendations to support growth and improve operations"
+          ]
+        },
+        {
+          company: "New York University",
+          role: "Learning Assistant",
+          date: "Aug 2026 – Present",
+          details: [
+            "Tutor NYU students in economics and Stern business courses, translating complex concepts into clear explanations and step-by-step problem-solving guidance",
+            "Facilitate learning groups and study workshops supporting 100+ students in refining their study strategies, and adapting instruction to individual needs through active listening, targeted questions, and constructive feedback"
+          ]
+        },
         {
           company: "Deloitte",
           role: "Tax and Business Advisory Intern",
@@ -368,6 +386,24 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
         }
       ],
       exp: [
+        {
+          company: "Consult Your Community",
+          role: "商业分析师 (Business Analyst)",
+          date: "2026.10 - 至今",
+          details: [
+            "为纽约市本地小型企业提供公益商业咨询项目支持",
+            "与学生咨询团队紧密协作，深入洞察客户需求，调研商业挑战与痛点，并制定切实可行的战略建议以赋能业务增长与运营优化"
+          ]
+        },
+        {
+          company: "纽约大学 (New York University)",
+          role: "助教 (Learning Assistant)",
+          date: "2026.8 - 至今",
+          details: [
+            "为纽大经济学及斯特恩商学院（Stern）商科课程学生提供辅导，将复杂的理论概念转化为清晰易懂的原理解析与分步解题思路",
+            "主持学习小组与专题研讨工作坊，累计支持 100+ 名学生优化学习策略；通过积极倾听、针对性提问与建设性反馈，因材施教适配个性化学习需求"
+          ]
+        },
         {
           company: "德勤管理咨询（上海）有限公司北京分公司",
           role: "税务与商务咨询实习生",
@@ -889,7 +925,7 @@ export default function App() {
                     <p className="text-slate-300 mb-8 font-light leading-relaxed text-sm sm:text-base">{t.portfolio.items.loreal.desc}</p>
                   </div>
                   <div className="relative z-10 mt-auto">
-                    <a href="/roland_berger_loreal_2026.pdf" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-full font-medium hover:bg-accent hover:text-white transition-all text-xs sm:text-sm shadow-sm">
+                    <a href={t.portfolio.items.loreal.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-full font-medium hover:bg-accent hover:text-white transition-all text-xs sm:text-sm shadow-sm">
                       {t.portfolio.items.loreal.linkText} <ExternalLink size={16} />
                     </a>
                   </div>
