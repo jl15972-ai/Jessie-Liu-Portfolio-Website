@@ -89,8 +89,8 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
           title: "2026 Roland Berger × L’Oréal China Case Competition",
           date: "July, 2026",
           desc: "Designed the CeraVe 'Shield' AI Eco-Strategy, a revolutionary digital model integrating real-time map weather LBS API with L'Oréal's Skin Genius technology. Created a proactive, personalized daily skin defense system with location-aware stress profiling, interactive skincare guidance, and a business roadmap centered around Gen Z consumer retention.",
-          linkText: "View Case Competition Slides (PDF)",
-          link: "/roland_berger_loreal_2026_en.pdf"
+          linkText: "View Case Presentation (Google Drive)",
+          link: "https://drive.google.com/"
         },
         mktsoc: {
           title: "NYU MKTSOC 25 Fall Case Competition — TOP 6",

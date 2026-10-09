@@ -660,7 +660,7 @@ ${styles}
                 <div className="mt-4 pt-3 border-t border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-[11px]">
                   <span className="text-slate-600 flex items-center gap-1.5 font-medium">
                     <FileText size={14} className="text-accent shrink-0" />
-                    <span>{isZh ? "成果：完整商业战略 Deck (PDF)" : "Deliverable: Strategy Deck (PDF)"}</span>
+                    <span>{isZh ? "成果：完整商业战略 Deck (PDF)" : "Deliverable: Strategy Deck (Google Drive)"}</span>
                   </span>
                   {t.portfolio.items.loreal.link && (
                     <a
