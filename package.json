@@ -8,6 +8,7 @@
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "node generate-pdf.cjs && vite build",
     "preview": "vite preview",
+    "start": "node server.cjs",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit",
     "predeploy": "npm run build",
