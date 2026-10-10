@@ -90,7 +90,7 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
           date: "July, 2026",
           desc: "Designed the CeraVe 'Shield' AI Eco-Strategy, a revolutionary digital model integrating real-time map weather LBS API with L'Oréal's Skin Genius technology. Created a proactive, personalized daily skin defense system with location-aware stress profiling, interactive skincare guidance, and a business roadmap centered around Gen Z consumer retention.",
           linkText: "View Case Presentation (Google Drive)",
-          link: "/roland_berger_loreal_2026_en.pdf"
+          link: "https://drive.google.com/file/d/1g4YC9jvyj5AShafBsx7p1MR0En_wMQ-p/view?usp=sharing"
         },
         mktsoc: {
           title: "NYU MKTSOC 25 Fall Case Competition — TOP 6",
@@ -322,8 +322,8 @@ Outside of work, I find my balance on trails and slopes. Long-distance running c
           title: "罗兰贝格x欧莱雅中国精英挑战赛",
           date: "2026年7月",
           desc: "策划并设计了全新“适乐护”微信小程序 AI 生态战略，全球首创将高德地图实时气象与欧莱雅 Skin Genius 测肤技术深度融合。构建了集“气象环境指数-实时皮肤压力-主动防护提醒”于一体的场景化主动防御系统，针对 Z 世代消费群体提供个性化护肤方案。",
-          linkText: "查看挑战赛方案 (PDF)",
-          link: "/roland_berger_loreal_2026.pdf"
+          linkText: "查看挑战赛方案 (Google Drive)",
+          link: "https://drive.google.com/file/d/1g4YC9jvyj5AShafBsx7p1MR0En_wMQ-p/view?usp=sharing"
         },
         mktsoc: {
           title: "NYU MKTSOC 25 秋季案例竞赛 — TOP 6",
